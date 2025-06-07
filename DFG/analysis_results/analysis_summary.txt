@@ -1,0 +1,38 @@
+Verilog数据依赖与传播路径分析汇总
+==================================================
+
+分析文件: /hpc/home/connect.ytan910/code/AgentBeamConcolic/DFG/test.v
+模块名: test
+分析时间: 0.03秒
+
+节点总数: 17
+边总数: 31
+输入节点数: 4
+输出节点数: 2
+寄存器节点数: 1
+
+操作类型统计:
+- constant_assignment: 11 条边
+- control_dependency: 8 条边
+- bitwise_or: 6 条边
+- less_equal: 3 条边
+- bitwise_not: 2 条边
+- bitwise_and: 1 条边
+
+分析内容:
+1. 依赖链分析 (3 个节点)
+2. 传播路径分析 (8 条路径)
+3. 操作类型摘要 (见 operation_summary.txt)
+
+输入节点:
+- clock
+- line1
+- line2
+- reset
+
+输出节点:
+- outp
+- overflw
+
+寄存器节点:
+- stato

@@ -1,0 +1,70 @@
+变量操作类型摘要
+==================================================
+
+各变量的操作类型:
+
+变量: line1
+  - bitwise_and: 来自 b100
+  - bitwise_or: 来自 b1, line2, stato, b101, b111, b011
+
+变量: outp
+  - bitwise_not: 来自 line1, line2
+  - constant_assignment: 来自 b0
+  - control_dependency: 来自 reset, b1
+
+变量: overflw
+  - constant_assignment: 来自 b0
+  - control_dependency: 来自 b1, reset
+
+变量: reset
+  - less_equal: 来自 b1, stato, b0
+
+变量: stato
+  - constant_assignment: 来自 b0, b100, b001, b101, b010, b111, b110, b011, b000
+  - control_dependency: 来自 reset, b1, line1, line2
+
+
+按操作类型分组的统计:
+
+操作: bitwise_and (总计: 1)
+  - b100 -> line1
+
+操作: bitwise_not (总计: 2)
+  - line1 -> outp
+  - line2 -> outp
+
+操作: bitwise_or (总计: 6)
+  - b011 -> line1
+  - b1 -> line1
+  - b101 -> line1
+  - b111 -> line1
+  - line2 -> line1
+  - stato -> line1
+
+操作: constant_assignment (总计: 11)
+  - b0 -> outp
+  - b0 -> overflw
+  - b0 -> stato
+  - b000 -> stato
+  - b001 -> stato
+  - b010 -> stato
+  - b011 -> stato
+  - b100 -> stato
+  - b101 -> stato
+  - b110 -> stato
+  - b111 -> stato
+
+操作: control_dependency (总计: 8)
+  - b1 -> outp
+  - b1 -> overflw
+  - b1 -> stato
+  - line1 -> stato
+  - line2 -> stato
+  - reset -> outp
+  - reset -> overflw
+  - reset -> stato
+
+操作: less_equal (总计: 3)
+  - b0 -> reset
+  - b1 -> reset
+  - stato -> reset

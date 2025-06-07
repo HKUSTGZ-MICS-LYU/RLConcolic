@@ -1,0 +1,5 @@
+src/__pycache__
+.vscode
+src/script.py
+test
+output

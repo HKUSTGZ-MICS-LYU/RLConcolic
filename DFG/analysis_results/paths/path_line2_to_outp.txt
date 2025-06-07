@@ -1,0 +1,27 @@
+传播路径分析结果：从 line2 到 outp
+==================================================
+找到 5 条传播路径:
+
+路径 1: line2 -> outp
+详细信息:
+  line2 -> outp (操作: bitwise_not, 赋值类型: nonblocking)
+路径 2: line2 -> line1 -> outp
+详细信息:
+  line2 -> line1 (操作: bitwise_or, 赋值类型: blocking)
+  line1 -> outp (操作: bitwise_not, 赋值类型: nonblocking)
+路径 3: line2 -> line1 -> stato -> reset -> outp
+详细信息:
+  line2 -> line1 (操作: bitwise_or, 赋值类型: blocking)
+  line1 -> stato (操作: control_dependency, 条件: equality)
+  stato -> reset (操作: less_equal, 赋值类型: blocking)
+  reset -> outp (操作: control_dependency, 条件: equality)
+路径 4: line2 -> stato -> reset -> outp
+详细信息:
+  line2 -> stato (操作: control_dependency, 条件: equality)
+  stato -> reset (操作: less_equal, 赋值类型: blocking)
+  reset -> outp (操作: control_dependency, 条件: equality)
+路径 5: line2 -> stato -> line1 -> outp
+详细信息:
+  line2 -> stato (操作: control_dependency, 条件: equality)
+  stato -> line1 (操作: bitwise_or, 赋值类型: blocking)
+  line1 -> outp (操作: bitwise_not, 赋值类型: nonblocking)
