@@ -269,11 +269,12 @@ configurations = {
         'reset_name': 'rst',
         'reset_edge': '0'
     },
+    
 }
 
 initial_distance = 999
-unroll = 20
-steps = 10
+unroll = 100
+steps = 20
 
 # assert steps*5<=unroll, "5*steps should be less than unroll for fuzzing"
 assert steps<=unroll, "steps should be less than unroll"
