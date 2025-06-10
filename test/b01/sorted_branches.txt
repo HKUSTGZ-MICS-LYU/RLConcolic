@@ -1,0 +1,29 @@
+[BRANCHES] Sorted Branches:
+[0]:Block ID 30 assign ID 48 at clock 24
+[1]:Block ID 21 assign ID 33 at clock 24
+[2]:Block ID 25 assign ID 40 at clock 24
+[3]:Block ID 13 assign ID 19 at clock 24
+[4]:Block ID 17 assign ID 26 at clock 24
+[5]:Block ID 5 assign ID 5 at clock 24
+[6]:Block ID 9 assign ID 12 at clock 24
+[7]:Block ID 33 assign ID 54 at clock 24
+[8]:Block ID 29 assign ID 47 at clock 25
+[9]:Block ID 21 assign ID 33 at clock 25
+[10]:Block ID 25 assign ID 40 at clock 25
+[11]:Block ID 13 assign ID 19 at clock 25
+[12]:Block ID 17 assign ID 26 at clock 25
+[13]:Block ID 6 assign ID 6 at clock 25
+[14]:Block ID 9 assign ID 12 at clock 25
+[15]:Block ID 33 assign ID 54 at clock 25
+[16]:Block ID 29 assign ID 47 at clock 26
+[17]:Block ID 21 assign ID 33 at clock 26
+[18]:Block ID 25 assign ID 40 at clock 26
+[19]:Block ID 14 assign ID 20 at clock 26
+[20]:Block ID 17 assign ID 26 at clock 26
+[21]:Block ID 5 assign ID 5 at clock 26
+[22]:Block ID 9 assign ID 12 at clock 26
+[23]:Block ID 33 assign ID 54 at clock 26
+[STATE] State:
+outp: 0
+overflw: 0
+stato: 2

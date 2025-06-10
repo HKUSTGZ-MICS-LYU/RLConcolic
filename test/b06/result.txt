@@ -1,0 +1,8 @@
+state_3 = 1
+eql_3 = 0
+enable_count_3 = 0
+cc_mux_3 = 1
+uscite_3 = 1
+ackout_3 = 0
+cont_eql_2 = 1
+state_2 = 0

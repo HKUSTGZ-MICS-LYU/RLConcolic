@@ -14,5 +14,5 @@ source /hpc/home/connect.ytan910/anaconda3/bin/activate cuda
 nvidia-smi
 
 # Run the main script
-python /hpc/home/connect.ytan910/code/AgentBeamConcolic/src/main.py
+python /hpc/home/connect.ytan910/code/Concolic/src/main.py
 # python /hpc/home/connect.ytan910/code/LLM_Concolic/test.py

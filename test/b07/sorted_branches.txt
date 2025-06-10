@@ -1,0 +1,33 @@
+[BRANCHES] Sorted Branches:
+[0]:Block ID 27 assign ID 69 at clock 2
+[1]:Block ID 27 assign ID 69 at clock 3
+[2]:Block ID 27 assign ID 69 at clock 4
+[3]:Block ID 27 assign ID 69 at clock 5
+[4]:Block ID 27 assign ID 69 at clock 6
+[5]:Block ID 27 assign ID 69 at clock 7
+[6]:Block ID 27 assign ID 69 at clock 8
+[7]:Block ID 27 assign ID 69 at clock 9
+[STATE] State:
+punti_retta: 0
+stato: 5
+cont: 0
+mar: 1
+x: 3
+y: 255
+t: 2
+mem[0]: 1
+mem[1]: 255
+mem[2]: 0
+mem[3]: 0
+mem[4]: 0
+mem[5]: 2
+mem[6]: 0
+mem[7]: 0
+mem[8]: 0
+mem[9]: 2
+mem[10]: 255
+mem[11]: 5
+mem[12]: 0
+mem[13]: 2
+mem[14]: 0
+mem[15]: 2

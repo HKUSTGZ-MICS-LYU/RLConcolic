@@ -1,0 +1,1297 @@
+VCD info: dumpfile ./test/ICache/conquest_tb.vcd opened for output.
+WARNING: ./test/ICache/conquest_tb.v:91: $readmemb(./test/ICache/data.mem): Not enough words in the file for the requested range [0:55].
+;A 10
+;A 11
+;A 12
+;A 13
+;A 14
+;A 15
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =          0
+;R state = 0
+;_P ic_en 0
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 0
+;_P tagcomp_miss 0
+;_P biudata_valid 0
+;_P biudata_error 0
+;_P start_addr 00000000000000000000000000000000
+;_P __obs 0
+;_C          1
+;_Input 010010001000011100010011110100001000100
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =          0
+;R state = 0
+;_P ic_en 0
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 0
+;_P biudata_valid 0
+;_P biudata_error 0
+;_P start_addr 10010001000011100010011110100001
+;_P __obs 0
+;_C          2
+;_Input 011101100000011111111000110110110001011
+;A 16
+;A 17
+;A 19
+;A 20
+;A 21
+;A 22
+;A 23
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =          0
+;R state = 0
+;_P ic_en 1
+;_P icqmem_cycstb_i 1
+;_P icqmem_ci_i 0
+;_P tagcomp_miss 1
+;_P biudata_valid 0
+;_P biudata_error 0
+;_P start_addr 11101100000011111111000110110110
+;_P __obs 0
+;_C          3
+;_Input 100000000101010111011010100011000100111
+;A 27
+;A 28
+;A 30
+;A 31
+;A 33
+;A 34
+;A 36
+;A 37
+;A 38
+;A 39
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 1
+;R load = 1
+;R saved_addr_r = 3960467894
+;R state = 1
+;_P ic_en 1
+;_P icqmem_cycstb_i 1
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 0
+;_P biudata_valid 0
+;_P biudata_error 1
+;_P start_addr 00000000101010111011010100011000
+;_P __obs 1
+;_C          4
+;_Input 000111101011010100111001000101110010100
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =   11252150
+;R state = 0
+;_P ic_en 0
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 0
+;_P biudata_valid 1
+;_P biudata_error 0
+;_P start_addr 00111101011010100111001000101110
+;_P __obs 0
+;_C          5
+;_Input 101100101101001000001010110010110011100
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =   11252150
+;R state = 0
+;_P ic_en 0
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 1
+;_P biudata_valid 1
+;_P biudata_error 0
+;_P start_addr 01100101101001000001010110010110
+;_P __obs 1
+;_C          6
+;_Input 001111011101111100011110111000010101101
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =   11252150
+;R state = 0
+;_P ic_en 1
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 1
+;_P biudata_valid 0
+;_P biudata_error 1
+;_P start_addr 01111011101111100011110111000010
+;_P __obs 0
+;_C          7
+;_Input 000101111111000110011010110110100110100
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =   11252150
+;R state = 0
+;_P ic_en 0
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 0
+;_P biudata_valid 1
+;_P biudata_error 1
+;_P start_addr 00101111111000110011010110110100
+;_P __obs 0
+;_C          8
+;_Input 000100110010111110110010000001111101111
+;A 16
+;A 17
+;A 19
+;A 20
+;A 21
+;A 22
+;A 23
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r =   11252150
+;R state = 0
+;_P ic_en 1
+;_P icqmem_cycstb_i 1
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 1
+;_P biudata_valid 0
+;_P biudata_error 1
+;_P start_addr 00100110010111110110010000001111
+;_P __obs 0
+;_C          9
+;_Input 010001111011000011001011001110101110001
+;A 27
+;A 29
+;A 31
+;A 33
+;A 34
+;A 36
+;A 37
+;A 38
+;A 39
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 1
+;R load = 1
+;R saved_addr_r =  643785743
+;R state = 1
+;_P ic_en 1
+;_P icqmem_cycstb_i 0
+;_P icqmem_ci_i 0
+;_P tagcomp_miss 0
+;_P biudata_valid 1
+;_P biudata_error 1
+;_P start_addr 10001111011000011001011001110101
+;_P __obs 0
+;_C         10
+;_Input 000111001111101111001001010011100000110
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en 0
+;_P icqmem_cycstb_i 1
+;_P icqmem_ci_i 1
+;_P tagcomp_miss 0
+;_P biudata_valid 0
+;_P biudata_error 0
+;_P start_addr 00111001111101111001001010011100
+;_P __obs 0
+;_C         11
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         12
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         13
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         14
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         15
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         16
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         17
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         18
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         19
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         20
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         21
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         22
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         23
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         24
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         25
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         26
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         27
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         28
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         29
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         30
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         31
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         32
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         33
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         34
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         35
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         36
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         37
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         38
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         39
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         40
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         41
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         42
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         43
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         44
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         45
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         46
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         47
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         48
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         49
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         50
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         51
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;A 16
+;A 18
+;A 24
+;A 25
+;A 26
+;R cache_inhibit = 0
+;R cnt = 0
+;R hitmiss_eval = 0
+;R load = 0
+;R saved_addr_r = 2405532687
+;R state = 0
+;_P ic_en x
+;_P icqmem_cycstb_i x
+;_P icqmem_ci_i x
+;_P tagcomp_miss x
+;_P biudata_valid x
+;_P biudata_error x
+;_P start_addr xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

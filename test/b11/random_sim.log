@@ -1,0 +1,860 @@
+ERROR: ../test/b11//conquest_tb.v:52: $readmemb: Unable to open ./test/b11/data.mem for reading.
+;A 0
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;R x_out =  0
+;R r_in =  0
+;R stato =  0
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in 000000
+;_P stbi 0
+;_P __obs 0
+;_C          1
+;_Input xxxxxxxx
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          2
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          3
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          4
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          5
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          6
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          7
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          8
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C          9
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         10
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         11
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         12
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         13
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         14
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         15
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         16
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         17
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         18
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         19
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         20
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         21
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         22
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         23
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         24
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         25
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         26
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         27
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         28
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         29
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         30
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         31
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         32
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         33
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         34
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         35
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         36
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         37
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         38
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         39
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         40
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         41
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         42
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         43
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         44
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         45
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         46
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         47
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         48
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         49
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         50
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         51
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         52
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         53
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         54
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         55
+;_Input xxxxxxxx
+;A 19
+;A 21
+;A 29
+;A 31
+;R x_out =  0
+;R r_in =  x
+;R stato =  1
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         56
+;_Input xxxxxxxx
+;A 13
+;A 14
+;A 16
+;A 18
+;R x_out =  0
+;R r_in =  x
+;R stato =  2
+;R cont =  0
+;R cont1_inv =    0
+;R cont1 =    0
+;_P x_in xxxxxx
+;_P stbi x
+;_P __obs x
+;_C         57
+;_Input xxxxxxxx
+../test/b11//conquest_tb.v:56: $finish called at 567 (1s)

@@ -1,0 +1,112 @@
+Job <223980> is submitted to default queue <interactive>.
+Generating LALR tables
+WARNING: 183 shift/reduce conflicts
+[INFO] Select the target branch from the branch_id.txt file
+[INFO] Target count: 48
+[RANDOM] Random simulation number 1
+[RANDOM] Random simulation number 2
+[RANDOM] Random simulation number 3
+[COVERED] Removing target 97
+[COVERED] Removing target 96
+[COVERED] Removing target 95
+[COVERED] Removing target 93
+[COVERED] Removing target 92
+[COVERED] Removing target 91
+[COVERED] Removing target 88
+[COVERED] Removing target 86
+[COVERED] Removing target 85
+[COVERED] Removing target 83
+[COVERED] Removing target 82
+[COVERED] Removing target 79
+[COVERED] Removing target 77
+[COVERED] Removing target 76
+[COVERED] Removing target 75
+[COVERED] Removing target 65
+[COVERED] Removing target 58
+[COVERED] Removing target 55
+[COVERED] Removing target 54
+[COVERED] Removing target 39
+[COVERED] Removing target 36
+[COVERED] Removing target 35
+[COVERED] Removing target 34
+[COVERED] Removing target 31
+[COVERED] Removing target 30
+[TARGET] Trying to cover target 38, the assign is 51
+[COVERED] Removing target 38
+[COVERED] Removing target 41
+[COVERED] Removing target 42
+[TARGET] Trying to cover target 43, the assign is 60
+[COVERED] Removing target 43
+[COVERED] Removing target 45
+[COVERED] Removing target 46
+[COVERED] Removing target 48
+[TARGET] Trying to cover target 49, the assign is 68
+[COVERED] Removing target 49
+[COVERED] Removing target 51
+[COVERED] Removing target 52
+[COVERED] Removing target 56
+[COVERED] Removing target 59
+[TARGET] Trying to cover target 61, the assign is 95
+[COVERED] Removing target 62
+[COVERED] Removing target 64
+[TARGET] Trying to cover target 67, the assign is 104
+[TARGET] Trying to cover target 68, the assign is 105
+[TARGET] Trying to cover target 69, the assign is 106
+[TARGET] Trying to cover target 71, the assign is 112
+[TARGET] Trying to cover target 72, the assign is 113
+[TARGET] Trying to cover target 74, the assign is 119
+[COVERED] Removing target 80
+[TARGET] Trying to cover target 89, the assign is 141
+Memory usage of run_concolic: 58.75 MiB
+The current testbench is DCache
+[COVERED] Covered target number is 40
+[UNCOVERED] Uncovered target number is 8
+[COVERED] Covered target 97 Assign id:  151
+[COVERED] Covered target 96 Assign id:  150
+[COVERED] Covered target 95 Assign id:  149
+[COVERED] Covered target 93 Assign id:  147
+[COVERED] Covered target 92 Assign id:  146
+[COVERED] Covered target 91 Assign id:  144
+[COVERED] Covered target 88 Assign id:  140
+[COVERED] Covered target 86 Assign id:  138
+[COVERED] Covered target 85 Assign id:  137
+[COVERED] Covered target 83 Assign id:  131
+[COVERED] Covered target 82 Assign id:  130
+[COVERED] Covered target 79 Assign id:  128
+[COVERED] Covered target 77 Assign id:  124
+[COVERED] Covered target 76 Assign id:  123
+[COVERED] Covered target 75 Assign id:  121
+[COVERED] Covered target 65 Assign id:  102
+[COVERED] Covered target 58 Assign id:  91
+[COVERED] Covered target 55 Assign id:  85
+[COVERED] Covered target 54 Assign id:  84
+[COVERED] Covered target 39 Assign id:  52
+[COVERED] Covered target 36 Assign id:  45
+[COVERED] Covered target 35 Assign id:  44
+[COVERED] Covered target 34 Assign id:  43
+[COVERED] Covered target 31 Assign id:  30
+[COVERED] Covered target 30 Assign id:  29
+[COVERED] Covered target 38 Assign id:  51
+[COVERED] Covered target 41 Assign id:  57
+[COVERED] Covered target 42 Assign id:  59
+[COVERED] Covered target 43 Assign id:  60
+[COVERED] Covered target 45 Assign id:  65
+[COVERED] Covered target 46 Assign id:  66
+[COVERED] Covered target 48 Assign id:  67
+[COVERED] Covered target 49 Assign id:  68
+[COVERED] Covered target 51 Assign id:  77
+[COVERED] Covered target 52 Assign id:  78
+[COVERED] Covered target 56 Assign id:  86
+[COVERED] Covered target 59 Assign id:  92
+[COVERED] Covered target 62 Assign id:  96
+[COVERED] Covered target 64 Assign id:  101
+[COVERED] Covered target 80 Assign id:  129
+[UNCOVERED] Uncovered target 61 Assign id:  95
+[UNCOVERED] Uncovered target 67 Assign id:  104
+[UNCOVERED] Uncovered target 68 Assign id:  105
+[UNCOVERED] Uncovered target 69 Assign id:  106
+[UNCOVERED] Uncovered target 71 Assign id:  112
+[UNCOVERED] Uncovered target 72 Assign id:  113
+[UNCOVERED] Uncovered target 74 Assign id:  119
+[UNCOVERED] Uncovered target 89 Assign id:  141
+Time taken: 7846.9608318805695 seconds

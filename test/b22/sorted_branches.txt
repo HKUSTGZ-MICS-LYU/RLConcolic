@@ -1,0 +1,168 @@
+[BRANCHES] Sorted Branches:
+[0]:Block ID 12 assign ID 47 at clock 4
+[1]:Block ID 13 assign ID 49 at clock 4
+[2]:Block ID 14 assign ID 51 at clock 4
+[3]:Block ID 131 assign ID 188 at clock 4
+[4]:Block ID 132 assign ID 192 at clock 4
+[5]:Block ID 133 assign ID 196 at clock 4
+[6]:Block ID 16 assign ID 53 at clock 4
+[7]:Block ID 140 assign ID 210 at clock 4
+[8]:Block ID 146 assign ID 227 at clock 4
+[9]:Block ID 158 assign ID 251 at clock 4
+[10]:Block ID 170 assign ID 275 at clock 4
+[11]:Block ID 182 assign ID 299 at clock 4
+[12]:Block ID 194 assign ID 323 at clock 4
+[13]:Block ID 206 assign ID 347 at clock 4
+[14]:Block ID 218 assign ID 371 at clock 4
+[15]:Block ID 230 assign ID 395 at clock 4
+[16]:Block ID 242 assign ID 419 at clock 4
+[17]:Block ID 254 assign ID 443 at clock 4
+[18]:Block ID 7 assign ID 35 at clock 4
+[19]:Block ID 101 assign ID 162 at clock 4
+[20]:Block ID 5 assign ID 27 at clock 4
+[21]:Block ID 103 assign ID 163 at clock 4
+[22]:Block ID 109 assign ID 168 at clock 4
+[23]:Block ID 115 assign ID 173 at clock 4
+[24]:Block ID 118 assign ID 176 at clock 4
+[25]:Block ID 121 assign ID 179 at clock 4
+[26]:Block ID 285 assign ID 493 at clock 4
+[27]:Block ID 125 assign ID 183 at clock 4
+[28]:Block ID 266 assign ID 467 at clock 4
+[29]:Block ID 136 assign ID 203 at clock 4
+[30]:Block ID 137 assign ID 205 at clock 4
+[31]:Block ID 138 assign ID 207 at clock 4
+[32]:Block ID 139 assign ID 209 at clock 4
+[33]:Block ID 6 assign ID 34 at clock 5
+[34]:Block ID 12 assign ID 47 at clock 6
+[35]:Block ID 13 assign ID 49 at clock 6
+[36]:Block ID 14 assign ID 51 at clock 6
+[37]:Block ID 131 assign ID 188 at clock 6
+[38]:Block ID 132 assign ID 192 at clock 6
+[39]:Block ID 133 assign ID 196 at clock 6
+[40]:Block ID 16 assign ID 53 at clock 6
+[41]:Block ID 140 assign ID 210 at clock 6
+[42]:Block ID 146 assign ID 227 at clock 6
+[43]:Block ID 158 assign ID 251 at clock 6
+[44]:Block ID 170 assign ID 275 at clock 6
+[45]:Block ID 182 assign ID 299 at clock 6
+[46]:Block ID 194 assign ID 323 at clock 6
+[47]:Block ID 206 assign ID 347 at clock 6
+[48]:Block ID 218 assign ID 371 at clock 6
+[49]:Block ID 230 assign ID 395 at clock 6
+[50]:Block ID 242 assign ID 419 at clock 6
+[51]:Block ID 254 assign ID 443 at clock 6
+[52]:Block ID 7 assign ID 35 at clock 6
+[53]:Block ID 101 assign ID 162 at clock 6
+[54]:Block ID 5 assign ID 27 at clock 6
+[55]:Block ID 103 assign ID 163 at clock 6
+[56]:Block ID 109 assign ID 168 at clock 6
+[57]:Block ID 115 assign ID 173 at clock 6
+[58]:Block ID 118 assign ID 176 at clock 6
+[59]:Block ID 121 assign ID 179 at clock 6
+[60]:Block ID 285 assign ID 493 at clock 6
+[61]:Block ID 125 assign ID 183 at clock 6
+[62]:Block ID 266 assign ID 467 at clock 6
+[63]:Block ID 136 assign ID 203 at clock 6
+[64]:Block ID 137 assign ID 205 at clock 6
+[65]:Block ID 138 assign ID 207 at clock 6
+[66]:Block ID 139 assign ID 209 at clock 6
+[STATE] State:
+so: 0
+rd: 0
+wr: 1
+addr_1: 8
+addr_2: 0
+addr_3: 1048568
+datai_1: 0
+datai_2: -1778431382
+datai_3: -1778431382
+datao_1: 0
+datao_2: 0
+datao_3: 0
+rd_1: 1
+rd_2: 1
+rd_3: 1
+wr_1: 0
+wr_2: 0
+wr_3: 0
+P1__clock: 1
+P1__reset: 0
+P1__addr: 8
+P1__datai: 0
+P1__datao: 0
+P1__rd: 1
+P1__wr: 0
+P1__reg0: 0
+P1__reg1: 0
+P1__reg2: 0
+P1__reg3: 8
+P1__B: 0
+P1__MAR: 8
+P1__MBR: 0
+P1__mf: 0
+P1__df: 0
+P1__cf: 0
+P1__ff: 0
+P1__tail: 0
+P1__IR: 0
+P1__state: 1
+P1__r: 0
+P1__m: 0
+P1__t: 0
+P1__d: 0
+P1__temp: 0
+P1__s: 0
+P2__clock: 1
+P2__reset: 0
+P2__addr: 0
+P2__datai: 2516535914
+P2__datao: 0
+P2__rd: 1
+P2__wr: 0
+P2__reg0: 0
+P2__reg1: 0
+P2__reg2: 0
+P2__reg3: 0
+P2__B: 0
+P2__MAR: 0
+P2__MBR: -1778431382
+P2__mf: 0
+P2__df: 0
+P2__cf: 0
+P2__ff: 0
+P2__tail: 0
+P2__IR: -1778431382
+P2__state: 0
+P2__r: 0
+P2__m: 0
+P2__t: 0
+P2__d: 0
+P2__temp: 0
+P2__s: 0
+P3__clock: 1
+P3__reset: 0
+P3__addr: 1048568
+P3__datai: 2516535914
+P3__datao: 0
+P3__rd: 1
+P3__wr: 0
+P3__reg0: 0
+P3__reg1: -4
+P3__reg2: 0
+P3__reg3: -8
+P3__B: 0
+P3__MAR: 1048568
+P3__MBR: -1778431382
+P3__mf: 3
+P3__df: 2
+P3__cf: 0
+P3__ff: 12
+P3__tail: 277128
+P3__IR: -1778431382
+P3__state: 1
+P3__r: -8
+P3__m: 0
+P3__t: -4
+P3__d: 2
+P3__temp: 0
+P3__s: 3

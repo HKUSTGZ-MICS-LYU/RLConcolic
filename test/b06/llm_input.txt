@@ -1,0 +1,10 @@
+reset = 0, cont_eql = 0, eql = 0
+reset = 0, cont_eql = 0, eql = 1
+reset = 0, cont_eql = 0, eql = 0
+reset = 0, cont_eql = 0, eql = 0
+reset = 0, cont_eql = 0, eql = 0
+reset = 0, cont_eql = 0, eql = 1
+reset = 0, cont_eql = 0, eql = 0
+reset = 0, cont_eql = 0, eql = 0
+reset = 0, cont_eql = 1, eql = 0
+reset = 0, cont_eql = 0, eql = 1

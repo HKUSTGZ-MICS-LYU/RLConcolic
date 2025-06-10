@@ -1,0 +1,96 @@
+Target 1 constraints:
+(1 == reset) == True
+
+Target 2 constraints:
+(1 == reset) == False
+
+Target 5 constraints:
+(0 == stato) == True
+(1 == reset) == False
+
+Target 6 constraints:
+(1 == stato) == True
+(1 == reset) == False
+
+Target 7 constraints:
+(1 == start) == True
+(1 == stato) == True
+(1 == reset) == False
+
+Target 8 constraints:
+(1 == start) == False
+(1 == stato) == True
+(1 == reset) == False
+
+Target 10 constraints:
+(2 == stato) == True
+(1 == reset) == False
+
+Target 11 constraints:
+(3 == stato) == True
+(1 == reset) == False
+
+Target 12 constraints:
+(4 == stato) == True
+(1 == reset) == False
+
+Target 13 constraints:
+(5 == stato) == True
+(1 == reset) == False
+
+Target 14 constraints:
+(6 == stato) == True
+(1 == reset) == False
+
+Target 15 constraints:
+15 != mar == True
+(6 == stato) == True
+(1 == reset) == False
+
+Target 16 constraints:
+15 != mar == False
+(6 == stato) == True
+(1 == reset) == False
+
+Target 18 constraints:
+(x == ZeroExt(4, 2)) == True
+15 != mar == True
+(6 == stato) == True
+(1 == reset) == False
+
+Target 19 constraints:
+(x == ZeroExt(4, 2)) == False
+15 != mar == True
+(6 == stato) == True
+(1 == reset) == False
+
+Target 21 constraints:
+(0 == start) == True
+15 != mar == False
+(6 == stato) == True
+(1 == reset) == False
+
+Target 22 constraints:
+(0 == start) == False
+15 != mar == False
+(6 == stato) == True
+(1 == reset) == False
+
+Target 24 constraints:
+(2 == x) == True
+(0 == start) == True
+15 != mar == False
+(6 == stato) == True
+(1 == reset) == False
+
+Target 25 constraints:
+(2 == x) == False
+(0 == start) == True
+15 != mar == False
+(6 == stato) == True
+(1 == reset) == False
+
+Target 27 constraints:
+If(0 != stato == True, 1, 0) & If(1 != stato == True, 1, 0) & If(2 != stato == True, 1, 0) & If(3 != stato == True, 1, 0) & If(4 != stato == True, 1, 0) & If(5 != stato == True, 1, 0) & If(6 != stato == True, 1, 0) == If(True, 1, 0)
+(1 == reset) == False
+

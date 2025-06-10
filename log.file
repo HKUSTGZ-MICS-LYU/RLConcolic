@@ -1,0 +1,176 @@
+Mon Jun  9 20:10:48 2025       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A30          Off  | 00000000:36:00.0 Off |                    0 |
+| N/A   51C    P0    54W / 165W |  23438MiB / 24576MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A     47463      C   /opt/conda/bin/python           23436MiB |
++-----------------------------------------------------------------------------+
+Generating LALR tables
+WARNING: 183 shift/reduce conflicts
+[INFO] Running command: iverilog -o ./test/b11/conc_run.vvp ./test/b11/conquest_dut.v ./test/b11/conquest_tb.v
+[INFO] Select the target branch from the branch_id.txt file
+[INFO] Target count: 35
+随机生成耗时: 0.0015 秒
+生成了 100 个输入向量
+仿真耗时 0.04
+读取仿真日志耗时 0.00
+建立约束耗时 0.08
+[COVERED] Removing target 49, the assign is 71, at clock 14
+[COVERED] Removing target 48, the assign is 70, at clock 21
+[COVERED] Removing target 47, the assign is 69, at clock 14
+[COVERED] Removing target 45, the assign is 65, at clock 61
+[COVERED] Removing target 44, the assign is 64, at clock 13
+[COVERED] Removing target 42, the assign is 62, at clock 13
+[COVERED] Removing target 41, the assign is 61, at clock 27
+[COVERED] Removing target 39, the assign is 59, at clock 13
+[COVERED] Removing target 38, the assign is 58, at clock 20
+[COVERED] Removing target 37, the assign is 57, at clock 13
+[COVERED] Removing target 35, the assign is 53, at clock 12
+[COVERED] Removing target 33, the assign is 51, at clock 12
+[COVERED] Removing target 31, the assign is 47, at clock 26
+[COVERED] Removing target 29, the assign is 45, at clock 26
+[COVERED] Removing target 27, the assign is 40, at clock 11
+[COVERED] Removing target 26, the assign is 39, at clock 25
+[COVERED] Removing target 25, the assign is 38, at clock 11
+[COVERED] Removing target 23, the assign is 34, at clock 10
+[COVERED] Removing target 22, the assign is 33, at clock 17
+[COVERED] Removing target 21, the assign is 32, at clock 10
+[COVERED] Removing target 19, the assign is 29, at clock 30
+[COVERED] Removing target 18, the assign is 28, at clock 9
+[COVERED] Removing target 13, the assign is 21, at clock 9
+[COVERED] Removing target 11, the assign is 19, at clock 9
+[COVERED] Removing target 9, the assign is 16, at clock 8
+[COVERED] Removing target 8, the assign is 15, at clock 3
+[COVERED] Removing target 7, the assign is 13, at clock 3
+[COVERED] Removing target 6, the assign is 8, at clock 2
+[COVERED] Removing target 3, the assign is 2, at clock 0
+[COVERED] Removing target 2, the assign is 1, at clock 0
+[TARGET] Trying to cover target 12, the assign is 20
+[INFO] The time of the target is 0.13 seconds
+仿真耗时 0.04
+读取仿真日志耗时 0.00
+建立约束耗时 0.09
+Choosing Branch id is 20,at clock 64,constraint is If(Or(If((0 == r_in_24) == True, 1, 0) == 1, If((63 == r_in_24) == True, 1, 0) == 1) == True, 1, 0) == If(False == True, 1, 0)
+[Enter] Block ID 12 assign ID 20 at clock 64, distance is 0
+[COVERED] Removing target 12, the assign is 20, at clock 64
+随机生成耗时: 0.0016 秒
+生成了 100 个输入向量
+仿真耗时 0.04
+读取仿真日志耗时 0.00
+建立约束耗时 0.08
+[TARGET] Trying to cover target 15, the assign is 22
+[INFO] The time of the target is 0.46 seconds
+仿真耗时 0.03
+读取仿真日志耗时 0.00
+建立约束耗时 0.09
+Choosing Branch id is 52,at clock 29,constraint is If((63 < cont1_10) == True, 1, 0) == If(False == True, 1, 0)
+[Enter] Block ID 34 assign ID 52 at clock 29, distance is 5
+Choosing Branch id is 46,at clock 71,constraint is If((26 < cont1_22) == True, 1, 0) == If(False == True, 1, 0)
+[Enter] Block ID 30 assign ID 46 at clock 71, distance is 5
+仿真耗时 0.04
+读取仿真日志耗时 0.00
+建立约束耗时 0.07
+[COVERED] Removing target 34, the assign is 52, at clock 29
+[COVERED] Removing target 30, the assign is 46, at clock 71
+仿真耗时 0.03
+读取仿真日志耗时 0.00
+建立约束耗时 0.07
+仿真耗时 0.03
+读取仿真日志耗时 0.00
+建立约束耗时 0.08
+随机生成耗时: 0.0015 秒
+生成了 100 个输入向量
+仿真耗时 0.03
+读取仿真日志耗时 0.00
+建立约束耗时 0.08
+[TARGET] Trying to cover target 16, the assign is 23
+[INFO] The time of the target is 1.14 seconds
+仿真耗时 0.03
+读取仿真日志耗时 0.00
+建立约束耗时 0.09
+Target 3 is covered in clock 0
+Target 2 is covered in clock 0
+Target 6 is covered in clock 2
+Target 8 is covered in clock 3
+Target 7 is covered in clock 3
+Target 9 is covered in clock 8
+Target 18 is covered in clock 9
+Target 13 is covered in clock 9
+Target 11 is covered in clock 9
+Target 23 is covered in clock 10
+Target 21 is covered in clock 10
+Target 27 is covered in clock 11
+Target 25 is covered in clock 11
+Target 35 is covered in clock 12
+Target 33 is covered in clock 12
+Target 44 is covered in clock 13
+Target 42 is covered in clock 13
+Target 39 is covered in clock 13
+Target 37 is covered in clock 13
+Target 49 is covered in clock 14
+Target 47 is covered in clock 14
+Target 22 is covered in clock 17
+Target 38 is covered in clock 20
+Target 48 is covered in clock 21
+Target 26 is covered in clock 25
+Target 31 is covered in clock 26
+Target 29 is covered in clock 26
+Target 41 is covered in clock 27
+Target 34 is covered in clock 29
+Target 19 is covered in clock 30
+Target 45 is covered in clock 61
+Target 12 is covered in clock 64
+Target 30 is covered in clock 71
+Memory usage of run_concolic: 23.08984375 MiB
+The current testbench is b11
+Time taken: 4.749713182449341 seconds
+[COVERED] Covered target number is 33
+[UNCOVERED] Uncovered target number is 2
+[COVERED] Covered target 49 Assign id:  71
+[COVERED] Covered target 48 Assign id:  70
+[COVERED] Covered target 47 Assign id:  69
+[COVERED] Covered target 45 Assign id:  65
+[COVERED] Covered target 44 Assign id:  64
+[COVERED] Covered target 42 Assign id:  62
+[COVERED] Covered target 41 Assign id:  61
+[COVERED] Covered target 39 Assign id:  59
+[COVERED] Covered target 38 Assign id:  58
+[COVERED] Covered target 37 Assign id:  57
+[COVERED] Covered target 35 Assign id:  53
+[COVERED] Covered target 33 Assign id:  51
+[COVERED] Covered target 31 Assign id:  47
+[COVERED] Covered target 29 Assign id:  45
+[COVERED] Covered target 27 Assign id:  40
+[COVERED] Covered target 26 Assign id:  39
+[COVERED] Covered target 25 Assign id:  38
+[COVERED] Covered target 23 Assign id:  34
+[COVERED] Covered target 22 Assign id:  33
+[COVERED] Covered target 21 Assign id:  32
+[COVERED] Covered target 19 Assign id:  29
+[COVERED] Covered target 18 Assign id:  28
+[COVERED] Covered target 13 Assign id:  21
+[COVERED] Covered target 11 Assign id:  19
+[COVERED] Covered target 9 Assign id:  16
+[COVERED] Covered target 8 Assign id:  15
+[COVERED] Covered target 7 Assign id:  13
+[COVERED] Covered target 6 Assign id:  8
+[COVERED] Covered target 3 Assign id:  2
+[COVERED] Covered target 2 Assign id:  1
+[COVERED] Covered target 12 Assign id:  20
+[COVERED] Covered target 34 Assign id:  52
+[COVERED] Covered target 30 Assign id:  46
+[UNCOVERED] Uncovered target 15 Assign id:  22
+[UNCOVERED] Uncovered target 16 Assign id:  23

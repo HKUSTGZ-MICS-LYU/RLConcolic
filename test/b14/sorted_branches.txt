@@ -1,0 +1,64 @@
+[BRANCHES] Sorted Branches:
+[0]:Block ID 11 assign ID 22 at clock 4
+[1]:Block ID 104 assign ID 145 at clock 4
+[2]:Block ID 107 assign ID 147 at clock 4
+[3]:Block ID 110 assign ID 150 at clock 4
+[4]:Block ID 138 assign ID 214 at clock 4
+[5]:Block ID 121 assign ID 174 at clock 4
+[6]:Block ID 127 assign ID 191 at clock 4
+[7]:Block ID 19 assign ID 36 at clock 4
+[8]:Block ID 215 assign ID 375 at clock 4
+[9]:Block ID 200 assign ID 344 at clock 4
+[10]:Block ID 201 assign ID 346 at clock 4
+[11]:Block ID 202 assign ID 348 at clock 4
+[12]:Block ID 204 assign ID 352 at clock 4
+[13]:Block ID 237 assign ID 421 at clock 4
+[14]:Block ID 226 assign ID 398 at clock 4
+[15]:Block ID 197 assign ID 336 at clock 4
+[16]:Block ID 160 assign ID 260 at clock 4
+[17]:Block ID 149 assign ID 237 at clock 4
+[18]:Block ID 195 assign ID 330 at clock 4
+[19]:Block ID 196 assign ID 332 at clock 4
+[20]:Block ID 171 assign ID 283 at clock 4
+[21]:Block ID 182 assign ID 306 at clock 4
+[22]:Block ID 15 assign ID 31 at clock 5
+[23]:Block ID 16 assign ID 33 at clock 5
+[24]:Block ID 17 assign ID 35 at clock 5
+[25]:Block ID 14 assign ID 29 at clock 5
+[26]:Block ID 11 assign ID 22 at clock 6
+[27]:Block ID 102 assign ID 143 at clock 6
+[28]:Block ID 80 assign ID 117 at clock 6
+[29]:Block ID 84 assign ID 122 at clock 6
+[30]:Block ID 88 assign ID 127 at clock 6
+[31]:Block ID 95 assign ID 135 at clock 6
+[32]:Block ID 76 assign ID 112 at clock 6
+[33]:Block ID 22 assign ID 39 at clock 6
+[34]:Block ID 23 assign ID 43 at clock 6
+[35]:Block ID 24 assign ID 47 at clock 6
+[36]:Block ID 26 assign ID 51 at clock 6
+[37]:Block ID 30 assign ID 56 at clock 6
+[38]:Block ID 64 assign ID 97 at clock 6
+[39]:Block ID 57 assign ID 89 at clock 6
+[40]:Block ID 68 assign ID 102 at clock 6
+[41]:Block ID 73 assign ID 108 at clock 6
+[42]:Block ID 34 assign ID 61 at clock 6
+[43]:Block ID 38 assign ID 66 at clock 6
+[44]:Block ID 42 assign ID 71 at clock 6
+[45]:Block ID 46 assign ID 76 at clock 6
+[46]:Block ID 50 assign ID 81 at clock 6
+[STATE] State:
+addr: 0
+datao: 0
+rd: 1
+wr: 0
+reg0: 2147404820
+reg1: 0
+reg2: 0
+reg3: 0
+B: 0
+IR: 1073820652
+state: 0
+rx: 0
+m: 78828
+t: 0
+d: 0

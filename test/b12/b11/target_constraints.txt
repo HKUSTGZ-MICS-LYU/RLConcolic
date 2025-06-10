@@ -1,0 +1,172 @@
+Target 1 constraints:
+(1 == reset) == True
+
+Target 2 constraints:
+(1 == reset) == False
+
+Target 5 constraints:
+(0 == stato) == True
+(1 == reset) == False
+
+Target 6 constraints:
+(1 == stato) == True
+(1 == reset) == False
+
+Target 7 constraints:
+(1 == stbi) == True
+(1 == stato) == True
+(1 == reset) == False
+
+Target 8 constraints:
+(1 == stbi) == False
+(1 == stato) == True
+(1 == reset) == False
+
+Target 10 constraints:
+(2 == stato) == True
+(1 == reset) == False
+
+Target 11 constraints:
+Or(If((0 == r_in) == True, 1, 0) == 1, If((63 == r_in) == True, 1, 0) == 1) == True
+(2 == stato) == True
+(1 == reset) == False
+
+Target 12 constraints:
+Or(If((0 == r_in) == True, 1, 0) == 1, If((63 == r_in) == True, 1, 0) == 1) == False
+(2 == stato) == True
+(1 == reset) == False
+
+Target 14 constraints:
+(25 > cont) == True
+Or(If((0 == r_in) == True, 1, 0) == 1, If((63 == r_in) == True, 1, 0) == 1) == True
+(2 == stato) == True
+(1 == reset) == False
+
+Target 15 constraints:
+(25 > cont) == False
+Or(If((0 == r_in) == True, 1, 0) == 1, If((63 == r_in) == True, 1, 0) == 1) == True
+(2 == stato) == True
+(1 == reset) == False
+
+Target 17 constraints:
+(26 >= r_in) == True
+Or(If((0 == r_in) == True, 1, 0) == 1, If((63 == r_in) == True, 1, 0) == 1) == False
+(2 == stato) == True
+(1 == reset) == False
+
+Target 18 constraints:
+(26 >= r_in) == False
+Or(If((0 == r_in) == True, 1, 0) == 1, If((63 == r_in) == True, 1, 0) == 1) == False
+(2 == stato) == True
+(1 == reset) == False
+
+Target 20 constraints:
+(3 == stato) == True
+(1 == reset) == False
+
+Target 21 constraints:
+(1 == Extract(0, 0, r_in)) == True
+(3 == stato) == True
+(1 == reset) == False
+
+Target 22 constraints:
+(1 == Extract(0, 0, r_in)) == False
+(3 == stato) == True
+(1 == reset) == False
+
+Target 24 constraints:
+(4 == stato) == True
+(1 == reset) == False
+
+Target 25 constraints:
+(1 == Extract(1, 1, r_in)) == True
+(4 == stato) == True
+(1 == reset) == False
+
+Target 26 constraints:
+(1 == Extract(1, 1, r_in)) == False
+(4 == stato) == True
+(1 == reset) == False
+
+Target 28 constraints:
+(5 == stato) == True
+(1 == reset) == False
+
+Target 29 constraints:
+(26 < cont1) == True
+(5 == stato) == True
+(1 == reset) == False
+
+Target 30 constraints:
+(26 < cont1) == False
+(5 == stato) == True
+(1 == reset) == False
+
+Target 32 constraints:
+(6 == stato) == True
+(1 == reset) == False
+
+Target 33 constraints:
+(63 < cont1) == True
+(6 == stato) == True
+(1 == reset) == False
+
+Target 34 constraints:
+(63 < cont1) == False
+(6 == stato) == True
+(1 == reset) == False
+
+Target 36 constraints:
+(7 == stato) == True
+(1 == reset) == False
+
+Target 37 constraints:
+(0 == Extract(3, 2, r_in)) == True
+(7 == stato) == True
+(1 == reset) == False
+
+Target 38 constraints:
+(0 == Extract(3, 2, r_in)) == False
+(7 == stato) == True
+(1 == reset) == False
+
+Target 40 constraints:
+(1 == Extract(3, 2, r_in)) == True
+(0 == Extract(3, 2, r_in)) == False
+(7 == stato) == True
+(1 == reset) == False
+
+Target 41 constraints:
+(1 == Extract(3, 2, r_in)) == False
+(0 == Extract(3, 2, r_in)) == False
+(7 == stato) == True
+(1 == reset) == False
+
+Target 43 constraints:
+(2 == Extract(3, 2, r_in)) == True
+(1 == Extract(3, 2, r_in)) == False
+(0 == Extract(3, 2, r_in)) == False
+(7 == stato) == True
+(1 == reset) == False
+
+Target 44 constraints:
+(2 == Extract(3, 2, r_in)) == False
+(1 == Extract(3, 2, r_in)) == False
+(0 == Extract(3, 2, r_in)) == False
+(7 == stato) == True
+(1 == reset) == False
+
+Target 46 constraints:
+(8 == stato) == True
+(1 == reset) == False
+
+Target 47 constraints:
+(0 > cont1) == True
+(8 == stato) == True
+(1 == reset) == False
+
+Target 48 constraints:
+(0 > cont1) == False
+(8 == stato) == True
+(1 == reset) == False
+

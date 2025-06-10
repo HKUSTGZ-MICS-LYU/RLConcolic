@@ -1,0 +1,12 @@
+rst = 0, dc_en = 1, dc_block_flush = 1, dc_block_writeback = 0
+hitmiss_eval = 1, tag_v = 0
+spr_cswe = 0
+dc_en = 1, dc_block_flush = 0, dc_block_writeback = 0, dcqmem_cycstb_i = 1, dcqmem_we_i = 1
+hitmiss_eval = 1, tagcomp_miss = 1, dirty = 0, dcqmem_ci_i = 0
+biudata_valid = 1, cnt = 1100
+biudata_valid = 1, cnt = 1000
+biudata_valid = 1, cnt = 0100
+cache_dirty_needs_writeback = 1
+cache_dirty_needs_writeback = 0, cache_spr_block_flush = 0, cache_spr_block_writeback = 0
+cache_dirty_needs_writeback = 0, cache_spr_block_flush = 0, cache_spr_block_writeback = 0
+dc_en = 1, dc_block_flush = 1, dc_block_writeback = 0, tag_v = 1, dirty = 1

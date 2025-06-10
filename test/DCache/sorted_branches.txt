@@ -1,0 +1,62 @@
+[BRANCHES] Sorted Branches:
+[0]:Block ID 41 assign ID 57 at clock 15, distance is 4
+[1]:Block ID 34 assign ID 43 at clock 15, distance is 4
+[2]:Block ID 75 assign ID 121 at clock 15, distance is 4
+[3]:Block ID 74 assign ID 119 at clock 15, distance is 5
+[4]:Block ID 95 assign ID 149 at clock 15, distance is 6
+[5]:Block ID 91 assign ID 144 at clock 15, distance is 3
+[6]:Block ID 59 assign ID 92 at clock 15, distance is 1
+[7]:Block ID 58 assign ID 91 at clock 15, distance is 1
+[8]:Block ID 56 assign ID 86 at clock 15, distance is 3
+[9]:Block ID 55 assign ID 85 at clock 15, distance is 1
+[10]:Block ID 54 assign ID 84 at clock 15, distance is 2
+[11]:Block ID 61 assign ID 95 at clock 15, distance is 0
+[12]:Block ID 67 assign ID 104 at clock 15, distance is 3
+[13]:Block ID 41 assign ID 57 at clock 16, distance is 4
+[14]:Block ID 34 assign ID 43 at clock 16, distance is 4
+[15]:Block ID 75 assign ID 121 at clock 16, distance is 4
+[16]:Block ID 74 assign ID 119 at clock 16, distance is 5
+[17]:Block ID 95 assign ID 149 at clock 16, distance is 6
+[18]:Block ID 91 assign ID 144 at clock 16, distance is 3
+[19]:Block ID 59 assign ID 92 at clock 16, distance is 1
+[20]:Block ID 58 assign ID 91 at clock 16, distance is 1
+[21]:Block ID 56 assign ID 86 at clock 16, distance is 3
+[22]:Block ID 55 assign ID 85 at clock 16, distance is 1
+[23]:Block ID 54 assign ID 84 at clock 16, distance is 2
+[24]:Block ID 61 assign ID 95 at clock 16, distance is 0
+[25]:Block ID 67 assign ID 104 at clock 16, distance is 3
+[26]:Block ID 41 assign ID 57 at clock 17, distance is 4
+[27]:Block ID 38 assign ID 51 at clock 17, distance is 4
+[28]:Block ID 36 assign ID 45 at clock 17, distance is 5
+[29]:Block ID 35 assign ID 44 at clock 17, distance is 3
+[30]:Block ID 34 assign ID 43 at clock 17, distance is 4
+[31]:Block ID 75 assign ID 121 at clock 17, distance is 4
+[32]:Block ID 74 assign ID 119 at clock 17, distance is 5
+[33]:Block ID 95 assign ID 149 at clock 17, distance is 6
+[34]:Block ID 91 assign ID 144 at clock 17, distance is 3
+[35]:Block ID 54 assign ID 84 at clock 17, distance is 2
+[36]:Block ID 67 assign ID 104 at clock 17, distance is 3
+[37]:Block ID 41 assign ID 57 at clock 18, distance is 4
+[38]:Block ID 36 assign ID 45 at clock 18, distance is 5
+[39]:Block ID 35 assign ID 44 at clock 18, distance is 3
+[40]:Block ID 34 assign ID 43 at clock 18, distance is 4
+[41]:Block ID 75 assign ID 121 at clock 18, distance is 4
+[42]:Block ID 74 assign ID 119 at clock 18, distance is 5
+[43]:Block ID 95 assign ID 149 at clock 18, distance is 6
+[44]:Block ID 91 assign ID 144 at clock 18, distance is 3
+[45]:Block ID 54 assign ID 84 at clock 18, distance is 2
+[46]:Block ID 67 assign ID 104 at clock 18, distance is 3
+[STATE] State:
+addr_r: 32768
+cache_dirty_needs_writeback: 0
+cache_inhibit: 0
+cache_miss: 0
+cache_spr_block_flush: 0
+cache_spr_block_writeback: 0
+cache_wb: 0
+cnt: 0
+did_early_load_ack: 0
+hitmiss_eval: 1
+load: 1
+state: 1
+store: 0

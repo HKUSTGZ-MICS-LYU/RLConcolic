@@ -1,5 +1,9 @@
 src/__pycache__
 .vscode
 src/script.py
-test
 output
+**/target_distance.txt
+**/debug.txt
+**/sim.log
+**/conquest.txt
+**/cfg.txt

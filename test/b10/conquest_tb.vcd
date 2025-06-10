@@ -1,0 +1,150 @@
+$date
+	Thu May 29 20:03:36 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module conquest_tb $end
+$var wire 4 ! v_out [3:0] $end
+$var wire 1 " cts $end
+$var wire 1 # ctr $end
+$var reg 1 $ __obs $end
+$var reg 12 % _conc_opcode [11:0] $end
+$var reg 32 & _conc_pc [31:0] $end
+$var reg 1 ' clock $end
+$var reg 1 ( g_button $end
+$var reg 1 ) key $end
+$var reg 1 * r_button $end
+$var reg 1 + reset $end
+$var reg 1 , rtr $end
+$var reg 1 - rts $end
+$var reg 1 . start $end
+$var reg 1 / test $end
+$var reg 4 0 v_in [3:0] $end
+$scope module _conc_top_inst $end
+$var wire 1 $ __obs $end
+$var wire 1 ' clock $end
+$var wire 1 ( g_button $end
+$var wire 1 ) key $end
+$var wire 1 * r_button $end
+$var wire 1 + reset $end
+$var wire 1 , rtr $end
+$var wire 1 - rts $end
+$var wire 1 . start $end
+$var wire 1 / test $end
+$var wire 4 1 v_in [3:0] $end
+$var reg 1 # ctr $end
+$var reg 1 " cts $end
+$var reg 1 2 last_g $end
+$var reg 1 3 last_r $end
+$var reg 4 4 sign [3:0] $end
+$var reg 4 5 stato [3:0] $end
+$var reg 4 6 v_out [3:0] $end
+$var reg 1 7 voto0 $end
+$var reg 1 8 voto1 $end
+$var reg 1 9 voto2 $end
+$var reg 1 : voto3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0:
+09
+08
+07
+b0 6
+b0 5
+b0 4
+03
+02
+b0 1
+b0 0
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+b0 &
+bx %
+0$
+0#
+0"
+b0 !
+$end
+#2
+b1 &
+b10010100101 %
+1+
+1'
+#5
+0'
+#7
+b1001 0
+b1001 1
+1-
+1)
+1*
+#10
+b10 &
+bx %
+1'
+#12
+0+
+#15
+x$
+bx 0
+bx 1
+x,
+x-
+x/
+x.
+x)
+x(
+x*
+0'
+#20
+b1 5
+b11 &
+1'
+#25
+0'
+#30
+b100 &
+1'
+#35
+0'
+#40
+b101 &
+1'
+#45
+0'
+#50
+b110 &
+1'
+#55
+0'
+#60
+b111 &
+1'
+#65
+0'
+#70
+b1000 &
+1'
+#75
+0'
+#80
+b1001 &
+1'
+#82

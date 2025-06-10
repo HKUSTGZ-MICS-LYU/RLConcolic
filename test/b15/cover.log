@@ -1,0 +1,213 @@
+Generating LALR tables
+WARNING: 183 shift/reduce conflicts
+[INFO] Select the target branch from the branch_id.txt file
+[INFO] Target count: 191
+Random simulation 1 out of 3
+Random simulation 2 out of 3
+Random simulation 3 out of 3
+[COVERED] Removing target 269
+[COVERED] Removing target 267
+[COVERED] Removing target 262
+[COVERED] Removing target 260
+[COVERED] Removing target 255
+[COVERED] Removing target 253
+[COVERED] Removing target 250
+[COVERED] Removing target 249
+[COVERED] Removing target 225
+[COVERED] Removing target 222
+[COVERED] Removing target 219
+[COVERED] Removing target 216
+[COVERED] Removing target 213
+[COVERED] Removing target 210
+[COVERED] Removing target 207
+[COVERED] Removing target 195
+[COVERED] Removing target 186
+[COVERED] Removing target 168
+[COVERED] Removing target 147
+[COVERED] Removing target 141
+[COVERED] Removing target 135
+[COVERED] Removing target 132
+[COVERED] Removing target 129
+[COVERED] Removing target 123
+[COVERED] Removing target 114
+[COVERED] Removing target 111
+[COVERED] Removing target 108
+[COVERED] Removing target 106
+[COVERED] Removing target 95
+[COVERED] Removing target 94
+[COVERED] Removing target 92
+[COVERED] Removing target 91
+[COVERED] Removing target 90
+[COVERED] Removing target 89
+[COVERED] Removing target 86
+[COVERED] Removing target 85
+[COVERED] Removing target 40
+[COVERED] Removing target 39
+[COVERED] Removing target 27
+[COVERED] Removing target 25
+[COVERED] Removing target 24
+[COVERED] Removing target 22
+[COVERED] Removing target 21
+[COVERED] Removing target 20
+[COVERED] Removing target 17
+[COVERED] Removing target 14
+[COVERED] Removing target 13
+[COVERED] Removing target 7
+[COVERED] Removing target 6
+[COVERED] Removing target 5
+[COVERED] Removing target 2
+[COVERED] Removing target 1
+[TARGET] Trying to cover target 8, the assign is 22
+[COVERED] Removing target 8
+[COVERED] Removing target 248
+[COVERED] Removing target 242
+[COVERED] Removing target 233
+[COVERED] Removing target 231
+[COVERED] Removing target 224
+[COVERED] Removing target 82
+[COVERED] Removing target 80
+[COVERED] Removing target 77
+[COVERED] Removing target 74
+[COVERED] Removing target 72
+[COVERED] Removing target 60
+[COVERED] Removing target 59
+[COVERED] Removing target 57
+[COVERED] Removing target 55
+[COVERED] Removing target 10
+[TARGET] Trying to cover target 11, the assign is 25
+[COVERED] Removing target 11
+[COVERED] Removing target 37
+[COVERED] Removing target 34
+[COVERED] Removing target 33
+[COVERED] Removing target 31
+[COVERED] Removing target 28
+[TARGET] Trying to cover target 15, the assign is 33
+[COVERED] Removing target 271
+[COVERED] Removing target 264
+[COVERED] Removing target 245
+[COVERED] Removing target 244
+[COVERED] Removing target 241
+[COVERED] Removing target 105
+[COVERED] Removing target 103
+[COVERED] Removing target 102
+[COVERED] Removing target 101
+[COVERED] Removing target 99
+[COVERED] Removing target 96
+[COVERED] Removing target 83
+[COVERED] Removing target 79
+[COVERED] Removing target 76
+[COVERED] Removing target 56
+[TARGET] Trying to cover target 18, the assign is 37
+[COVERED] Removing target 138
+[COVERED] Removing target 134
+[COVERED] Removing target 110
+[COVERED] Removing target 73
+[COVERED] Removing target 70
+[COVERED] Removing target 69
+[COVERED] Removing target 66
+[COVERED] Removing target 63
+[COVERED] Removing target 62
+[COVERED] Removing target 53
+[COVERED] Removing target 52
+[COVERED] Removing target 43
+[COVERED] Removing target 42
+[TARGET] Trying to cover target 44, the assign is 71
+[COVERED] Removing target 44
+[COVERED] Removing target 46
+[TARGET] Trying to cover target 47, the assign is 74
+[COVERED] Removing target 47
+[COVERED] Removing target 49
+[TARGET] Trying to cover target 64, the assign is 100
+[COVERED] Removing target 171
+[COVERED] Removing target 167
+[TARGET] Trying to cover target 67, the assign is 104
+[COVERED] Removing target 128
+[COVERED] Removing target 107
+[TARGET] Trying to cover target 98, the assign is 176
+[COVERED] Removing target 270
+[COVERED] Removing target 204
+[COVERED] Removing target 201
+[COVERED] Removing target 200
+[COVERED] Removing target 197
+[COVERED] Removing target 194
+[TARGET] Trying to cover target 113, the assign is 210
+[COVERED] Removing target 191
+[COVERED] Removing target 188
+[COVERED] Removing target 185
+[TARGET] Trying to cover target 116, the assign is 212
+[COVERED] Removing target 116
+[COVERED] Removing target 238
+[COVERED] Removing target 235
+[COVERED] Removing target 232
+[COVERED] Removing target 218
+[COVERED] Removing target 189
+[COVERED] Removing target 119
+[TARGET] Trying to cover target 117, the assign is 213
+[COVERED] Removing target 117
+[COVERED] Removing target 263
+[TARGET] Trying to cover target 120, the assign is 215
+[COVERED] Removing target 212
+[TARGET] Trying to cover target 122, the assign is 224
+[COVERED] Removing target 164
+[COVERED] Removing target 161
+[COVERED] Removing target 159
+[COVERED] Removing target 156
+[COVERED] Removing target 155
+[COVERED] Removing target 153
+[COVERED] Removing target 149
+[COVERED] Removing target 146
+[TARGET] Trying to cover target 125, the assign is 226
+[TARGET] Trying to cover target 126, the assign is 227
+[COVERED] Removing target 126
+[TARGET] Trying to cover target 131, the assign is 240
+[TARGET] Trying to cover target 137, the assign is 248
+[COVERED] Removing target 206
+[TARGET] Trying to cover target 140, the assign is 260
+[TARGET] Trying to cover target 143, the assign is 262
+[TARGET] Trying to cover target 144, the assign is 263
+[TARGET] Trying to cover target 150, the assign is 277
+[TARGET] Trying to cover target 152, the assign is 278
+[TARGET] Trying to cover target 158, the assign is 290
+[TARGET] Trying to cover target 170, the assign is 310
+[COVERED] Removing target 203
+[TARGET] Trying to cover target 173, the assign is 312
+[TARGET] Trying to cover target 174, the assign is 313
+[TARGET] Trying to cover target 176, the assign is 322
+[TARGET] Trying to cover target 177, the assign is 323
+[TARGET] Trying to cover target 179, the assign is 325
+[COVERED] Removing target 221
+[TARGET] Trying to cover target 180, the assign is 326
+[TARGET] Trying to cover target 182, the assign is 328
+[COVERED] Removing target 209
+[TARGET] Trying to cover target 183, the assign is 329
+[TARGET] Trying to cover target 192, the assign is 352
+[TARGET] Trying to cover target 198, the assign is 364
+[TARGET] Trying to cover target 215, the assign is 401
+[TARGET] Trying to cover target 227, the assign is 426
+[TARGET] Trying to cover target 228, the assign is 428
+[TARGET] Trying to cover target 229, the assign is 429
+[TARGET] Trying to cover target 236, the assign is 438
+[TARGET] Trying to cover target 239, the assign is 442
+[TARGET] Trying to cover target 256, the assign is 469
+[TARGET] Trying to cover target 257, the assign is 471
+[TARGET] Trying to cover target 258, the assign is 473
+[TARGET] Trying to cover target 265, the assign is 487
+[TARGET] Trying to cover target 272, the assign is 503
+[TARGET] Trying to cover target 274, the assign is 509
+Traceback (most recent call last):
+  File "/Users/mengxiangchen/Documents/Code/py_Concolic/src/Concolic.py", line 198, in <module>
+    concolic.main()
+  File "/Users/mengxiangchen/Documents/Code/py_Concolic/src/Concolic.py", line 76, in main
+    self.run_concolic()
+  File "/Users/mengxiangchen/Documents/Code/py_Concolic/src/Concolic.py", line 124, in run_concolic
+    single_target_coverage()
+  File "/Users/mengxiangchen/Documents/Code/py_Concolic/src/Simulate.py", line 122, in single_target_coverage
+    while (path := concolic_iteration(path)):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mengxiangchen/Documents/Code/py_Concolic/src/Simulate.py", line 154, in concolic_iteration
+    if(find_next_cfg(init_clock, current_clock)):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mengxiangchen/Documents/Code/py_Concolic/src/Simulate.py", line 302, in find_next_cfg
+    target_state = global_variable.get_target().cnst_state
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SMTBasicBlock' object has no attribute 'cnst_state'

@@ -1,0 +1,449 @@
+
+[0]: [None] clock == 0
+[1]: [103] 0 == nloss_1
+[2]: [104] nl_1 == ZeroExt(3, 0)
+[3]: [105] 0 == play_1
+[4]: [106] 0 == wr_1
+[5]: [107] scan_1 == ZeroExt(4, 0)
+[6]: [108] max_1 == ZeroExt(4, 0)
+[7]: [109] ind_1 == ZeroExt(1, 0)
+[8]: [110] timebase_1 == ZeroExt(5, 0)
+[9]: [111] count2_1 == ZeroExt(5, 0)
+[10]: [112] sound_1 == ZeroExt(2, 0)
+[11]: [113] address_1 == ZeroExt(4, 0)
+[12]: [114] data_in_1 == ZeroExt(1, 0)
+[13]: [115] gamma_1 == ZeroExt(4, 0)
+[14]: [64] data_out_1 == ZeroExt(1, 0)
+[15]: [65] memory_1[0] == ZeroExt(1, 0)
+[16]: [66] memory_2[1] == ZeroExt(1, 0)
+[17]: [67] memory_3[2] == ZeroExt(1, 0)
+[18]: [68] memory_4[3] == ZeroExt(1, 0)
+[19]: [69] memory_5[4] == ZeroExt(1, 0)
+[20]: [70] memory_6[5] == ZeroExt(1, 0)
+[21]: [71] memory_7[6] == ZeroExt(1, 0)
+[22]: [72] memory_8[7] == ZeroExt(1, 0)
+[23]: [73] memory_9[8] == ZeroExt(1, 0)
+[24]: [74] memory_10[9] == ZeroExt(1, 0)
+[25]: [75] memory_11[10] == ZeroExt(1, 0)
+[26]: [76] memory_12[11] == ZeroExt(1, 0)
+[27]: [77] memory_13[12] == ZeroExt(1, 0)
+[28]: [78] memory_14[13] == ZeroExt(1, 0)
+[29]: [79] memory_15[14] == ZeroExt(1, 0)
+[30]: [80] memory_16[15] == ZeroExt(1, 0)
+[31]: [81] memory_17[16] == ZeroExt(1, 0)
+[32]: [82] memory_18[17] == ZeroExt(1, 0)
+[33]: [83] memory_19[18] == ZeroExt(1, 0)
+[34]: [84] memory_20[19] == ZeroExt(1, 0)
+[35]: [85] memory_21[20] == ZeroExt(1, 0)
+[36]: [86] memory_22[21] == ZeroExt(1, 0)
+[37]: [87] memory_23[22] == ZeroExt(1, 0)
+[38]: [88] memory_24[23] == ZeroExt(1, 0)
+[39]: [89] memory_25[24] == ZeroExt(1, 0)
+[40]: [90] memory_26[25] == ZeroExt(1, 0)
+[41]: [91] memory_27[26] == ZeroExt(1, 0)
+[42]: [92] memory_28[27] == ZeroExt(1, 0)
+[43]: [93] memory_29[28] == ZeroExt(1, 0)
+[44]: [94] memory_30[29] == ZeroExt(1, 0)
+[45]: [95] memory_31[30] == ZeroExt(1, 0)
+[46]: [96] memory_32[31] == ZeroExt(1, 0)
+[47]: [55] count_1 == ZeroExt(1, 0)
+[48]: [56] num_1 == ZeroExt(1, 0)
+[49]: [2] 0 == s_1
+[50]: [3] 0 == speaker_1
+[51]: [4] counter_1 == ZeroExt(2, 0)
+
+[52]: [None] clock == 1
+[53]: [6] If(0 != play_1 == True, 1, 0) == If(False == True, 1, 0)
+[54]: [51] counter_2 == ZeroExt(2, 0)
+[55]: [52] 0 == speaker_2
+[56]: [58] If((3 == count_1) == True, 1, 0) == If(False == True, 1, 0)
+[57]: [60] count_2 == count_1 + ZeroExt(1, 1)
+[58]: [61] num_2 == count_2
+[59]: [97] data_out_2 == memory_32[address_1]
+[60]: [99] If(0 != wr_1 == True, 1, 0) == If(False == True, 1, 0)
+[61]: [116] If((1 == start_1) == True, 1, 0) == If(True == True, 1, 0)
+[62]: [118] gamma_2 == ZeroExt(4, 1)
+[63]: [122] If((gamma_2 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[64]: [123] 0 == nloss_2
+[65]: [124] nl_2 == ZeroExt(3, 0)
+[66]: [125] 0 == play_2
+[67]: [126] 0 == wr_2
+[68]: [127] max_2 == ZeroExt(4, 0)
+[69]: [128] 33 == timebase_2
+[70]: [129] gamma_3 == ZeroExt(3, 2)
+
+[71]: [None] clock == 2
+[72]: [116] If((1 == start_2) == True, 1, 0) == If(True == True, 1, 0)
+[73]: [118] gamma_4 == ZeroExt(4, 1)
+[74]: [122] If((gamma_4 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[75]: [123] 0 == nloss_3
+[76]: [124] nl_3 == ZeroExt(3, 0)
+[77]: [125] 0 == play_3
+[78]: [126] 0 == wr_3
+[79]: [127] max_3 == ZeroExt(4, 0)
+[80]: [128] 33 == timebase_3
+[81]: [129] gamma_5 == ZeroExt(3, 2)
+[82]: [97] data_out_3 == memory_32[address_1]
+[83]: [99] If(0 != wr_2 == True, 1, 0) == If(False == True, 1, 0)
+[84]: [58] If((3 == count_2) == True, 1, 0) == If(False == True, 1, 0)
+[85]: [60] count_3 == count_2 + ZeroExt(1, 1)
+[86]: [61] num_3 == count_3
+[87]: [6] If(0 != play_2 == True, 1, 0) == If(False == True, 1, 0)
+[88]: [51] counter_3 == ZeroExt(2, 0)
+[89]: [52] 0 == speaker_3
+
+[90]: [None] clock == 3
+[91]: [6] If(0 != play_3 == True, 1, 0) == If(False == True, 1, 0)
+[92]: [51] counter_4 == ZeroExt(2, 0)
+[93]: [52] 0 == speaker_4
+[94]: [58] If((3 == count_3) == True, 1, 0) == If(False == True, 1, 0)
+[95]: [60] count_4 == count_3 + ZeroExt(1, 1)
+[96]: [61] num_4 == count_4
+[97]: [97] data_out_4 == memory_32[address_1]
+[98]: [99] If(0 != wr_3 == True, 1, 0) == If(False == True, 1, 0)
+[99]: [117] If((1 == start_3) == True, 1, 0) == If(False == True, 1, 0)
+[100]: [119] gamma_6 == gamma_5
+[101]: [130] If((gamma_6 == ZeroExt(3, 2)) == True, 1, 0) == If(True == True, 1, 0)
+[102]: [131] scan_2 == ZeroExt(4, 0)
+[103]: [132] 1 == wr_4
+[104]: [133] address_2 == max_3
+[105]: [134] data_in_2 == num_3
+[106]: [135] gamma_7 == ZeroExt(3, 3)
+
+[107]: [None] clock == 4
+[108]: [117] If((1 == start_4) == True, 1, 0) == If(False == True, 1, 0)
+[109]: [119] gamma_8 == gamma_7
+[110]: [136] If((gamma_8 == ZeroExt(3, 3)) == True, 1, 0) == If(True == True, 1, 0)
+[111]: [137] 0 == wr_5
+[112]: [138] address_3 == scan_2
+[113]: [139] gamma_9 == ZeroExt(2, 4)
+[114]: [97] data_out_5 == memory_32[address_2]
+[115]: [98] If(0 != wr_4 == True, 1, 0) == If(True == True, 1, 0)
+[116]: [100] memory_33[address_4] == data_in_2
+[117]: [57] If((3 == count_4) == True, 1, 0) == If(True == True, 1, 0)
+[118]: [59] count_5 == ZeroExt(1, 0)
+[119]: [61] num_5 == count_5
+[120]: [6] If(0 != play_3 == True, 1, 0) == If(False == True, 1, 0)
+[121]: [51] counter_5 == ZeroExt(2, 0)
+[122]: [52] 0 == speaker_5
+
+[123]: [None] clock == 5
+[124]: [6] If(0 != play_3 == True, 1, 0) == If(False == True, 1, 0)
+[125]: [51] counter_6 == ZeroExt(2, 0)
+[126]: [52] 0 == speaker_6
+[127]: [58] If((3 == count_5) == True, 1, 0) == If(False == True, 1, 0)
+[128]: [60] count_6 == count_5 + ZeroExt(1, 1)
+[129]: [61] num_6 == count_6
+[130]: [97] data_out_6 == memory_33[address_4]
+[131]: [99] If(0 != wr_5 == True, 1, 0) == If(False == True, 1, 0)
+[132]: [117] If((1 == start_5) == True, 1, 0) == If(False == True, 1, 0)
+[133]: [119] gamma_10 == gamma_9
+[134]: [140] If((gamma_10 == ZeroExt(2, 4)) == True, 1, 0) == If(True == True, 1, 0)
+[135]: [141] gamma_11 == ZeroExt(2, 5)
+
+[136]: [None] clock == 6
+[137]: [117] If((1 == start_6) == True, 1, 0) == If(False == True, 1, 0)
+[138]: [119] gamma_12 == gamma_11
+[139]: [142] If((gamma_12 == ZeroExt(2, 5)) == True, 1, 0) == If(True == True, 1, 0)
+[140]: [143] 1 == arr_nl_4[data_out_7]
+[141]: [144] count2_2 == timebase_3
+[142]: [145] 1 == play_4
+[143]: [146] sound_2 == Concat(0, data_out_6)
+[144]: [147] gamma_13 == ZeroExt(2, 6)
+[145]: [97] data_out_8 == memory_33[address_4]
+[146]: [99] If(0 != wr_5 == True, 1, 0) == If(False == True, 1, 0)
+[147]: [58] If((3 == count_6) == True, 1, 0) == If(False == True, 1, 0)
+[148]: [60] count_7 == count_6 + ZeroExt(1, 1)
+[149]: [61] num_7 == count_7
+[150]: [6] If(0 != play_3 == True, 1, 0) == If(False == True, 1, 0)
+[151]: [51] counter_7 == ZeroExt(2, 0)
+[152]: [52] 0 == speaker_7
+
+[153]: [None] clock == 7
+[154]: [5] If(0 != play_4 == True, 1, 0) == If(True == True, 1, 0)
+[155]: [21] If((sound_2 == ZeroExt(1, 2)) == True, 1, 0) == If(True == True, 1, 0)
+[156]: [23] If(UGT(counter_7, 4) == True, 1, 0) == If(False == True, 1, 0)
+[157]: [27] counter_8 == counter_7 + ZeroExt(2, 1)
+[158]: [58] If((3 == count_7) == True, 1, 0) == If(False == True, 1, 0)
+[159]: [60] count_8 == count_7 + ZeroExt(1, 1)
+[160]: [61] num_8 == count_8
+[161]: [97] data_out_9 == memory_33[address_4]
+[162]: [99] If(0 != wr_5 == True, 1, 0) == If(False == True, 1, 0)
+[163]: [116] If((1 == start_7) == True, 1, 0) == If(True == True, 1, 0)
+[164]: [118] gamma_14 == ZeroExt(4, 1)
+[165]: [122] If((gamma_14 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[166]: [123] 0 == nloss_4
+[167]: [124] nl_5 == ZeroExt(3, 0)
+[168]: [125] 0 == play_5
+[169]: [126] 0 == wr_6
+[170]: [127] max_4 == ZeroExt(4, 0)
+[171]: [128] 33 == timebase_4
+[172]: [129] gamma_15 == ZeroExt(3, 2)
+
+[173]: [None] clock == 8
+[174]: [116] If((1 == start_8) == True, 1, 0) == If(True == True, 1, 0)
+[175]: [118] gamma_16 == ZeroExt(4, 1)
+[176]: [122] If((gamma_16 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[177]: [123] 0 == nloss_5
+[178]: [124] nl_6 == ZeroExt(3, 0)
+[179]: [125] 0 == play_6
+[180]: [126] 0 == wr_7
+[181]: [127] max_5 == ZeroExt(4, 0)
+[182]: [128] 33 == timebase_5
+[183]: [129] gamma_17 == ZeroExt(3, 2)
+[184]: [97] data_out_10 == memory_33[address_4]
+[185]: [99] If(0 != wr_6 == True, 1, 0) == If(False == True, 1, 0)
+[186]: [57] If((3 == count_8) == True, 1, 0) == If(True == True, 1, 0)
+[187]: [59] count_9 == ZeroExt(1, 0)
+[188]: [61] num_9 == count_9
+[189]: [6] If(0 != play_5 == True, 1, 0) == If(False == True, 1, 0)
+[190]: [51] counter_9 == ZeroExt(2, 0)
+[191]: [52] 0 == speaker_8
+
+[192]: [None] clock == 9
+[193]: [6] If(0 != play_6 == True, 1, 0) == If(False == True, 1, 0)
+[194]: [51] counter_10 == ZeroExt(2, 0)
+[195]: [52] 0 == speaker_9
+[196]: [58] If((3 == count_9) == True, 1, 0) == If(False == True, 1, 0)
+[197]: [60] count_10 == count_9 + ZeroExt(1, 1)
+[198]: [61] num_10 == count_10
+[199]: [97] data_out_11 == memory_33[address_4]
+[200]: [99] If(0 != wr_7 == True, 1, 0) == If(False == True, 1, 0)
+[201]: [117] If((1 == start_9) == True, 1, 0) == If(False == True, 1, 0)
+[202]: [119] gamma_18 == gamma_17
+[203]: [130] If((gamma_18 == ZeroExt(3, 2)) == True, 1, 0) == If(True == True, 1, 0)
+[204]: [131] scan_3 == ZeroExt(4, 0)
+[205]: [132] 1 == wr_8
+[206]: [133] address_5 == max_5
+[207]: [134] data_in_3 == num_9
+[208]: [135] gamma_19 == ZeroExt(3, 3)
+
+[209]: [None] clock == 10
+[210]: [116] If((1 == start_10) == True, 1, 0) == If(True == True, 1, 0)
+[211]: [118] gamma_20 == ZeroExt(4, 1)
+[212]: [122] If((gamma_20 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[213]: [123] 0 == nloss_6
+[214]: [124] nl_7 == ZeroExt(3, 0)
+[215]: [125] 0 == play_7
+[216]: [126] 0 == wr_9
+[217]: [127] max_6 == ZeroExt(4, 0)
+[218]: [128] 33 == timebase_6
+[219]: [129] gamma_21 == ZeroExt(3, 2)
+[220]: [97] data_out_12 == memory_33[address_5]
+[221]: [98] If(0 != wr_8 == True, 1, 0) == If(True == True, 1, 0)
+[222]: [100] memory_34[address_6] == data_in_3
+[223]: [58] If((3 == count_10) == True, 1, 0) == If(False == True, 1, 0)
+[224]: [60] count_11 == count_10 + ZeroExt(1, 1)
+[225]: [61] num_11 == count_11
+[226]: [6] If(0 != play_6 == True, 1, 0) == If(False == True, 1, 0)
+[227]: [51] counter_11 == ZeroExt(2, 0)
+[228]: [52] 0 == speaker_10
+
+[229]: [None] clock == 11
+[230]: [6] If(0 != play_7 == True, 1, 0) == If(False == True, 1, 0)
+[231]: [51] counter_12 == ZeroExt(2, 0)
+[232]: [52] 0 == speaker_11
+[233]: [58] If((3 == count_11) == True, 1, 0) == If(False == True, 1, 0)
+[234]: [60] count_12 == count_11 + ZeroExt(1, 1)
+[235]: [61] num_12 == count_12
+[236]: [97] data_out_13 == memory_34[address_6]
+[237]: [99] If(0 != wr_9 == True, 1, 0) == If(False == True, 1, 0)
+[238]: [116] If((1 == start_11) == True, 1, 0) == If(True == True, 1, 0)
+[239]: [118] gamma_22 == ZeroExt(4, 1)
+[240]: [122] If((gamma_22 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[241]: [123] 0 == nloss_7
+[242]: [124] nl_8 == ZeroExt(3, 0)
+[243]: [125] 0 == play_8
+[244]: [126] 0 == wr_10
+[245]: [127] max_7 == ZeroExt(4, 0)
+[246]: [128] 33 == timebase_7
+[247]: [129] gamma_23 == ZeroExt(3, 2)
+
+[248]: [None] clock == 12
+[249]: [117] If((1 == start_12) == True, 1, 0) == If(False == True, 1, 0)
+[250]: [119] gamma_24 == gamma_23
+[251]: [130] If((gamma_24 == ZeroExt(3, 2)) == True, 1, 0) == If(True == True, 1, 0)
+[252]: [131] scan_4 == ZeroExt(4, 0)
+[253]: [132] 1 == wr_11
+[254]: [133] address_7 == max_7
+[255]: [134] data_in_4 == num_12
+[256]: [135] gamma_25 == ZeroExt(3, 3)
+[257]: [97] data_out_14 == memory_34[address_6]
+[258]: [99] If(0 != wr_10 == True, 1, 0) == If(False == True, 1, 0)
+[259]: [57] If((3 == count_12) == True, 1, 0) == If(True == True, 1, 0)
+[260]: [59] count_13 == ZeroExt(1, 0)
+[261]: [61] num_13 == count_13
+[262]: [6] If(0 != play_8 == True, 1, 0) == If(False == True, 1, 0)
+[263]: [51] counter_13 == ZeroExt(2, 0)
+[264]: [52] 0 == speaker_12
+
+[265]: [None] clock == 13
+[266]: [6] If(0 != play_8 == True, 1, 0) == If(False == True, 1, 0)
+[267]: [51] counter_14 == ZeroExt(2, 0)
+[268]: [52] 0 == speaker_13
+[269]: [58] If((3 == count_13) == True, 1, 0) == If(False == True, 1, 0)
+[270]: [60] count_14 == count_13 + ZeroExt(1, 1)
+[271]: [61] num_14 == count_14
+[272]: [97] data_out_15 == memory_34[address_7]
+[273]: [98] If(0 != wr_11 == True, 1, 0) == If(True == True, 1, 0)
+[274]: [100] memory_35[address_8] == data_in_4
+[275]: [117] If((1 == start_13) == True, 1, 0) == If(False == True, 1, 0)
+[276]: [119] gamma_26 == gamma_25
+[277]: [136] If((gamma_26 == ZeroExt(3, 3)) == True, 1, 0) == If(True == True, 1, 0)
+[278]: [137] 0 == wr_12
+[279]: [138] address_9 == scan_4
+[280]: [139] gamma_27 == ZeroExt(2, 4)
+
+[281]: [None] clock == 14
+[282]: [116] If((1 == start_14) == True, 1, 0) == If(True == True, 1, 0)
+[283]: [118] gamma_28 == ZeroExt(4, 1)
+[284]: [122] If((gamma_28 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[285]: [123] 0 == nloss_8
+[286]: [124] nl_9 == ZeroExt(3, 0)
+[287]: [125] 0 == play_9
+[288]: [126] 0 == wr_13
+[289]: [127] max_8 == ZeroExt(4, 0)
+[290]: [128] 33 == timebase_8
+[291]: [129] gamma_29 == ZeroExt(3, 2)
+[292]: [97] data_out_16 == memory_35[address_9]
+[293]: [99] If(0 != wr_12 == True, 1, 0) == If(False == True, 1, 0)
+[294]: [58] If((3 == count_14) == True, 1, 0) == If(False == True, 1, 0)
+[295]: [60] count_15 == count_14 + ZeroExt(1, 1)
+[296]: [61] num_15 == count_15
+[297]: [6] If(0 != play_8 == True, 1, 0) == If(False == True, 1, 0)
+[298]: [51] counter_15 == ZeroExt(2, 0)
+[299]: [52] 0 == speaker_14
+
+[300]: [None] clock == 15
+[301]: [6] If(0 != play_9 == True, 1, 0) == If(False == True, 1, 0)
+[302]: [51] counter_16 == ZeroExt(2, 0)
+[303]: [52] 0 == speaker_15
+[304]: [58] If((3 == count_15) == True, 1, 0) == If(False == True, 1, 0)
+[305]: [60] count_16 == count_15 + ZeroExt(1, 1)
+[306]: [61] num_16 == count_16
+[307]: [97] data_out_17 == memory_35[address_9]
+[308]: [99] If(0 != wr_13 == True, 1, 0) == If(False == True, 1, 0)
+[309]: [116] If((1 == start_15) == True, 1, 0) == If(True == True, 1, 0)
+[310]: [118] gamma_30 == ZeroExt(4, 1)
+[311]: [122] If((gamma_30 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[312]: [123] 0 == nloss_9
+[313]: [124] nl_10 == ZeroExt(3, 0)
+[314]: [125] 0 == play_10
+[315]: [126] 0 == wr_14
+[316]: [127] max_9 == ZeroExt(4, 0)
+[317]: [128] 33 == timebase_9
+[318]: [129] gamma_31 == ZeroExt(3, 2)
+
+[319]: [None] clock == 16
+[320]: [116] If((1 == start_16) == True, 1, 0) == If(True == True, 1, 0)
+[321]: [118] gamma_32 == ZeroExt(4, 1)
+[322]: [122] If((gamma_32 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[323]: [123] 0 == nloss_10
+[324]: [124] nl_11 == ZeroExt(3, 0)
+[325]: [125] 0 == play_11
+[326]: [126] 0 == wr_15
+[327]: [127] max_10 == ZeroExt(4, 0)
+[328]: [128] 33 == timebase_10
+[329]: [129] gamma_33 == ZeroExt(3, 2)
+[330]: [97] data_out_18 == memory_35[address_9]
+[331]: [99] If(0 != wr_14 == True, 1, 0) == If(False == True, 1, 0)
+[332]: [57] If((3 == count_16) == True, 1, 0) == If(True == True, 1, 0)
+[333]: [59] count_17 == ZeroExt(1, 0)
+[334]: [61] num_17 == count_17
+[335]: [6] If(0 != play_10 == True, 1, 0) == If(False == True, 1, 0)
+[336]: [51] counter_17 == ZeroExt(2, 0)
+[337]: [52] 0 == speaker_16
+
+[338]: [None] clock == 17
+[339]: [6] If(0 != play_11 == True, 1, 0) == If(False == True, 1, 0)
+[340]: [51] counter_18 == ZeroExt(2, 0)
+[341]: [52] 0 == speaker_17
+[342]: [58] If((3 == count_17) == True, 1, 0) == If(False == True, 1, 0)
+[343]: [60] count_18 == count_17 + ZeroExt(1, 1)
+[344]: [61] num_18 == count_18
+[345]: [97] data_out_19 == memory_35[address_9]
+[346]: [99] If(0 != wr_15 == True, 1, 0) == If(False == True, 1, 0)
+[347]: [116] If((1 == start_17) == True, 1, 0) == If(True == True, 1, 0)
+[348]: [118] gamma_34 == ZeroExt(4, 1)
+[349]: [122] If((gamma_34 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[350]: [123] 0 == nloss_11
+[351]: [124] nl_12 == ZeroExt(3, 0)
+[352]: [125] 0 == play_12
+[353]: [126] 0 == wr_16
+[354]: [127] max_11 == ZeroExt(4, 0)
+[355]: [128] 33 == timebase_11
+[356]: [129] gamma_35 == ZeroExt(3, 2)
+
+[357]: [None] clock == 18
+[358]: [117] If((1 == start_18) == True, 1, 0) == If(False == True, 1, 0)
+[359]: [119] gamma_36 == gamma_35
+[360]: [130] If((gamma_36 == ZeroExt(3, 2)) == True, 1, 0) == If(True == True, 1, 0)
+[361]: [131] scan_5 == ZeroExt(4, 0)
+[362]: [132] 1 == wr_17
+[363]: [133] address_10 == max_11
+[364]: [134] data_in_5 == num_18
+[365]: [135] gamma_37 == ZeroExt(3, 3)
+[366]: [97] data_out_20 == memory_35[address_9]
+[367]: [99] If(0 != wr_16 == True, 1, 0) == If(False == True, 1, 0)
+[368]: [58] If((3 == count_18) == True, 1, 0) == If(False == True, 1, 0)
+[369]: [60] count_19 == count_18 + ZeroExt(1, 1)
+[370]: [61] num_19 == count_19
+[371]: [6] If(0 != play_12 == True, 1, 0) == If(False == True, 1, 0)
+[372]: [51] counter_19 == ZeroExt(2, 0)
+[373]: [52] 0 == speaker_18
+
+[374]: [None] clock == 19
+[375]: [6] If(0 != play_12 == True, 1, 0) == If(False == True, 1, 0)
+[376]: [51] counter_20 == ZeroExt(2, 0)
+[377]: [52] 0 == speaker_19
+[378]: [58] If((3 == count_19) == True, 1, 0) == If(False == True, 1, 0)
+[379]: [60] count_20 == count_19 + ZeroExt(1, 1)
+[380]: [61] num_20 == count_20
+[381]: [97] data_out_21 == memory_35[address_10]
+[382]: [98] If(0 != wr_17 == True, 1, 0) == If(True == True, 1, 0)
+[383]: [100] memory_36[address_11] == data_in_5
+[384]: [116] If((1 == start_19) == True, 1, 0) == If(True == True, 1, 0)
+[385]: [118] gamma_38 == ZeroExt(4, 1)
+[386]: [122] If((gamma_38 == ZeroExt(4, 1)) == True, 1, 0) == If(True == True, 1, 0)
+[387]: [123] 0 == nloss_12
+[388]: [124] nl_13 == ZeroExt(3, 0)
+[389]: [125] 0 == play_13
+[390]: [126] 0 == wr_18
+[391]: [127] max_12 == ZeroExt(4, 0)
+[392]: [128] 33 == timebase_12
+[393]: [129] gamma_39 == ZeroExt(3, 2)
+
+[394]: [None] clock == 20
+[395]: [117] If((1 == start_20) == True, 1, 0) == If(False == True, 1, 0)
+[396]: [119] gamma_40 == gamma_39
+[397]: [130] If((gamma_40 == ZeroExt(3, 2)) == True, 1, 0) == If(True == True, 1, 0)
+[398]: [131] scan_6 == ZeroExt(4, 0)
+[399]: [132] 1 == wr_19
+[400]: [133] address_12 == max_12
+[401]: [134] data_in_6 == num_20
+[402]: [135] gamma_41 == ZeroExt(3, 3)
+[403]: [97] data_out_22 == memory_36[address_11]
+[404]: [99] If(0 != wr_18 == True, 1, 0) == If(False == True, 1, 0)
+[405]: [57] If((3 == count_20) == True, 1, 0) == If(True == True, 1, 0)
+[406]: [59] count_21 == ZeroExt(1, 0)
+[407]: [61] num_21 == count_21
+[408]: [6] If(0 != play_13 == True, 1, 0) == If(False == True, 1, 0)
+[409]: [51] counter_21 == ZeroExt(2, 0)
+[410]: [52] 0 == speaker_20
+
+[411]: [None] clock == 21
+[412]: [6] If(0 != play_13 == True, 1, 0) == If(False == True, 1, 0)
+[413]: [51] counter_22 == ZeroExt(2, 0)
+[414]: [52] 0 == speaker_21
+[415]: [58] If((3 == count_21) == True, 1, 0) == If(False == True, 1, 0)
+[416]: [60] count_22 == count_21 + ZeroExt(1, 1)
+[417]: [61] num_22 == count_22
+[418]: [97] data_out_23 == memory_36[address_12]
+[419]: [98] If(0 != wr_19 == True, 1, 0) == If(True == True, 1, 0)
+[420]: [100] memory_37[address_13] == data_in_6
+[421]: [117] If((1 == start_21) == True, 1, 0) == If(False == True, 1, 0)
+[422]: [119] gamma_42 == gamma_41
+[423]: [136] If((gamma_42 == ZeroExt(3, 3)) == True, 1, 0) == If(True == True, 1, 0)
+[424]: [137] 0 == wr_20
+[425]: [138] address_14 == scan_6
+[426]: [139] gamma_43 == ZeroExt(2, 4)

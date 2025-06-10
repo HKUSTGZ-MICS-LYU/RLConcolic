@@ -1,0 +1,117 @@
+$date
+	Thu May 29 18:40:43 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module conquest_tb $end
+$var wire 1 ! overflw $end
+$var wire 1 " outp $end
+$var reg 1 # __obs $end
+$var reg 3 $ _conc_opcode [2:0] $end
+$var reg 32 % _conc_pc [31:0] $end
+$var reg 1 & clock $end
+$var reg 1 ' line1 $end
+$var reg 1 ( line2 $end
+$var reg 1 ) reset $end
+$scope module _conc_top_inst $end
+$var wire 1 # __obs $end
+$var wire 1 & clock $end
+$var wire 1 ' line1 $end
+$var wire 1 ( line2 $end
+$var wire 1 ) reset $end
+$var reg 1 " outp $end
+$var reg 1 ! overflw $end
+$var reg 3 * stato [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 *
+0)
+0(
+0'
+0&
+b0 %
+bx $
+0#
+0"
+0!
+$end
+#2
+b1 %
+b110 $
+1)
+1&
+#5
+0&
+#7
+1#
+1(
+#10
+b10 %
+b111 $
+1&
+#12
+0)
+#15
+1'
+0&
+#20
+1"
+b100 *
+b11 %
+b1 $
+1&
+#25
+0#
+0(
+0&
+#30
+0"
+b101 *
+b100 %
+bx $
+1&
+#35
+x#
+x(
+x'
+0&
+#40
+x"
+b110 *
+b101 %
+1&
+#45
+0&
+#50
+b0 *
+b110 %
+1&
+#55
+0&
+#60
+b1 *
+b111 %
+1&
+#65
+0&
+#70
+b10 *
+b1000 %
+1&
+#75
+0&
+#80
+b110 *
+b1001 %
+1&
+#82

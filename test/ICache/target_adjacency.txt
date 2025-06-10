@@ -1,0 +1,44 @@
+Block 0 distance: 999.
+Block 1 distance: 999.
+Block 2 distance: 999.
+Block 3 distance: 999.
+Block 4 distance: 999.
+Block 5 distance: 999.
+Block 6 distance: 999.
+Block 7 distance: 999.
+Block 8 distance: 2.
+Block 9 distance: 999. Assign: 8.
+Block 10 distance: 1. Assign: 9.
+Block 11 distance: 999.
+Block 12 distance: 999.
+Block 13 distance: 999. Assign: 16.
+Block 14 distance: 999. Assign: 17.
+Block 15 distance: 999. Assign: 18.
+Block 16 distance: 999.
+Block 17 distance: 999. Assign: 27.
+Block 18 distance: 999. Assign: 28.
+Block 19 distance: 999. Assign: 29.
+Block 20 distance: 999.
+Block 21 distance: 999. Assign: 31.
+Block 22 distance: 999. Assign: 32.
+Block 23 distance: 999.
+Block 24 distance: 999. Assign: 34.
+Block 25 distance: 999. Assign: 35.
+Block 26 distance: 999.
+Block 27 distance: 999. Assign: 40.
+Block 28 distance: 999. Assign: 41.
+Block 29 distance: 999.
+Block 30 distance: 999. Assign: 47.
+Block 31 distance: 999. Assign: 48.
+Block 32 distance: 999.
+Block 33 distance: 999. Assign: 51.
+Block 34 distance: 999. Assign: 52.
+Block 35 distance: 999.
+Block 36 distance: 999. Assign: 58.
+Block 37 distance: 999. Assign: 59.
+Block 38 distance: 999. Assign: 60.
+Block 39 distance: 999.
+Block 40 distance: 999. Assign: 63.
+Block 41 distance: 999. Assign: 64.
+Block 42 distance: 999.
+Block 43 distance: 0. Assign: 69.

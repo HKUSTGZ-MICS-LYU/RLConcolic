@@ -1,0 +1,180 @@
+
+[0]: [None] clock == 0
+[1]: [2] stato_1 == 0
+[2]: [3] outp_1 == 0
+[3]: [4] overflw_1 == 0
+
+[4]: [None] clock == 1
+[5]: [5] stato_1 == 0
+[6]: [7] Not(And(line1_1 == 1, line2_1 == 1))
+[7]: [9] stato_2 == 1
+[8]: [10] outp_2 == line1_1 | line2_1
+[9]: [11] overflw_2 == 0
+
+[10]: [None] clock == 2
+[11]: [19] stato_2 == 1
+[12]: [21] Not(And(line1_2 == 1, line2_2 == 1))
+[13]: [23] stato_3 == 2
+[14]: [24] outp_3 == line1_2 | line2_2
+[15]: [25] overflw_3 == 0
+
+[16]: [None] clock == 3
+[17]: [33] stato_3 == 2
+[18]: [35] Not(And(line1_3 == 1, line2_3 == 1))
+[19]: [37] stato_4 == 6
+[20]: [38] outp_4 == line1_3 | line2_3
+[21]: [39] overflw_4 == 0
+
+[22]: [None] clock == 4
+[23]: [47] stato_4 == 6
+[24]: [49] Not(And(line1_4 == 1, line2_4 == 1))
+[25]: [51] stato_5 == 0
+[26]: [52] outp_5 == line1_4 | line2_4
+[27]: [53] overflw_5 == 0
+
+[28]: [None] clock == 5
+[29]: [5] stato_5 == 0
+[30]: [7] Not(And(line1_5 == 1, line2_5 == 1))
+[31]: [9] stato_6 == 1
+[32]: [10] outp_6 == line1_5 | line2_5
+[33]: [11] overflw_6 == 0
+
+[34]: [None] clock == 6
+[35]: [19] stato_6 == 1
+[36]: [21] Not(And(line1_6 == 1, line2_6 == 1))
+[37]: [23] stato_7 == 2
+[38]: [24] outp_7 == line1_6 | line2_6
+[39]: [25] overflw_7 == 0
+
+[40]: [None] clock == 7
+[41]: [33] stato_7 == 2
+[42]: [35] Not(And(line1_7 == 1, line2_7 == 1))
+[43]: [37] stato_8 == 6
+[44]: [38] outp_8 == line1_7 | line2_7
+[45]: [39] overflw_8 == 0
+
+[46]: [None] clock == 8
+[47]: [47] stato_8 == 6
+[48]: [49] Not(And(line1_8 == 1, line2_8 == 1))
+[49]: [51] stato_9 == 0
+[50]: [52] outp_9 == line1_8 | line2_8
+[51]: [53] overflw_9 == 0
+
+[52]: [None] clock == 9
+[53]: [5] stato_9 == 0
+[54]: [7] Not(And(line1_9 == 1, line2_9 == 1))
+[55]: [9] stato_10 == 1
+[56]: [10] outp_10 == line1_9 | line2_9
+[57]: [11] overflw_10 == 0
+
+[58]: [None] clock == 10
+[59]: [19] stato_10 == 1
+[60]: [21] Not(And(line1_10 == 1, line2_10 == 1))
+[61]: [23] stato_11 == 2
+[62]: [24] outp_11 == line1_10 | line2_10
+[63]: [25] overflw_11 == 0
+
+[64]: [None] clock == 11
+[65]: [33] stato_11 == 2
+[66]: [35] Not(And(line1_11 == 1, line2_11 == 1))
+[67]: [37] stato_12 == 6
+[68]: [38] outp_12 == line1_11 | line2_11
+[69]: [39] overflw_12 == 0
+
+[70]: [None] clock == 12
+[71]: [47] stato_12 == 6
+[72]: [49] Not(And(line1_12 == 1, line2_12 == 1))
+[73]: [51] stato_13 == 0
+[74]: [52] outp_13 == line1_12 | line2_12
+[75]: [53] overflw_13 == 0
+
+[76]: [None] clock == 13
+[77]: [5] stato_13 == 0
+[78]: [7] Not(And(line1_13 == 1, line2_13 == 1))
+[79]: [9] stato_14 == 1
+[80]: [10] outp_14 == line1_13 | line2_13
+[81]: [11] overflw_14 == 0
+
+[82]: [None] clock == 14
+[83]: [19] stato_14 == 1
+[84]: [20] And(line1_14 == 1, line2_14 == 1)
+[85]: [22] stato_15 == 5
+[86]: [24] outp_15 == line1_14 | line2_14
+[87]: [25] overflw_15 == 0
+
+[88]: [None] clock == 15
+[89]: [40] stato_15 == 5
+[90]: [41] Or(line1_15 == 1, line2_15 == 1)
+[91]: [43] stato_16 == 7
+[92]: [45] outp_16 == ~(line1_15 | line2_15)
+[93]: [46] overflw_16 == 0
+
+[94]: [None] clock == 16
+[95]: [54] stato_16 == 7
+[96]: [55] Or(line1_16 == 1, line2_16 == 1)
+[97]: [57] stato_17 == 3
+[98]: [59] outp_17 == ~(line1_16 | line2_16)
+[99]: [60] overflw_17 == 0
+
+[100]: [None] clock == 17
+[101]: [12] stato_17 == 3
+[102]: [14] Not(And(line1_17 == 1, line2_17 == 1))
+[103]: [16] stato_18 == 1
+[104]: [17] outp_18 == line1_17 | line2_17
+[105]: [18] overflw_18 == 1
+
+[106]: [None] clock == 18
+[107]: [19] stato_18 == 1
+[108]: [21] Not(And(line1_18 == 1, line2_18 == 1))
+[109]: [23] stato_19 == 2
+[110]: [24] outp_19 == line1_18 | line2_18
+[111]: [25] overflw_19 == 0
+
+[112]: [None] clock == 19
+[113]: [33] stato_19 == 2
+[114]: [35] Not(And(line1_19 == 1, line2_19 == 1))
+[115]: [37] stato_20 == 6
+[116]: [38] outp_20 == line1_19 | line2_19
+[117]: [39] overflw_20 == 0
+
+[118]: [None] clock == 20
+[119]: [47] stato_20 == 6
+[120]: [49] Not(And(line1_20 == 1, line2_20 == 1))
+[121]: [51] stato_21 == 0
+[122]: [52] outp_21 == line1_20 | line2_20
+[123]: [53] overflw_21 == 0
+
+[124]: [None] clock == 21
+[125]: [5] stato_21 == 0
+[126]: [7] Not(And(line1_21 == 1, line2_21 == 1))
+[127]: [9] stato_22 == 1
+[128]: [10] outp_22 == line1_21 | line2_21
+[129]: [11] overflw_22 == 0
+
+[130]: [None] clock == 22
+[131]: [19] stato_22 == 1
+[132]: [21] Not(And(line1_22 == 1, line2_22 == 1))
+[133]: [23] stato_23 == 2
+[134]: [24] outp_23 == line1_22 | line2_22
+[135]: [25] overflw_23 == 0
+
+[136]: [None] clock == 23
+[137]: [33] stato_23 == 2
+[138]: [35] Not(And(line1_23 == 1, line2_23 == 1))
+[139]: [37] stato_24 == 6
+[140]: [38] outp_24 == line1_23 | line2_23
+[141]: [39] overflw_24 == 0
+
+[142]: [None] clock == 24
+[143]: [47] stato_24 == 6
+[144]: [48] And(line1_24 == 1, line2_24 == 1)
+[145]: [50] stato_25 == 3
+[146]: [52] outp_25 == line1_24 | line2_24
+[147]: [53] overflw_25 == 0
+
+[148]: [None] clock == 25
+[149]: [12] stato_25 == 3
+[150]: [14] Not(And(line1_25 == 1, line2_25 == 1))
+[151]: [16] stato_26 == 1
+[152]: [17] outp_26 == line1_25 | line2_25
+[153]: [18] overflw_26 == 1
