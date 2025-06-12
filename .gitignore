@@ -7,3 +7,5 @@ output
 **/sim.log
 **/conquest.txt
 **/cfg.txt
+.conda
+.pytest_cache
