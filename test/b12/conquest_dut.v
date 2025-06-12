@@ -1,5 +1,5 @@
 //Following code is from line 1
-module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
+module b12(speaker, k, start, nl, clock, reset, nloss, __obs);
 
     input               clock;
     input               reset;
@@ -315,7 +315,7 @@ module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
                       5:
                         begin
                           $display(";A 142");                          //assertion( gamma == ZeroExt(2, 5) = True) 142
-                            nl[data_out] <= 1;  $display(";A 143");  //assertion( arr_nl_79[data_out] = 1) 143
+                            nl[data_out] <= 1;  $display(";A 143");  //assertion( arr_nl_109[data_out] = 1) 143
                             count2 = timebase;  $display(";A 144");  //assertion( count2 = timebase) 144
                             play <= 1;  $display(";A 145");  //assertion( play = 1) 145
                             sound <= {1'b0, data_out};  $display(";A 146");  //assertion( sound = Concat(0, data_out)) 146
@@ -489,7 +489,7 @@ module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
                       11:
                         begin
                           $display(";A 226");                          //assertion( gamma == ZeroExt(1, 11) = True) 226
-                            nl[ind] <= 1;  $display(";A 227");  //assertion( arr_nl_79[ind] = 1) 227
+                            nl[ind] <= 1;  $display(";A 227");  //assertion( arr_nl_109[ind] = 1) 227
                             gamma = 12;  $display(";A 228");  //assertion( gamma = 12) 228
                         end
                       12:
@@ -552,7 +552,7 @@ module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
                       14:
                         begin
                           $display(";A 256");                          //assertion( gamma == ZeroExt(1, 14) = True) 256
-                            nl[ind] <= 1;  $display(";A 257");  //assertion( arr_nl_79[ind] = 1) 257
+                            nl[ind] <= 1;  $display(";A 257");  //assertion( arr_nl_109[ind] = 1) 257
                             gamma = 15;  $display(";A 258");  //assertion( gamma = 15) 258
                         end
                       15:
@@ -603,7 +603,7 @@ module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
                       19:
                         begin
                           $display(";A 280");                          //assertion( 19 == gamma = True) 280
-                            nl[data_out] <= 1;  $display(";A 281");  //assertion( arr_nl_79[data_out] = 1) 281
+                            nl[data_out] <= 1;  $display(";A 281");  //assertion( arr_nl_109[data_out] = 1) 281
                             play <= 1;  $display(";A 282");  //assertion( play = 1) 282
                             sound <= {1'b0, data_out};  $display(";A 283");  //assertion( sound = Concat(0, data_out)) 283
                             count2 = timebase;  $display(";A 284");  //assertion( count2 = timebase) 284
@@ -642,7 +642,7 @@ module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
                                     else
                                         begin
                                           $display(";A 299");                                          //assertion( max != scan = False) 299
-                                            nl[data_out] <= 1;  $display(";A 302");  //assertion( arr_nl_79[data_out] = 1) 302
+                                            nl[data_out] <= 1;  $display(";A 302");  //assertion( arr_nl_109[data_out] = 1) 302
                                             play <= 1;  $display(";A 303");  //assertion( play = 1) 303
                                             sound <= 5;  $display(";A 304");  //assertion( sound = 5) 304
                                             count2 = 8;  $display(";A 305");  //assertion( count2 = 8) 305
@@ -680,7 +680,7 @@ module b12(clock, start, speaker, nl, reset, nloss, k, __obs);
                             if ((count2 == 0))
                                 begin
                                   $display(";A 319");                                  //assertion( count2 == ZeroExt(5, 0) = True) 319
-                                    nl[data_out] <= 1;  $display(";A 321");  //assertion( arr_nl_79[data_out] = 1) 321
+                                    nl[data_out] <= 1;  $display(";A 321");  //assertion( arr_nl_109[data_out] = 1) 321
                                     play <= 1;  $display(";A 322");  //assertion( play = 1) 322
                                     sound <= 5;  $display(";A 323");  //assertion( sound = 5) 323
                                     count2 = 8;  $display(";A 324");  //assertion( count2 = 8) 324

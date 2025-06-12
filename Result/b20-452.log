@@ -1,0 +1,1871 @@
+Thu Jun 12 10:06:11 2025       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A30          Off  | 00000000:34:00.0 Off |                    0 |
+| N/A   57C    P0   190W / 165W |  22180MiB / 24576MiB |     96%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A     27858      C   /opt/conda/bin/python           22178MiB |
++-----------------------------------------------------------------------------+
+Generating LALR tables
+WARNING: 183 shift/reduce conflicts
+[INFO] Running command: iverilog -o ./test/b20/conc_run.vvp ./test/b20/conquest_dut.v ./test/b20/conquest_tb.v
+[INFO] Select the target branch from the branch_id.txt file
+[INFO] Target count: 456
+建立约束耗时 0.37
+[COVERED] Removing target 604, the assign is 1034, at clock 2
+[COVERED] Removing target 603, the assign is 1033, at clock 0
+[COVERED] Removing target 527, the assign is 903, at clock 9
+[COVERED] Removing target 526, the assign is 901, at clock 5
+[COVERED] Removing target 524, the assign is 897, at clock 5
+[COVERED] Removing target 519, the assign is 886, at clock 5
+[COVERED] Removing target 454, the assign is 757, at clock 27
+[COVERED] Removing target 451, the assign is 749, at clock 27
+[COVERED] Removing target 447, the assign is 742, at clock 27
+[COVERED] Removing target 438, the assign is 720, at clock 13
+[COVERED] Removing target 436, the assign is 716, at clock 3
+[COVERED] Removing target 432, the assign is 703, at clock 13
+[COVERED] Removing target 431, the assign is 701, at clock 3
+[COVERED] Removing target 429, the assign is 700, at clock 3
+[COVERED] Removing target 426, the assign is 698, at clock 25
+[COVERED] Removing target 425, the assign is 697, at clock 3
+[COVERED] Removing target 423, the assign is 695, at clock 3
+[COVERED] Removing target 422, the assign is 694, at clock 9
+[COVERED] Removing target 420, the assign is 692, at clock 3
+[COVERED] Removing target 419, the assign is 691, at clock 13
+[COVERED] Removing target 417, the assign is 689, at clock 3
+[COVERED] Removing target 414, the assign is 686, at clock 5
+[COVERED] Removing target 411, the assign is 684, at clock 3
+[COVERED] Removing target 410, the assign is 683, at clock 5
+[COVERED] Removing target 405, the assign is 679, at clock 3
+[COVERED] Removing target 401, the assign is 676, at clock 3
+[COVERED] Removing target 400, the assign is 675, at clock 3
+[COVERED] Removing target 337, the assign is 599, at clock 23
+[COVERED] Removing target 336, the assign is 598, at clock 23
+[COVERED] Removing target 326, the assign is 585, at clock 21
+[COVERED] Removing target 325, the assign is 584, at clock 31
+[COVERED] Removing target 324, the assign is 583, at clock 21
+[COVERED] Removing target 321, the assign is 575, at clock 23
+[COVERED] Removing target 320, the assign is 571, at clock 35
+[COVERED] Removing target 319, the assign is 569, at clock 21
+[COVERED] Removing target 317, the assign is 568, at clock 21
+[COVERED] Removing target 315, the assign is 566, at clock 9
+[COVERED] Removing target 314, the assign is 564, at clock 23
+[COVERED] Removing target 313, the assign is 562, at clock 5
+[COVERED] Removing target 312, the assign is 560, at clock 3
+[COVERED] Removing target 309, the assign is 551, at clock 3
+[COVERED] Removing target 308, the assign is 550, at clock 23
+[COVERED] Removing target 307, the assign is 549, at clock 3
+[COVERED] Removing target 306, the assign is 542, at clock 2
+[COVERED] Removing target 303, the assign is 516, at clock 2
+[COVERED] Removing target 302, the assign is 515, at clock 0
+[COVERED] Removing target 281, the assign is 486, at clock 19
+[COVERED] Removing target 273, the assign is 475, at clock 19
+[COVERED] Removing target 266, the assign is 467, at clock 19
+[COVERED] Removing target 237, the assign is 410, at clock 39
+[COVERED] Removing target 235, the assign is 406, at clock 39
+[COVERED] Removing target 230, the assign is 395, at clock 39
+[COVERED] Removing target 154, the assign is 244, at clock 3
+[COVERED] Removing target 149, the assign is 230, at clock 3
+[COVERED] Removing target 146, the assign is 227, at clock 3
+[COVERED] Removing target 135, the assign is 201, at clock 5
+[COVERED] Removing target 130, the assign is 186, at clock 5
+[COVERED] Removing target 128, the assign is 185, at clock 5
+[COVERED] Removing target 124, the assign is 182, at clock 5
+[COVERED] Removing target 122, the assign is 180, at clock 5
+[COVERED] Removing target 121, the assign is 179, at clock 3
+[COVERED] Removing target 119, the assign is 177, at clock 3
+[COVERED] Removing target 116, the assign is 174, at clock 3
+[COVERED] Removing target 110, the assign is 169, at clock 3
+[COVERED] Removing target 106, the assign is 165, at clock 11
+[COVERED] Removing target 104, the assign is 164, at clock 3
+[COVERED] Removing target 103, the assign is 163, at clock 11
+[COVERED] Removing target 100, the assign is 161, at clock 3
+[COVERED] Removing target 99, the assign is 160, at clock 3
+[COVERED] Removing target 96, the assign is 156, at clock 41
+[COVERED] Removing target 94, the assign is 154, at clock 41
+[COVERED] Removing target 92, the assign is 152, at clock 41
+[COVERED] Removing target 83, the assign is 141, at clock 33
+[COVERED] Removing target 81, the assign is 139, at clock 33
+[COVERED] Removing target 66, the assign is 120, at clock 37
+[COVERED] Removing target 65, the assign is 119, at clock 37
+[COVERED] Removing target 58, the assign is 110, at clock 17
+[COVERED] Removing target 56, the assign is 108, at clock 17
+[COVERED] Removing target 54, the assign is 106, at clock 17
+[COVERED] Removing target 45, the assign is 95, at clock 29
+[COVERED] Removing target 43, the assign is 93, at clock 29
+[COVERED] Removing target 37, the assign is 85, at clock 15
+[COVERED] Removing target 35, the assign is 83, at clock 15
+[COVERED] Removing target 25, the assign is 70, at clock 7
+[COVERED] Removing target 23, the assign is 68, at clock 7
+[COVERED] Removing target 21, the assign is 64, at clock 17
+[COVERED] Removing target 19, the assign is 56, at clock 7
+[COVERED] Removing target 18, the assign is 54, at clock 29
+[COVERED] Removing target 16, the assign is 53, at clock 7
+[COVERED] Removing target 14, the assign is 51, at clock 7
+[COVERED] Removing target 13, the assign is 49, at clock 3
+[COVERED] Removing target 12, the assign is 47, at clock 15
+[COVERED] Removing target 11, the assign is 45, at clock 5
+[COVERED] Removing target 8, the assign is 36, at clock 5
+[COVERED] Removing target 7, the assign is 35, at clock 3
+[COVERED] Removing target 6, the assign is 34, at clock 3
+[COVERED] Removing target 5, the assign is 27, at clock 2
+[COVERED] Removing target 2, the assign is 1, at clock 2
+[COVERED] Removing target 1, the assign is 0, at clock 0
+建立约束耗时 0.37
+[COVERED] Removing target 586, the assign is 1008, at clock 35
+[COVERED] Removing target 584, the assign is 1005, at clock 27
+[COVERED] Removing target 581, the assign is 999, at clock 39
+[COVERED] Removing target 574, the assign is 990, at clock 27
+[COVERED] Removing target 571, the assign is 987, at clock 39
+[COVERED] Removing target 570, the assign is 985, at clock 39
+[COVERED] Removing target 567, the assign is 982, at clock 27
+[COVERED] Removing target 563, the assign is 975, at clock 19
+[COVERED] Removing target 562, the assign is 973, at clock 29
+[COVERED] Removing target 560, the assign is 969, at clock 19
+[COVERED] Removing target 557, the assign is 959, at clock 29
+[COVERED] Removing target 555, the assign is 958, at clock 19
+[COVERED] Removing target 540, the assign is 929, at clock 13
+[COVERED] Removing target 536, the assign is 921, at clock 13
+[COVERED] Removing target 535, the assign is 917, at clock 15
+[COVERED] Removing target 531, the assign is 910, at clock 13
+[COVERED] Removing target 503, the assign is 855, at clock 11
+[COVERED] Removing target 497, the assign is 839, at clock 11
+[COVERED] Removing target 495, the assign is 838, at clock 11
+[COVERED] Removing target 416, the assign is 688, at clock 35
+[COVERED] Removing target 413, the assign is 685, at clock 29
+[COVERED] Removing target 397, the assign is 671, at clock 33
+[COVERED] Removing target 395, the assign is 669, at clock 33
+[COVERED] Removing target 393, the assign is 667, at clock 33
+[COVERED] Removing target 384, the assign is 656, at clock 9
+[COVERED] Removing target 383, the assign is 655, at clock 41
+[COVERED] Removing target 382, the assign is 654, at clock 9
+[COVERED] Removing target 367, the assign is 635, at clock 17
+[COVERED] Removing target 366, the assign is 634, at clock 17
+[COVERED] Removing target 363, the assign is 630, at clock 25
+[COVERED] Removing target 362, the assign is 629, at clock 25
+[COVERED] Removing target 322, the assign is 579, at clock 41
+[COVERED] Removing target 251, the assign is 438, at clock 7
+[COVERED] Removing target 247, the assign is 430, at clock 7
+[COVERED] Removing target 242, the assign is 419, at clock 7
+[COVERED] Removing target 204, the assign is 344, at clock 31
+[COVERED] Removing target 199, the assign is 334, at clock 31
+[COVERED] Removing target 194, the assign is 323, at clock 31
+[COVERED] Removing target 118, the assign is 176, at clock 3
+[COVERED] Removing target 115, the assign is 173, at clock 31
+[COVERED] Removing target 113, the assign is 171, at clock 7
+[COVERED] Removing target 109, the assign is 168, at clock 7
+[COVERED] Removing target 78, the assign is 135, at clock 21
+[COVERED] Removing target 77, the assign is 134, at clock 21
+[COVERED] Removing target 75, the assign is 131, at clock 5
+[COVERED] Removing target 73, the assign is 129, at clock 5
+建立约束耗时 0.37
+[COVERED] Removing target 553, the assign is 955, at clock 35
+[COVERED] Removing target 547, the assign is 941, at clock 37
+[COVERED] Removing target 546, the assign is 937, at clock 35
+[COVERED] Removing target 543, the assign is 934, at clock 35
+[COVERED] Removing target 538, the assign is 925, at clock 29
+[COVERED] Removing target 528, the assign is 905, at clock 13
+[COVERED] Removing target 522, the assign is 889, at clock 13
+[COVERED] Removing target 505, the assign is 859, at clock 5
+[COVERED] Removing target 500, the assign is 849, at clock 5
+[COVERED] Removing target 481, the assign is 811, at clock 27
+[COVERED] Removing target 475, the assign is 797, at clock 27
+[COVERED] Removing target 471, the assign is 790, at clock 27
+[COVERED] Removing target 456, the assign is 761, at clock 11
+[COVERED] Removing target 452, the assign is 753, at clock 11
+[COVERED] Removing target 443, the assign is 726, at clock 23
+[COVERED] Removing target 441, the assign is 725, at clock 23
+[COVERED] Removing target 407, the assign is 680, at clock 27
+[COVERED] Removing target 404, the assign is 678, at clock 27
+[COVERED] Removing target 379, the assign is 650, at clock 39
+[COVERED] Removing target 378, the assign is 649, at clock 39
+[COVERED] Removing target 291, the assign is 498, at clock 19
+[COVERED] Removing target 286, the assign is 494, at clock 19
+[COVERED] Removing target 261, the assign is 458, at clock 17
+[COVERED] Removing target 259, the assign is 454, at clock 17
+[COVERED] Removing target 254, the assign is 443, at clock 17
+[COVERED] Removing target 234, the assign is 402, at clock 7
+[COVERED] Removing target 215, the assign is 366, at clock 23
+[COVERED] Removing target 211, the assign is 358, at clock 23
+[COVERED] Removing target 206, the assign is 347, at clock 23
+[COVERED] Removing target 142, the assign is 211, at clock 9
+[COVERED] Removing target 140, the assign is 210, at clock 9
+[COVERED] Removing target 101, the assign is 162, at clock 19
+[COVERED] Removing target 52, the assign is 103, at clock 3
+[COVERED] Removing target 49, the assign is 100, at clock 3
+[COVERED] Removing target 47, the assign is 98, at clock 3
+[COVERED] Removing target 40, the assign is 89, at clock 25
+[COVERED] Removing target 39, the assign is 88, at clock 25
+[COVERED] Removing target 20, the assign is 60, at clock 3
+[TARGET] Trying to cover target 24, the assign is 69
+建立约束耗时 0.55
+[COVERED] Removing target 502, the assign is 853, at clock 47
+[COVERED] Removing target 445, the assign is 732, at clock 45
+[COVERED] Removing target 408, the assign is 681, at clock 47
+[COVERED] Removing target 371, the assign is 640, at clock 43
+[COVERED] Removing target 370, the assign is 639, at clock 43
+[COVERED] Removing target 329, the assign is 589, at clock 51
+[COVERED] Removing target 328, the assign is 588, at clock 51
+[COVERED] Removing target 197, the assign is 326, at clock 61
+[COVERED] Removing target 144, the assign is 217, at clock 53
+[COVERED] Removing target 44, the assign is 94, at clock 55
+[COVERED] Removing target 41, the assign is 90, at clock 49
+[COVERED] Removing target 29, the assign is 75, at clock 57
+[COVERED] Removing target 27, the assign is 73, at clock 57
+[Enter] Block ID 138 assign ID 207 at clock 35, distance is 9
+[COVERED] Removing target 138, the assign is 207, at clock 35
+[Enter] Block ID 137 assign ID 205 at clock 35, distance is 9
+[COVERED] Removing target 137, the assign is 205, at clock 35
+[Enter] Block ID 139 assign ID 209 at clock 33, distance is 9
+[COVERED] Removing target 139, the assign is 209, at clock 33
+[Enter] Block ID 136 assign ID 203 at clock 33, distance is 9
+[COVERED] Removing target 136, the assign is 203, at clock 33
+[Enter] Block ID 125 assign ID 183 at clock 33, distance is 9
+[COVERED] Removing target 125, the assign is 183, at clock 33
+[Enter] Block ID 217 assign ID 370 at clock 23, distance is 9
+[COVERED] Removing target 217, the assign is 370, at clock 23
+[Enter] Block ID 216 assign ID 368 at clock 23, distance is 9
+[COVERED] Removing target 216, the assign is 368, at clock 23
+[Enter] Block ID 214 assign ID 364 at clock 23, distance is 9
+[COVERED] Removing target 214, the assign is 364, at clock 23
+[Enter] Block ID 213 assign ID 362 at clock 23, distance is 9
+[COVERED] Removing target 213, the assign is 362, at clock 23
+[Enter] Block ID 265 assign ID 466 at clock 17, distance is 9
+[COVERED] Removing target 265, the assign is 466, at clock 17
+[Enter] Block ID 264 assign ID 464 at clock 17, distance is 9
+[COVERED] Removing target 264, the assign is 464, at clock 17
+[Enter] Block ID 263 assign ID 462 at clock 17, distance is 9
+[COVERED] Removing target 263, the assign is 462, at clock 17
+[Enter] Block ID 262 assign ID 460 at clock 17, distance is 9
+[COVERED] Removing target 262, the assign is 460, at clock 17
+[Enter] Block ID 241 assign ID 418 at clock 7, distance is 9
+[COVERED] Removing target 241, the assign is 418, at clock 7
+[Enter] Block ID 240 assign ID 416 at clock 7, distance is 9
+[COVERED] Removing target 240, the assign is 416, at clock 7
+[Enter] Block ID 239 assign ID 414 at clock 7, distance is 9
+[COVERED] Removing target 239, the assign is 414, at clock 7
+[Enter] Block ID 238 assign ID 412 at clock 7, distance is 9
+[COVERED] Removing target 238, the assign is 412, at clock 7
+[Enter] Block ID 285 assign ID 493 at clock 31, distance is 8
+[COVERED] Removing target 285, the assign is 493, at clock 31
+[Enter] Block ID 287 assign ID 495 at clock 19, distance is 8
+[UNSAT] Block ID 69 assign ID 124 at clock 49 The constraints before clock are unsat.
+[Enter] Block ID 69 assign ID 124 at clock 49, distance is 7
+[COVERED] Removing target 69, the assign is 124, at clock 49
+[UNSAT] Block ID 61 assign ID 114 at clock 49 The constraints before clock are unsat.
+[Enter] Block ID 61 assign ID 114 at clock 49, distance is 7
+[COVERED] Removing target 61, the assign is 114, at clock 49
+[UNSAT] Block ID 31 assign ID 78 at clock 49 The constraints before clock are unsat.
+[Enter] Block ID 31 assign ID 78 at clock 49, distance is 7
+[COVERED] Removing target 31, the assign is 78, at clock 49
+[UNSAT] Block ID 28 assign ID 74 at clock 57 The constraints before clock are unsat.
+[Enter] Block ID 28 assign ID 74 at clock 57, distance is 6
+[COVERED] Removing target 28, the assign is 74, at clock 57
+[Enter] Block ID 112 assign ID 170 at clock 17, distance is 6
+[COVERED] Removing target 112, the assign is 170, at clock 17
+[Enter] Block ID 112 assign ID 170 at clock 7, distance is 6
+[Enter] Block ID 51 assign ID 102 at clock 3, distance is 6
+[COVERED] Removing target 51, the assign is 102, at clock 3
+[UNSAT] Block ID 85 assign ID 144 at clock 49 The constraints before clock are unsat.
+[Enter] Block ID 85 assign ID 144 at clock 49, distance is 2
+[COVERED] Removing target 85, the assign is 144, at clock 49
+[Enter] Block ID 218 assign ID 371 at clock 31, distance is 2
+[COVERED] Removing target 218, the assign is 371, at clock 31
+[Enter] Block ID 182 assign ID 299 at clock 31, distance is 2
+[COVERED] Removing target 182, the assign is 299, at clock 31
+[Enter] Block ID 170 assign ID 275 at clock 31, distance is 2
+[COVERED] Removing target 170, the assign is 275, at clock 31
+[Enter] Block ID 158 assign ID 251 at clock 31, distance is 2
+[COVERED] Removing target 158, the assign is 251, at clock 31
+[UNSAT] Block ID 145 assign ID 221 at clock 53 The constraints before clock are unsat.
+[Enter] Block ID 145 assign ID 221 at clock 53, distance is 1
+[COVERED] Removing target 145, the assign is 221, at clock 53
+[UNSAT] Block ID 143 assign ID 213 at clock 53 The constraints before clock are unsat.
+[Enter] Block ID 143 assign ID 213 at clock 53, distance is 1
+[COVERED] Removing target 143, the assign is 213, at clock 53
+[Enter] Block ID 133 assign ID 196 at clock 33, distance is 1
+[COVERED] Removing target 133, the assign is 196, at clock 33
+[Enter] Block ID 132 assign ID 192 at clock 33, distance is 1
+[COVERED] Removing target 132, the assign is 192, at clock 33
+[Enter] Block ID 131 assign ID 188 at clock 33, distance is 1
+[COVERED] Removing target 131, the assign is 188, at clock 33
+[Enter] Block ID 210 assign ID 354 at clock 23, distance is 1
+[COVERED] Removing target 210, the assign is 354, at clock 23
+[Enter] Block ID 209 assign ID 350 at clock 23, distance is 1
+[COVERED] Removing target 209, the assign is 350, at clock 23
+[Enter] Block ID 208 assign ID 348 at clock 23, distance is 1
+[COVERED] Removing target 208, the assign is 348, at clock 23
+[Enter] Block ID 293 assign ID 502 at clock 19, distance is 1
+[COVERED] Removing target 293, the assign is 502, at clock 19
+[Enter] Block ID 292 assign ID 500 at clock 19, distance is 1
+[COVERED] Removing target 292, the assign is 500, at clock 19
+[Enter] Block ID 290 assign ID 496 at clock 19, distance is 1
+[COVERED] Removing target 290, the assign is 496, at clock 19
+[Enter] Block ID 258 assign ID 450 at clock 17, distance is 1
+[COVERED] Removing target 258, the assign is 450, at clock 17
+[Enter] Block ID 257 assign ID 446 at clock 17, distance is 1
+[COVERED] Removing target 257, the assign is 446, at clock 17
+[Enter] Block ID 256 assign ID 444 at clock 17, distance is 1
+[COVERED] Removing target 256, the assign is 444, at clock 17
+[Enter] Block ID 145 assign ID 221 at clock 9, distance is 1
+[Enter] Block ID 143 assign ID 213 at clock 9, distance is 1
+[Enter] Block ID 233 assign ID 398 at clock 7, distance is 1
+[COVERED] Removing target 233, the assign is 398, at clock 7
+[Enter] Block ID 232 assign ID 396 at clock 7, distance is 1
+[COVERED] Removing target 232, the assign is 396, at clock 7
+[Enter] Block ID 48 assign ID 99 at clock 3, distance is 1
+[COVERED] Removing target 48, the assign is 99, at clock 3
+[Enter] Block ID 234 assign ID 402 at clock 7, distance is 1
+[Enter] Block ID 235 assign ID 406 at clock 7, distance is 1
+建立约束耗时 0.25
+[COVERED] Removing target 493, the assign is 835, at clock 25
+[COVERED] Removing target 491, the assign is 831, at clock 19
+[COVERED] Removing target 486, the assign is 817, at clock 25
+[COVERED] Removing target 485, the assign is 815, at clock 19
+[COVERED] Removing target 483, the assign is 814, at clock 19
+[COVERED] Removing target 372, the assign is 641, at clock 27
+[COVERED] Removing target 153, the assign is 242, at clock 11
+[COVERED] Removing target 32, the assign is 79, at clock 17
+[UNSAT] Block ID 157 assign ID 250 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 157 assign ID 250 at clock 11, distance is 9
+[COVERED] Removing target 157, the assign is 250, at clock 11
+[UNSAT] Block ID 156 assign ID 248 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 156 assign ID 248 at clock 11, distance is 9
+[COVERED] Removing target 156, the assign is 248, at clock 11
+[UNSAT] Block ID 155 assign ID 246 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 155 assign ID 246 at clock 11, distance is 9
+[COVERED] Removing target 155, the assign is 246, at clock 11
+[UNSAT] Block ID 33 assign ID 80 at clock 17 The constraints before clock are unsat.
+[Enter] Block ID 33 assign ID 80 at clock 17, distance is 6
+[COVERED] Removing target 33, the assign is 80, at clock 17
+[Enter] Block ID 67 assign ID 121 at clock 9, distance is 6
+[COVERED] Removing target 67, the assign is 121, at clock 9
+[UNSAT] Block ID 151 assign ID 238 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 151 assign ID 238 at clock 11, distance is 1
+[COVERED] Removing target 151, the assign is 238, at clock 11
+[UNSAT] Block ID 150 assign ID 234 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 150 assign ID 234 at clock 11, distance is 1
+[COVERED] Removing target 150, the assign is 234, at clock 11
+[UNSAT] Block ID 148 assign ID 228 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 148 assign ID 228 at clock 11, distance is 1
+[COVERED] Removing target 148, the assign is 228, at clock 11
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 594, the assign is 1017, at clock 21
+[COVERED] Removing target 587, the assign is 1009, at clock 21
+[COVERED] Removing target 558, the assign is 961, at clock 17
+[COVERED] Removing target 469, the assign is 787, at clock 13
+[COVERED] Removing target 463, the assign is 773, at clock 13
+[COVERED] Removing target 459, the assign is 766, at clock 13
+[COVERED] Removing target 402, the assign is 677, at clock 21
+[COVERED] Removing target 375, the assign is 645, at clock 11
+[COVERED] Removing target 374, the assign is 644, at clock 11
+[UNSAT] Block ID 287 assign ID 495 at clock 7 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 7, distance is 8
+建立约束耗时 0.37
+[COVERED] Removing target 539, the assign is 927, at clock 25
+[COVERED] Removing target 467, the assign is 783, at clock 21
+[COVERED] Removing target 464, the assign is 777, at clock 21
+[COVERED] Removing target 341, the assign is 604, at clock 11
+[COVERED] Removing target 340, the assign is 603, at clock 11
+[COVERED] Removing target 82, the assign is 140, at clock 13
+[COVERED] Removing target 74, the assign is 130, at clock 17
+[Enter] Block ID 287 assign ID 495 at clock 7, distance is 8
+[Enter] Block ID 48 assign ID 99 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 390, the assign is 663, at clock 17
+[COVERED] Removing target 388, the assign is 661, at clock 17
+[COVERED] Removing target 386, the assign is 659, at clock 17
+[COVERED] Removing target 360, the assign is 626, at clock 19
+[COVERED] Removing target 357, the assign is 623, at clock 19
+[COVERED] Removing target 355, the assign is 621, at clock 19
+[COVERED] Removing target 353, the assign is 618, at clock 21
+[COVERED] Removing target 350, the assign is 615, at clock 21
+[COVERED] Removing target 348, the assign is 613, at clock 21
+[COVERED] Removing target 165, the assign is 266, at clock 11
+[COVERED] Removing target 162, the assign is 258, at clock 11
+[COVERED] Removing target 71, the assign is 126, at clock 13
+[UNSAT] Block ID 169 assign ID 274 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 169 assign ID 274 at clock 11, distance is 9
+[COVERED] Removing target 169, the assign is 274, at clock 11
+[UNSAT] Block ID 168 assign ID 272 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 168 assign ID 272 at clock 11, distance is 9
+[COVERED] Removing target 168, the assign is 272, at clock 11
+[UNSAT] Block ID 167 assign ID 270 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 167 assign ID 270 at clock 11, distance is 9
+[COVERED] Removing target 167, the assign is 270, at clock 11
+[UNSAT] Block ID 166 assign ID 268 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 166 assign ID 268 at clock 11, distance is 9
+[COVERED] Removing target 166, the assign is 268, at clock 11
+[UNSAT] Block ID 79 assign ID 136 at clock 23 The constraints before clock are unsat.
+[Enter] Block ID 79 assign ID 136 at clock 23, distance is 6
+[COVERED] Removing target 79, the assign is 136, at clock 23
+[UNSAT] Block ID 70 assign ID 125 at clock 13 The constraints before clock are unsat.
+[Enter] Block ID 70 assign ID 125 at clock 13, distance is 6
+[COVERED] Removing target 70, the assign is 125, at clock 13
+[UNSAT] Block ID 163 assign ID 262 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 163 assign ID 262 at clock 11, distance is 1
+[COVERED] Removing target 163, the assign is 262, at clock 11
+[UNSAT] Block ID 161 assign ID 254 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 161 assign ID 254 at clock 11, distance is 1
+[COVERED] Removing target 161, the assign is 254, at clock 11
+[UNSAT] Block ID 160 assign ID 252 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 160 assign ID 252 at clock 11, distance is 1
+[COVERED] Removing target 160, the assign is 252, at clock 11
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 380, the assign is 651, at clock 15
+[COVERED] Removing target 334, the assign is 595, at clock 9
+[COVERED] Removing target 332, the assign is 593, at clock 9
+[COVERED] Removing target 177, the assign is 290, at clock 11
+[COVERED] Removing target 175, the assign is 286, at clock 11
+[UNSAT] Block ID 181 assign ID 298 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 181 assign ID 298 at clock 11, distance is 9
+[COVERED] Removing target 181, the assign is 298, at clock 11
+[UNSAT] Block ID 180 assign ID 296 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 180 assign ID 296 at clock 11, distance is 9
+[COVERED] Removing target 180, the assign is 296, at clock 11
+[UNSAT] Block ID 179 assign ID 294 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 179 assign ID 294 at clock 11, distance is 9
+[COVERED] Removing target 179, the assign is 294, at clock 11
+[UNSAT] Block ID 178 assign ID 292 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 178 assign ID 292 at clock 11, distance is 9
+[COVERED] Removing target 178, the assign is 292, at clock 11
+[UNSAT] Block ID 174 assign ID 282 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 174 assign ID 282 at clock 11, distance is 1
+[COVERED] Removing target 174, the assign is 282, at clock 11
+[UNSAT] Block ID 173 assign ID 278 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 173 assign ID 278 at clock 11, distance is 1
+[COVERED] Removing target 173, the assign is 278, at clock 11
+[UNSAT] Block ID 172 assign ID 276 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 172 assign ID 276 at clock 11, distance is 1
+[COVERED] Removing target 172, the assign is 276, at clock 11
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 565, the assign is 979, at clock 13
+[COVERED] Removing target 437, the assign is 718, at clock 23
+[COVERED] Removing target 434, the assign is 711, at clock 23
+[COVERED] Removing target 391, the assign is 664, at clock 5
+[COVERED] Removing target 359, the assign is 625, at clock 19
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+建立约束耗时 0.22
+[COVERED] Removing target 569, the assign is 983, at clock 7
+[COVERED] Removing target 488, the assign is 825, at clock 15
+[COVERED] Removing target 449, the assign is 743, at clock 5
+[COVERED] Removing target 250, the assign is 436, at clock 11
+[UNSAT] Block ID 253 assign ID 442 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 253 assign ID 442 at clock 11, distance is 9
+[COVERED] Removing target 253, the assign is 442, at clock 11
+[UNSAT] Block ID 252 assign ID 440 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 252 assign ID 440 at clock 11, distance is 9
+[COVERED] Removing target 252, the assign is 440, at clock 11
+[UNSAT] Block ID 249 assign ID 434 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 249 assign ID 434 at clock 11, distance is 9
+[COVERED] Removing target 249, the assign is 434, at clock 11
+[UNSAT] Block ID 36 assign ID 84 at clock 19 The constraints before clock are unsat.
+[Enter] Block ID 36 assign ID 84 at clock 19, distance is 6
+[COVERED] Removing target 36, the assign is 84, at clock 19
+[UNSAT] Block ID 246 assign ID 426 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 246 assign ID 426 at clock 11, distance is 1
+[COVERED] Removing target 246, the assign is 426, at clock 11
+[UNSAT] Block ID 245 assign ID 422 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 245 assign ID 422 at clock 11, distance is 1
+[COVERED] Removing target 245, the assign is 422, at clock 11
+[UNSAT] Block ID 244 assign ID 420 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 244 assign ID 420 at clock 11, distance is 1
+[COVERED] Removing target 244, the assign is 420, at clock 11
+建立约束耗时 0.29
+[COVERED] Removing target 593, the assign is 1015, at clock 31
+[COVERED] Removing target 450, the assign is 745, at clock 19
+[COVERED] Removing target 345, the assign is 609, at clock 29
+[COVERED] Removing target 344, the assign is 608, at clock 29
+[UNSAT] Block ID 287 assign ID 495 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 21, distance is 8
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+[Enter] Block ID 20 assign ID 60 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 591, the assign is 1011, at clock 5
+[COVERED] Removing target 368, the assign is 636, at clock 15
+[COVERED] Removing target 330, the assign is 590, at clock 13
+[UNSAT] Block ID 107 assign ID 166 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 107 assign ID 166 at clock 21, distance is 5
+[COVERED] Removing target 107, the assign is 166, at clock 21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 492, the assign is 833, at clock 17
+[COVERED] Removing target 342, the assign is 605, at clock 19
+[UNSAT] Block ID 287 assign ID 495 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+建立约束耗时 0.27
+[COVERED] Removing target 523, the assign is 893, at clock 13
+[COVERED] Removing target 346, the assign is 610, at clock 23
+[COVERED] Removing target 89, the assign is 148, at clock 27
+[COVERED] Removing target 87, the assign is 146, at clock 27
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+[UNSAT] Block ID 90 assign ID 149 at clock 27 The constraints before clock are unsat.
+[Enter] Block ID 90 assign ID 149 at clock 27, distance is 6
+[COVERED] Removing target 90, the assign is 149, at clock 27
+[UNSAT] Block ID 86 assign ID 145 at clock 27 The constraints before clock are unsat.
+[Enter] Block ID 86 assign ID 145 at clock 27, distance is 1
+[COVERED] Removing target 86, the assign is 145, at clock 27
+建立约束耗时 0.43
+[COVERED] Removing target 545, the assign is 935, at clock 43
+[COVERED] Removing target 533, the assign is 911, at clock 29
+[COVERED] Removing target 352, the assign is 617, at clock 39
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+建立约束耗时 0.27
+[COVERED] Removing target 490, the assign is 829, at clock 21
+[COVERED] Removing target 466, the assign is 781, at clock 19
+[COVERED] Removing target 462, the assign is 769, at clock 19
+[UNSAT] Block ID 287 assign ID 495 at clock 15 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 15, distance is 8
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+建立约束耗时 0.26
+[COVERED] Removing target 592, the assign is 1013, at clock 27
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+建立约束耗时 0.26
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+建立约束耗时 0.27
+[COVERED] Removing target 515, the assign is 879, at clock 29
+[COVERED] Removing target 509, the assign is 863, at clock 29
+[COVERED] Removing target 507, the assign is 862, at clock 29
+[COVERED] Removing target 433, the assign is 707, at clock 21
+[Enter] Block ID 287 assign ID 495 at clock 9, distance is 8
+[Enter] Block ID 48 assign ID 99 at clock 3, distance is 1
+建立约束耗时 0.21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+[Enter] Block ID 20 assign ID 60 at clock 3, distance is 1
+[Enter] Block ID 21 assign ID 64 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 572, the assign is 988, at clock 19
+[COVERED] Removing target 457, the assign is 763, at clock 9
+[COVERED] Removing target 203, the assign is 342, at clock 11
+[UNSAT] Block ID 205 assign ID 346 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 205 assign ID 346 at clock 11, distance is 9
+[COVERED] Removing target 205, the assign is 346, at clock 11
+[UNSAT] Block ID 202 assign ID 340 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 202 assign ID 340 at clock 11, distance is 9
+[COVERED] Removing target 202, the assign is 340, at clock 11
+[UNSAT] Block ID 201 assign ID 338 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 201 assign ID 338 at clock 11, distance is 9
+[COVERED] Removing target 201, the assign is 338, at clock 11
+[UNSAT] Block ID 198 assign ID 330 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 198 assign ID 330 at clock 11, distance is 1
+[COVERED] Removing target 198, the assign is 330, at clock 11
+[UNSAT] Block ID 196 assign ID 324 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 196 assign ID 324 at clock 11, distance is 1
+[COVERED] Removing target 196, the assign is 324, at clock 11
+[UNSAT] Block ID 24 assign ID 69 at clock 15 The constraints before clock are unsat.
+[Enter] Block ID 24 assign ID 69 at clock 15, distance is 0
+[COVERED] Removing target 24, the assign is 69, at clock 15
+[INFO] The time of the target is 11.53 seconds
+建立约束耗时 0.36
+[COVERED] Removing target 479, the assign is 807, at clock 5
+[COVERED] Removing target 473, the assign is 791, at clock 5
+[COVERED] Removing target 444, the assign is 728, at clock 41
+[COVERED] Removing target 268, the assign is 468, at clock 19
+建立约束耗时 0.36
+[COVERED] Removing target 478, the assign is 805, at clock 19
+[COVERED] Removing target 474, the assign is 793, at clock 19
+[COVERED] Removing target 228, the assign is 392, at clock 27
+[COVERED] Removing target 221, the assign is 374, at clock 27
+建立约束耗时 0.37
+[COVERED] Removing target 541, the assign is 931, at clock 41
+[COVERED] Removing target 529, the assign is 907, at clock 33
+[COVERED] Removing target 283, the assign is 490, at clock 35
+[COVERED] Removing target 270, the assign is 472, at clock 35
+[COVERED] Removing target 269, the assign is 470, at clock 35
+[TARGET] Trying to cover target 55, the assign is 107
+建立约束耗时 0.55
+[Enter] Block ID 271 assign ID 473 at clock 35, distance is 11
+[COVERED] Removing target 271, the assign is 473, at clock 35
+[INFO] Block ID 278 assign ID 483 at clock 35 The constraints after mutate are unsat.
+[Enter] Block ID 278 assign ID 483 at clock 35, distance is 10
+[Enter] Block ID 274 assign ID 477 at clock 35, distance is 10
+[COVERED] Removing target 274, the assign is 477, at clock 35
+[Enter] Block ID 284 assign ID 492 at clock 35, distance is 9
+[COVERED] Removing target 284, the assign is 492, at clock 35
+[Enter] Block ID 282 assign ID 488 at clock 35, distance is 9
+[COVERED] Removing target 282, the assign is 488, at clock 35
+[Enter] Block ID 280 assign ID 484 at clock 35, distance is 9
+[COVERED] Removing target 280, the assign is 484, at clock 35
+[Enter] Block ID 287 assign ID 495 at clock 37, distance is 8
+[Enter] Block ID 287 assign ID 495 at clock 29, distance is 8
+建立约束耗时 0.44
+[COVERED] Removing target 480, the assign is 809, at clock 37
+[UNSAT] Block ID 97 assign ID 157 at clock 41 The constraints before clock are unsat.
+[Enter] Block ID 97 assign ID 157 at clock 41, distance is 8
+[COVERED] Removing target 97, the assign is 157, at clock 41
+[UNSAT] Block ID 287 assign ID 495 at clock 39 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 39, distance is 8
+[UNSAT] Block ID 59 assign ID 111 at clock 33 The constraints before clock are unsat.
+[Enter] Block ID 59 assign ID 111 at clock 33, distance is 8
+[COVERED] Removing target 59, the assign is 111, at clock 33
+[Enter] Block ID 287 assign ID 495 at clock 29, distance is 8
+[UNSAT] Block ID 93 assign ID 153 at clock 41 The constraints before clock are unsat.
+[Enter] Block ID 93 assign ID 153 at clock 41, distance is 1
+[COVERED] Removing target 93, the assign is 153, at clock 41
+[UNSAT] Block ID 55 assign ID 107 at clock 33 The constraints before clock are unsat.
+[Enter] Block ID 55 assign ID 107 at clock 33, distance is 0
+[COVERED] Removing target 55, the assign is 107, at clock 33
+[Enter] Block ID 86 assign ID 145 at clock 23, distance is 1
+[Enter] Block ID 13 assign ID 49 at clock 25, distance is 1
+[INFO] The time of the target is 14.43 seconds
+建立约束耗时 0.37
+[COVERED] Removing target 468, the assign is 785, at clock 41
+[COVERED] Removing target 192, the assign is 320, at clock 3
+[COVERED] Removing target 185, the assign is 302, at clock 3
+建立约束耗时 0.37
+[COVERED] Removing target 461, the assign is 767, at clock 11
+[COVERED] Removing target 398, the assign is 672, at clock 9
+建立约束耗时 0.47
+[COVERED] Removing target 583, the assign is 1003, at clock 41
+[COVERED] Removing target 517, the assign is 883, at clock 13
+[COVERED] Removing target 511, the assign is 869, at clock 13
+[COVERED] Removing target 476, the assign is 801, at clock 25
+[TARGET] Trying to cover target 62, the assign is 115
+建立约束耗时 0.55
+[COVERED] Removing target 552, the assign is 953, at clock 49
+[Enter] Block ID 74 assign ID 130 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 226, the assign is 388, at clock 21
+[UNSAT] Block ID 278 assign ID 483 at clock 17 The constraints before clock are unsat.
+[INFO] Block ID 278 assign ID 483 at clock 17 The constraints after mutate are unsat.
+[Enter] Block ID 278 assign ID 483 at clock 17, distance is 10
+[UNSAT] Block ID 229 assign ID 394 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 229 assign ID 394 at clock 21, distance is 9
+[COVERED] Removing target 229, the assign is 394, at clock 21
+[UNSAT] Block ID 227 assign ID 390 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 227 assign ID 390 at clock 21, distance is 9
+[COVERED] Removing target 227, the assign is 390, at clock 21
+[UNSAT] Block ID 225 assign ID 386 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 225 assign ID 386 at clock 21, distance is 9
+[COVERED] Removing target 225, the assign is 386, at clock 21
+[UNSAT] Block ID 223 assign ID 382 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 223 assign ID 382 at clock 21, distance is 1
+[COVERED] Removing target 223, the assign is 382, at clock 21
+[UNSAT] Block ID 222 assign ID 378 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 222 assign ID 378 at clock 21, distance is 1
+[COVERED] Removing target 222, the assign is 378, at clock 21
+[UNSAT] Block ID 220 assign ID 372 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 220 assign ID 372 at clock 21, distance is 1
+[COVERED] Removing target 220, the assign is 372, at clock 21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+[Enter] Block ID 20 assign ID 60 at clock 3, distance is 1
+[Enter] Block ID 21 assign ID 64 at clock 3, distance is 1
+建立约束耗时 0.21
+[UNSAT] Block ID 193 assign ID 322 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 193 assign ID 322 at clock 9, distance is 9
+[COVERED] Removing target 193, the assign is 322, at clock 9
+[UNSAT] Block ID 191 assign ID 318 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 191 assign ID 318 at clock 9, distance is 9
+[COVERED] Removing target 191, the assign is 318, at clock 9
+[UNSAT] Block ID 190 assign ID 316 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 190 assign ID 316 at clock 9, distance is 9
+[COVERED] Removing target 190, the assign is 316, at clock 9
+[UNSAT] Block ID 189 assign ID 314 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 189 assign ID 314 at clock 9, distance is 9
+[COVERED] Removing target 189, the assign is 314, at clock 9
+[UNSAT] Block ID 187 assign ID 310 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 187 assign ID 310 at clock 9, distance is 1
+[COVERED] Removing target 187, the assign is 310, at clock 9
+[UNSAT] Block ID 186 assign ID 306 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 186 assign ID 306 at clock 9, distance is 1
+[COVERED] Removing target 186, the assign is 306, at clock 9
+[UNSAT] Block ID 184 assign ID 300 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 184 assign ID 300 at clock 9, distance is 1
+[COVERED] Removing target 184, the assign is 300, at clock 9
+建立约束耗时 0.27
+[COVERED] Removing target 521, the assign is 887, at clock 15
+[COVERED] Removing target 510, the assign is 865, at clock 17
+[COVERED] Removing target 439, the assign is 722, at clock 29
+[COVERED] Removing target 276, the assign is 480, at clock 13
+[UNSAT] Block ID 278 assign ID 483 at clock 13 The constraints before clock are unsat.
+[INFO] Block ID 278 assign ID 483 at clock 13 The constraints after mutate are unsat.
+[Enter] Block ID 278 assign ID 483 at clock 13, distance is 10
+[UNSAT] Block ID 287 assign ID 495 at clock 25 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 25, distance is 8
+[UNSAT] Block ID 275 assign ID 479 at clock 13 The constraints before clock are unsat.
+[Enter] Block ID 275 assign ID 479 at clock 13, distance is 1
+[COVERED] Removing target 275, the assign is 479, at clock 13
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 550, the assign is 949, at clock 19
+[COVERED] Removing target 548, the assign is 945, at clock 19
+[Enter] Block ID 74 assign ID 130 at clock 3, distance is 1
+建立约束耗时 0.21
+[UNSAT] Block ID 287 assign ID 495 at clock 15 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 15, distance is 8
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+建立约束耗时 0.22
+[COVERED] Removing target 487, the assign is 821, at clock 21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.22
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+建立约束耗时 0.21
+[UNSAT] Block ID 287 assign ID 495 at clock 11 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 11, distance is 8
+[UNSAT] Block ID 287 assign ID 495 at clock 7 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 7, distance is 8
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 514, the assign is 877, at clock 7
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+[Enter] Block ID 20 assign ID 60 at clock 3, distance is 1
+[Enter] Block ID 21 assign ID 64 at clock 3, distance is 1
+[Enter] Block ID 61 assign ID 114 at clock 3, distance is 1
+建立约束耗时 0.21
+[Enter] Block ID 74 assign ID 130 at clock 3, distance is 1
+建立约束耗时 0.21
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+[Enter] Block ID 19 assign ID 56 at clock 3, distance is 1
+[Enter] Block ID 20 assign ID 60 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 446, the assign is 736, at clock 7
+[UNSAT] Block ID 287 assign ID 495 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 21, distance is 8
+建立约束耗时 0.37
+[Enter] Block ID 287 assign ID 495 at clock 21, distance is 8
+建立约束耗时 0.37
+[UNSAT] Block ID 287 assign ID 495 at clock 37 The constraints before clock are unsat.
+[Enter] Block ID 287 assign ID 495 at clock 37, distance is 8
+[Enter] Block ID 287 assign ID 495 at clock 21, distance is 8
+建立约束耗时 0.37
+[Enter] Block ID 287 assign ID 495 at clock 21, distance is 8
+[Enter] Block ID 18 assign ID 54 at clock 3, distance is 1
+建立约束耗时 0.21
+[Enter] Block ID 74 assign ID 130 at clock 3, distance is 1
+[UNSAT] Block ID 61 assign ID 114 at clock 7 The constraints before clock are unsat.
+[Enter] Block ID 61 assign ID 114 at clock 7, distance is 1
+[UNSAT] Block ID 66 assign ID 120 at clock 7 The constraints before clock are unsat.
+[Enter] Block ID 66 assign ID 120 at clock 7, distance is 1
+[UNSAT] Block ID 18 assign ID 54 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 18 assign ID 54 at clock 9, distance is 1
+建立约束耗时 0.27
+[COVERED] Removing target 516, the assign is 881, at clock 13
+[Enter] Block ID 287 assign ID 495 at clock 11, distance is 8
+[Enter] Block ID 74 assign ID 130 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 564, the assign is 977, at clock 13
+[COVERED] Removing target 498, the assign is 841, at clock 7
+[COVERED] Removing target 62, the assign is 115, at clock 23
+[UNSAT] Block ID 278 assign ID 483 at clock 9 The constraints before clock are unsat.
+[INFO] Block ID 278 assign ID 483 at clock 9 The constraints after mutate are unsat.
+[Enter] Block ID 278 assign ID 483 at clock 9, distance is 10
+[UNSAT] Block ID 63 assign ID 116 at clock 23 The constraints before clock are unsat.
+[Enter] Block ID 63 assign ID 116 at clock 23, distance is 6
+[COVERED] Removing target 63, the assign is 116, at clock 23
+[UNSAT] Block ID 62 assign ID 115 at clock 23 The constraints before clock are unsat.
+[Enter] Block ID 62 assign ID 115 at clock 23, distance is 0
+[INFO] The time of the target is 23.99 seconds
+建立约束耗时 0.37
+[COVERED] Removing target 499, the assign is 845, at clock 7
+建立约束耗时 0.36
+建立约束耗时 0.36
+[TARGET] Trying to cover target 333, the assign is 594
+建立约束耗时 0.64
+[INFO] Block ID 579 assign ID 998 at clock 43 The constraints after mutate are unsat.
+[Enter] Block ID 579 assign ID 998 at clock 43, distance is 10
+[UNSAT] Block ID 566 assign ID 981 at clock 53 The constraints before clock are unsat.
+[Enter] Block ID 566 assign ID 981 at clock 53, distance is 9
+[COVERED] Removing target 566, the assign is 981, at clock 53
+[Enter] Block ID 585 assign ID 1007 at clock 43, distance is 9
+[COVERED] Removing target 585, the assign is 1007, at clock 43
+[Enter] Block ID 582 assign ID 1001 at clock 43, distance is 9
+[COVERED] Removing target 582, the assign is 1001, at clock 43
+[Enter] Block ID 482 assign ID 813 at clock 37, distance is 9
+[COVERED] Removing target 482, the assign is 813, at clock 37
+[Enter] Block ID 518 assign ID 885 at clock 33, distance is 9
+[COVERED] Removing target 518, the assign is 885, at clock 33
+[Enter] Block ID 440 assign ID 724 at clock 31, distance is 9
+[COVERED] Removing target 440, the assign is 724, at clock 31
+[Enter] Block ID 506 assign ID 861 at clock 21, distance is 9
+[COVERED] Removing target 506, the assign is 861, at clock 21
+[Enter] Block ID 504 assign ID 857 at clock 21, distance is 9
+[COVERED] Removing target 504, the assign is 857, at clock 21
+[Enter] Block ID 575 assign ID 992 at clock 43, distance is 8
+[COVERED] Removing target 575, the assign is 992, at clock 43
+[UNSAT] Block ID 349 assign ID 614 at clock 55 The constraints before clock are unsat.
+[Enter] Block ID 349 assign ID 614 at clock 55, distance is 1
+[COVERED] Removing target 349, the assign is 614, at clock 55
+[UNSAT] Block ID 559 assign ID 965 at clock 53 The constraints before clock are unsat.
+[Enter] Block ID 559 assign ID 965 at clock 53, distance is 1
+[COVERED] Removing target 559, the assign is 965, at clock 53
+[Enter] Block ID 512 assign ID 873 at clock 33, distance is 1
+[COVERED] Removing target 512, the assign is 873, at clock 33
+[Enter] Block ID 387 assign ID 660 at clock 11, distance is 1
+[COVERED] Removing target 387, the assign is 660, at clock 11
+[Enter] Block ID 319 assign ID 569 at clock 19, distance is 1
+[Enter] Block ID 320 assign ID 571 at clock 19, distance is 1
+建立约束耗时 0.35
+[UNSAT] Block ID 376 assign ID 646 at clock 35 The constraints before clock are unsat.
+[Enter] Block ID 376 assign ID 646 at clock 35, distance is 6
+[COVERED] Removing target 376, the assign is 646, at clock 35
+[UNSAT] Block ID 394 assign ID 668 at clock 37 The constraints before clock are unsat.
+[Enter] Block ID 394 assign ID 668 at clock 37, distance is 1
+[COVERED] Removing target 394, the assign is 668, at clock 37
+[Enter] Block ID 394 assign ID 668 at clock 21, distance is 1
+[Enter] Block ID 431 assign ID 701 at clock 3, distance is 1
+[Enter] Block ID 432 assign ID 703 at clock 3, distance is 1
+[Enter] Block ID 433 assign ID 707 at clock 3, distance is 1
+建立约束耗时 0.21
+[COVERED] Removing target 577, the assign is 995, at clock 9
+[UNSAT] Block ID 579 assign ID 998 at clock 9 The constraints before clock are unsat.
+[INFO] Block ID 579 assign ID 998 at clock 9 The constraints after mutate are unsat.
+[Enter] Block ID 579 assign ID 998 at clock 9, distance is 10
+[UNSAT] Block ID 588 assign ID 1010 at clock 21 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 21, distance is 8
+[UNSAT] Block ID 576 assign ID 994 at clock 9 The constraints before clock are unsat.
+[Enter] Block ID 576 assign ID 994 at clock 9, distance is 7
+[COVERED] Removing target 576, the assign is 994, at clock 9
+[UNSAT] Block ID 364 assign ID 631 at clock 15 The constraints before clock are unsat.
+[Enter] Block ID 364 assign ID 631 at clock 15, distance is 6
+[COVERED] Removing target 364, the assign is 631, at clock 15
+[Enter] Block ID 319 assign ID 569 at clock 5, distance is 1
+建立约束耗时 0.23
+[INFO] Block ID 530 assign ID 909 at clock 9 The constraints after mutate are unsat.
+[Enter] Block ID 530 assign ID 909 at clock 9, distance is 9
+[COVERED] Removing target 530, the assign is 909, at clock 9
+[UNSAT] Block ID 588 assign ID 1010 at clock 19 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 19, distance is 8
+[UNSAT] Block ID 356 assign ID 622 at clock 17 The constraints before clock are unsat.
+[Enter] Block ID 356 assign ID 622 at clock 17, distance is 1
+[COVERED] Removing target 356, the assign is 622, at clock 17
+[Enter] Block ID 432 assign ID 703 at clock 7, distance is 1
+建立约束耗时 0.25
+[INFO] Block ID 579 assign ID 998 at clock 9 The constraints after mutate are unsat.
+[Enter] Block ID 579 assign ID 998 at clock 9, distance is 10
+[UNSAT] Block ID 494 assign ID 837 at clock 27 The constraints before clock are unsat.
+[Enter] Block ID 494 assign ID 837 at clock 27, distance is 9
+[COVERED] Removing target 494, the assign is 837, at clock 27
+[UNSAT] Block ID 542 assign ID 933 at clock 19 The constraints before clock are unsat.
+[Enter] Block ID 542 assign ID 933 at clock 19, distance is 9
+[COVERED] Removing target 542, the assign is 933, at clock 19
+[UNSAT] Block ID 542 assign ID 933 at clock 17 The constraints before clock are unsat.
+[Enter] Block ID 542 assign ID 933 at clock 17, distance is 9
+[UNSAT] Block ID 534 assign ID 913 at clock 19 The constraints before clock are unsat.
+[Enter] Block ID 534 assign ID 913 at clock 19, distance is 1
+[COVERED] Removing target 534, the assign is 913, at clock 19
+[UNSAT] Block ID 534 assign ID 913 at clock 17 The constraints before clock are unsat.
+[Enter] Block ID 534 assign ID 913 at clock 17, distance is 1
+建立约束耗时 0.34
+[INFO] Block ID 579 assign ID 998 at clock 9 The constraints after mutate are unsat.
+[Enter] Block ID 579 assign ID 998 at clock 9, distance is 10
+[Enter] Block ID 338 assign ID 600 at clock 29, distance is 6
+[COVERED] Removing target 338, the assign is 600, at clock 29
+[Enter] Block ID 432 assign ID 703 at clock 11, distance is 1
+[Enter] Block ID 433 assign ID 707 at clock 11, distance is 1
+建立约束耗时 0.28
+[INFO] Block ID 579 assign ID 998 at clock 9 The constraints after mutate are unsat.
+[Enter] Block ID 579 assign ID 998 at clock 9, distance is 10
+[UNSAT] Block ID 333 assign ID 594 at clock 27 The constraints before clock are unsat.
+[Enter] Block ID 333 assign ID 594 at clock 27, distance is 0
+[COVERED] Removing target 333, the assign is 594, at clock 27
+[INFO] The time of the target is 29.54 seconds
+建立约束耗时 0.36
+[COVERED] Removing target 455, the assign is 759, at clock 5
+建立约束耗时 0.37
+建立约束耗时 0.36
+[TARGET] Trying to cover target 458, the assign is 765
+建立约束耗时 0.66
+[INFO] Block ID 579 assign ID 998 at clock 41 The constraints after mutate are unsat.
+[Enter] Block ID 579 assign ID 998 at clock 41, distance is 11
+[Enter] Block ID 588 assign ID 1010 at clock 43, distance is 9
+[Enter] Block ID 458 assign ID 765 at clock 7, distance is 0
+[COVERED] Removing target 458, the assign is 765, at clock 7
+[INFO] The time of the target is 31.60 seconds
+建立约束耗时 0.37
+建立约束耗时 0.37
+[COVERED] Removing target 551, the assign is 951, at clock 21
+建立约束耗时 0.37
+[TARGET] Trying to cover target 470, the assign is 789
+建立约束耗时 0.54
+[Enter] Block ID 554 assign ID 957 at clock 35, distance is 10
+[COVERED] Removing target 554, the assign is 957, at clock 35
+[UNSAT] Block ID 588 assign ID 1010 at clock 53 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 53, distance is 9
+[Enter] Block ID 459 assign ID 766 at clock 37, distance is 2
+建立约束耗时 0.52
+[Enter] Block ID 459 assign ID 766 at clock 33, distance is 2
+建立约束耗时 0.48
+[UNSAT] Block ID 588 assign ID 1010 at clock 51 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 51, distance is 9
+建立约束耗时 0.75
+[Enter] Block ID 588 assign ID 1010 at clock 51, distance is 9
+[Enter] Block ID 459 assign ID 766 at clock 35, distance is 2
+[Enter] Block ID 302 assign ID 515 at clock 36, distance is 3
+[Enter] Block ID 307 assign ID 549 at clock 37, distance is 4
+建立约束耗时 0.52
+[Enter] Block ID 459 assign ID 766 at clock 35, distance is 2
+[Enter] Block ID 302 assign ID 515 at clock 30, distance is 3
+[Enter] Block ID 307 assign ID 549 at clock 30, distance is 4
+建立约束耗时 0.45
+[UNSAT] Block ID 588 assign ID 1010 at clock 47 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 47, distance is 9
+[Enter] Block ID 459 assign ID 766 at clock 31, distance is 2
+建立约束耗时 0.46
+[Enter] Block ID 459 assign ID 766 at clock 33, distance is 2
+建立约束耗时 0.48
+[UNSAT] Block ID 588 assign ID 1010 at clock 43 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 43, distance is 9
+[Enter] Block ID 459 assign ID 766 at clock 33, distance is 2
+建立约束耗时 0.47
+[UNSAT] Block ID 588 assign ID 1010 at clock 49 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 49, distance is 9
+[Enter] Block ID 588 assign ID 1010 at clock 41, distance is 9
+建立约束耗时 0.54
+[Enter] Block ID 588 assign ID 1010 at clock 41, distance is 9
+[Enter] Block ID 588 assign ID 1010 at clock 37, distance is 9
+[Enter] Block ID 459 assign ID 766 at clock 31, distance is 2
+建立约束耗时 0.46
+[UNSAT] Block ID 588 assign ID 1010 at clock 51 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 51, distance is 9
+[Enter] Block ID 459 assign ID 766 at clock 31, distance is 2
+建立约束耗时 0.46
+[UNSAT] Block ID 588 assign ID 1010 at clock 41 The constraints before clock are unsat.
+[Enter] Block ID 588 assign ID 1010 at clock 41, distance is 9
+[UNSAT] Block ID 470 assign ID 789 at clock 51 The constraints before clock are unsat.
+[Enter] Block ID 470 assign ID 789 at clock 51, distance is 0
+[COVERED] Removing target 470, the assign is 789, at clock 51
+[INFO] Block ID 459 assign ID 766 at clock 35 The constraints after mutate are unsat.
+[Enter] Block ID 459 assign ID 766 at clock 35, distance is 2
+[UNSAT] Block ID 461 assign ID 767 at clock 51 The constraints before clock are unsat.
+[Enter] Block ID 461 assign ID 767 at clock 51, distance is 2
+[INFO] The time of the target is 40.77 seconds
+Target 603 is covered in clock 0
+Target 302 is covered in clock 0
+Target 1 is covered in clock 0
+Target 604 is covered in clock 2
+Target 306 is covered in clock 2
+Target 303 is covered in clock 2
+Target 5 is covered in clock 2
+Target 2 is covered in clock 2
+Target 436 is covered in clock 3
+Target 431 is covered in clock 3
+Target 429 is covered in clock 3
+Target 425 is covered in clock 3
+Target 423 is covered in clock 3
+Target 420 is covered in clock 3
+Target 417 is covered in clock 3
+Target 411 is covered in clock 3
+Target 405 is covered in clock 3
+Target 401 is covered in clock 3
+Target 400 is covered in clock 3
+Target 312 is covered in clock 3
+Target 309 is covered in clock 3
+Target 307 is covered in clock 3
+Target 154 is covered in clock 3
+Target 149 is covered in clock 3
+Target 146 is covered in clock 3
+Target 121 is covered in clock 3
+Target 119 is covered in clock 3
+Target 116 is covered in clock 3
+Target 110 is covered in clock 3
+Target 104 is covered in clock 3
+Target 100 is covered in clock 3
+Target 99 is covered in clock 3
+Target 13 is covered in clock 3
+Target 7 is covered in clock 3
+Target 6 is covered in clock 3
+Target 118 is covered in clock 3
+Target 52 is covered in clock 3
+Target 49 is covered in clock 3
+Target 47 is covered in clock 3
+Target 20 is covered in clock 3
+Target 51 is covered in clock 3
+Target 48 is covered in clock 3
+Target 192 is covered in clock 3
+Target 185 is covered in clock 3
+Target 526 is covered in clock 5
+Target 524 is covered in clock 5
+Target 519 is covered in clock 5
+Target 414 is covered in clock 5
+Target 410 is covered in clock 5
+Target 313 is covered in clock 5
+Target 135 is covered in clock 5
+Target 130 is covered in clock 5
+Target 128 is covered in clock 5
+Target 124 is covered in clock 5
+Target 122 is covered in clock 5
+Target 11 is covered in clock 5
+Target 8 is covered in clock 5
+Target 75 is covered in clock 5
+Target 73 is covered in clock 5
+Target 505 is covered in clock 5
+Target 500 is covered in clock 5
+Target 391 is covered in clock 5
+Target 449 is covered in clock 5
+Target 591 is covered in clock 5
+Target 479 is covered in clock 5
+Target 473 is covered in clock 5
+Target 455 is covered in clock 5
+Target 25 is covered in clock 7
+Target 23 is covered in clock 7
+Target 19 is covered in clock 7
+Target 16 is covered in clock 7
+Target 14 is covered in clock 7
+Target 251 is covered in clock 7
+Target 247 is covered in clock 7
+Target 242 is covered in clock 7
+Target 113 is covered in clock 7
+Target 109 is covered in clock 7
+Target 234 is covered in clock 7
+Target 241 is covered in clock 7
+Target 240 is covered in clock 7
+Target 239 is covered in clock 7
+Target 238 is covered in clock 7
+Target 233 is covered in clock 7
+Target 232 is covered in clock 7
+Target 569 is covered in clock 7
+Target 514 is covered in clock 7
+Target 446 is covered in clock 7
+Target 498 is covered in clock 7
+Target 499 is covered in clock 7
+Target 458 is covered in clock 7
+Target 527 is covered in clock 9
+Target 422 is covered in clock 9
+Target 315 is covered in clock 9
+Target 384 is covered in clock 9
+Target 382 is covered in clock 9
+Target 142 is covered in clock 9
+Target 140 is covered in clock 9
+Target 67 is covered in clock 9
+Target 334 is covered in clock 9
+Target 332 is covered in clock 9
+Target 457 is covered in clock 9
+Target 398 is covered in clock 9
+Target 193 is covered in clock 9
+Target 191 is covered in clock 9
+Target 190 is covered in clock 9
+Target 189 is covered in clock 9
+Target 187 is covered in clock 9
+Target 186 is covered in clock 9
+Target 184 is covered in clock 9
+Target 577 is covered in clock 9
+Target 576 is covered in clock 9
+Target 530 is covered in clock 9
+Target 106 is covered in clock 11
+Target 103 is covered in clock 11
+Target 503 is covered in clock 11
+Target 497 is covered in clock 11
+Target 495 is covered in clock 11
+Target 456 is covered in clock 11
+Target 452 is covered in clock 11
+Target 153 is covered in clock 11
+Target 157 is covered in clock 11
+Target 156 is covered in clock 11
+Target 155 is covered in clock 11
+Target 151 is covered in clock 11
+Target 150 is covered in clock 11
+Target 148 is covered in clock 11
+Target 375 is covered in clock 11
+Target 374 is covered in clock 11
+Target 341 is covered in clock 11
+Target 340 is covered in clock 11
+Target 165 is covered in clock 11
+Target 162 is covered in clock 11
+Target 169 is covered in clock 11
+Target 168 is covered in clock 11
+Target 167 is covered in clock 11
+Target 166 is covered in clock 11
+Target 163 is covered in clock 11
+Target 161 is covered in clock 11
+Target 160 is covered in clock 11
+Target 177 is covered in clock 11
+Target 175 is covered in clock 11
+Target 181 is covered in clock 11
+Target 180 is covered in clock 11
+Target 179 is covered in clock 11
+Target 178 is covered in clock 11
+Target 174 is covered in clock 11
+Target 173 is covered in clock 11
+Target 172 is covered in clock 11
+Target 250 is covered in clock 11
+Target 253 is covered in clock 11
+Target 252 is covered in clock 11
+Target 249 is covered in clock 11
+Target 246 is covered in clock 11
+Target 245 is covered in clock 11
+Target 244 is covered in clock 11
+Target 203 is covered in clock 11
+Target 205 is covered in clock 11
+Target 202 is covered in clock 11
+Target 201 is covered in clock 11
+Target 198 is covered in clock 11
+Target 196 is covered in clock 11
+Target 461 is covered in clock 11
+Target 387 is covered in clock 11
+Target 438 is covered in clock 13
+Target 432 is covered in clock 13
+Target 419 is covered in clock 13
+Target 540 is covered in clock 13
+Target 536 is covered in clock 13
+Target 531 is covered in clock 13
+Target 528 is covered in clock 13
+Target 522 is covered in clock 13
+Target 469 is covered in clock 13
+Target 463 is covered in clock 13
+Target 459 is covered in clock 13
+Target 82 is covered in clock 13
+Target 71 is covered in clock 13
+Target 70 is covered in clock 13
+Target 565 is covered in clock 13
+Target 330 is covered in clock 13
+Target 523 is covered in clock 13
+Target 517 is covered in clock 13
+Target 511 is covered in clock 13
+Target 276 is covered in clock 13
+Target 275 is covered in clock 13
+Target 516 is covered in clock 13
+Target 564 is covered in clock 13
+Target 37 is covered in clock 15
+Target 35 is covered in clock 15
+Target 12 is covered in clock 15
+Target 535 is covered in clock 15
+Target 380 is covered in clock 15
+Target 488 is covered in clock 15
+Target 368 is covered in clock 15
+Target 24 is covered in clock 15
+Target 521 is covered in clock 15
+Target 364 is covered in clock 15
+Target 58 is covered in clock 17
+Target 56 is covered in clock 17
+Target 54 is covered in clock 17
+Target 21 is covered in clock 17
+Target 367 is covered in clock 17
+Target 366 is covered in clock 17
+Target 261 is covered in clock 17
+Target 259 is covered in clock 17
+Target 254 is covered in clock 17
+Target 265 is covered in clock 17
+Target 264 is covered in clock 17
+Target 263 is covered in clock 17
+Target 262 is covered in clock 17
+Target 112 is covered in clock 17
+Target 258 is covered in clock 17
+Target 257 is covered in clock 17
+Target 256 is covered in clock 17
+Target 32 is covered in clock 17
+Target 33 is covered in clock 17
+Target 558 is covered in clock 17
+Target 74 is covered in clock 17
+Target 390 is covered in clock 17
+Target 388 is covered in clock 17
+Target 386 is covered in clock 17
+Target 492 is covered in clock 17
+Target 510 is covered in clock 17
+Target 356 is covered in clock 17
+Target 281 is covered in clock 19
+Target 273 is covered in clock 19
+Target 266 is covered in clock 19
+Target 563 is covered in clock 19
+Target 560 is covered in clock 19
+Target 555 is covered in clock 19
+Target 291 is covered in clock 19
+Target 286 is covered in clock 19
+Target 101 is covered in clock 19
+Target 293 is covered in clock 19
+Target 292 is covered in clock 19
+Target 290 is covered in clock 19
+Target 491 is covered in clock 19
+Target 485 is covered in clock 19
+Target 483 is covered in clock 19
+Target 360 is covered in clock 19
+Target 357 is covered in clock 19
+Target 355 is covered in clock 19
+Target 359 is covered in clock 19
+Target 36 is covered in clock 19
+Target 450 is covered in clock 19
+Target 342 is covered in clock 19
+Target 466 is covered in clock 19
+Target 462 is covered in clock 19
+Target 572 is covered in clock 19
+Target 268 is covered in clock 19
+Target 478 is covered in clock 19
+Target 474 is covered in clock 19
+Target 550 is covered in clock 19
+Target 548 is covered in clock 19
+Target 542 is covered in clock 19
+Target 534 is covered in clock 19
+Target 326 is covered in clock 21
+Target 324 is covered in clock 21
+Target 319 is covered in clock 21
+Target 317 is covered in clock 21
+Target 78 is covered in clock 21
+Target 77 is covered in clock 21
+Target 594 is covered in clock 21
+Target 587 is covered in clock 21
+Target 402 is covered in clock 21
+Target 467 is covered in clock 21
+Target 464 is covered in clock 21
+Target 353 is covered in clock 21
+Target 350 is covered in clock 21
+Target 348 is covered in clock 21
+Target 107 is covered in clock 21
+Target 490 is covered in clock 21
+Target 433 is covered in clock 21
+Target 226 is covered in clock 21
+Target 229 is covered in clock 21
+Target 227 is covered in clock 21
+Target 225 is covered in clock 21
+Target 223 is covered in clock 21
+Target 222 is covered in clock 21
+Target 220 is covered in clock 21
+Target 487 is covered in clock 21
+Target 506 is covered in clock 21
+Target 504 is covered in clock 21
+Target 551 is covered in clock 21
+Target 337 is covered in clock 23
+Target 336 is covered in clock 23
+Target 321 is covered in clock 23
+Target 314 is covered in clock 23
+Target 308 is covered in clock 23
+Target 443 is covered in clock 23
+Target 441 is covered in clock 23
+Target 215 is covered in clock 23
+Target 211 is covered in clock 23
+Target 206 is covered in clock 23
+Target 217 is covered in clock 23
+Target 216 is covered in clock 23
+Target 214 is covered in clock 23
+Target 213 is covered in clock 23
+Target 210 is covered in clock 23
+Target 209 is covered in clock 23
+Target 208 is covered in clock 23
+Target 79 is covered in clock 23
+Target 437 is covered in clock 23
+Target 434 is covered in clock 23
+Target 346 is covered in clock 23
+Target 62 is covered in clock 23
+Target 63 is covered in clock 23
+Target 426 is covered in clock 25
+Target 363 is covered in clock 25
+Target 362 is covered in clock 25
+Target 40 is covered in clock 25
+Target 39 is covered in clock 25
+Target 493 is covered in clock 25
+Target 486 is covered in clock 25
+Target 539 is covered in clock 25
+Target 476 is covered in clock 25
+Target 454 is covered in clock 27
+Target 451 is covered in clock 27
+Target 447 is covered in clock 27
+Target 584 is covered in clock 27
+Target 574 is covered in clock 27
+Target 567 is covered in clock 27
+Target 481 is covered in clock 27
+Target 475 is covered in clock 27
+Target 471 is covered in clock 27
+Target 407 is covered in clock 27
+Target 404 is covered in clock 27
+Target 372 is covered in clock 27
+Target 89 is covered in clock 27
+Target 87 is covered in clock 27
+Target 90 is covered in clock 27
+Target 86 is covered in clock 27
+Target 592 is covered in clock 27
+Target 228 is covered in clock 27
+Target 221 is covered in clock 27
+Target 494 is covered in clock 27
+Target 333 is covered in clock 27
+Target 45 is covered in clock 29
+Target 43 is covered in clock 29
+Target 18 is covered in clock 29
+Target 562 is covered in clock 29
+Target 557 is covered in clock 29
+Target 413 is covered in clock 29
+Target 538 is covered in clock 29
+Target 345 is covered in clock 29
+Target 344 is covered in clock 29
+Target 533 is covered in clock 29
+Target 515 is covered in clock 29
+Target 509 is covered in clock 29
+Target 507 is covered in clock 29
+Target 439 is covered in clock 29
+Target 338 is covered in clock 29
+Target 325 is covered in clock 31
+Target 204 is covered in clock 31
+Target 199 is covered in clock 31
+Target 194 is covered in clock 31
+Target 115 is covered in clock 31
+Target 285 is covered in clock 31
+Target 218 is covered in clock 31
+Target 182 is covered in clock 31
+Target 170 is covered in clock 31
+Target 158 is covered in clock 31
+Target 593 is covered in clock 31
+Target 440 is covered in clock 31
+Target 83 is covered in clock 33
+Target 81 is covered in clock 33
+Target 397 is covered in clock 33
+Target 395 is covered in clock 33
+Target 393 is covered in clock 33
+Target 139 is covered in clock 33
+Target 136 is covered in clock 33
+Target 125 is covered in clock 33
+Target 133 is covered in clock 33
+Target 132 is covered in clock 33
+Target 131 is covered in clock 33
+Target 529 is covered in clock 33
+Target 59 is covered in clock 33
+Target 55 is covered in clock 33
+Target 518 is covered in clock 33
+Target 512 is covered in clock 33
+Target 320 is covered in clock 35
+Target 586 is covered in clock 35
+Target 416 is covered in clock 35
+Target 553 is covered in clock 35
+Target 546 is covered in clock 35
+Target 543 is covered in clock 35
+Target 138 is covered in clock 35
+Target 137 is covered in clock 35
+Target 283 is covered in clock 35
+Target 270 is covered in clock 35
+Target 269 is covered in clock 35
+Target 271 is covered in clock 35
+Target 274 is covered in clock 35
+Target 284 is covered in clock 35
+Target 282 is covered in clock 35
+Target 280 is covered in clock 35
+Target 376 is covered in clock 35
+Target 554 is covered in clock 35
+Target 66 is covered in clock 37
+Target 65 is covered in clock 37
+Target 547 is covered in clock 37
+Target 480 is covered in clock 37
+Target 482 is covered in clock 37
+Target 394 is covered in clock 37
+Target 237 is covered in clock 39
+Target 235 is covered in clock 39
+Target 230 is covered in clock 39
+Target 581 is covered in clock 39
+Target 571 is covered in clock 39
+Target 570 is covered in clock 39
+Target 379 is covered in clock 39
+Target 378 is covered in clock 39
+Target 352 is covered in clock 39
+Target 96 is covered in clock 41
+Target 94 is covered in clock 41
+Target 92 is covered in clock 41
+Target 383 is covered in clock 41
+Target 322 is covered in clock 41
+Target 444 is covered in clock 41
+Target 541 is covered in clock 41
+Target 97 is covered in clock 41
+Target 93 is covered in clock 41
+Target 468 is covered in clock 41
+Target 583 is covered in clock 41
+Target 371 is covered in clock 43
+Target 370 is covered in clock 43
+Target 545 is covered in clock 43
+Target 585 is covered in clock 43
+Target 582 is covered in clock 43
+Target 575 is covered in clock 43
+Target 445 is covered in clock 45
+Target 502 is covered in clock 47
+Target 408 is covered in clock 47
+Target 41 is covered in clock 49
+Target 69 is covered in clock 49
+Target 61 is covered in clock 49
+Target 31 is covered in clock 49
+Target 85 is covered in clock 49
+Target 552 is covered in clock 49
+Target 329 is covered in clock 51
+Target 328 is covered in clock 51
+Target 470 is covered in clock 51
+Target 144 is covered in clock 53
+Target 145 is covered in clock 53
+Target 143 is covered in clock 53
+Target 566 is covered in clock 53
+Target 559 is covered in clock 53
+Target 44 is covered in clock 55
+Target 349 is covered in clock 55
+Target 29 is covered in clock 57
+Target 27 is covered in clock 57
+Target 28 is covered in clock 57
+Target 197 is covered in clock 61
+Memory usage of run_concolic: 64.23046875 MiB
+The current testbench is b20
+Time taken: 132.7727575302124 seconds
+[COVERED] Covered target number is 452
+[UNCOVERED] Uncovered target number is 4
+[COVERED] Covered target 604 Assign id:  1034
+[COVERED] Covered target 603 Assign id:  1033
+[COVERED] Covered target 527 Assign id:  903
+[COVERED] Covered target 526 Assign id:  901
+[COVERED] Covered target 524 Assign id:  897
+[COVERED] Covered target 519 Assign id:  886
+[COVERED] Covered target 454 Assign id:  757
+[COVERED] Covered target 451 Assign id:  749
+[COVERED] Covered target 447 Assign id:  742
+[COVERED] Covered target 438 Assign id:  720
+[COVERED] Covered target 436 Assign id:  716
+[COVERED] Covered target 432 Assign id:  703
+[COVERED] Covered target 431 Assign id:  701
+[COVERED] Covered target 429 Assign id:  700
+[COVERED] Covered target 426 Assign id:  698
+[COVERED] Covered target 425 Assign id:  697
+[COVERED] Covered target 423 Assign id:  695
+[COVERED] Covered target 422 Assign id:  694
+[COVERED] Covered target 420 Assign id:  692
+[COVERED] Covered target 419 Assign id:  691
+[COVERED] Covered target 417 Assign id:  689
+[COVERED] Covered target 414 Assign id:  686
+[COVERED] Covered target 411 Assign id:  684
+[COVERED] Covered target 410 Assign id:  683
+[COVERED] Covered target 405 Assign id:  679
+[COVERED] Covered target 401 Assign id:  676
+[COVERED] Covered target 400 Assign id:  675
+[COVERED] Covered target 337 Assign id:  599
+[COVERED] Covered target 336 Assign id:  598
+[COVERED] Covered target 326 Assign id:  585
+[COVERED] Covered target 325 Assign id:  584
+[COVERED] Covered target 324 Assign id:  583
+[COVERED] Covered target 321 Assign id:  575
+[COVERED] Covered target 320 Assign id:  571
+[COVERED] Covered target 319 Assign id:  569
+[COVERED] Covered target 317 Assign id:  568
+[COVERED] Covered target 315 Assign id:  566
+[COVERED] Covered target 314 Assign id:  564
+[COVERED] Covered target 313 Assign id:  562
+[COVERED] Covered target 312 Assign id:  560
+[COVERED] Covered target 309 Assign id:  551
+[COVERED] Covered target 308 Assign id:  550
+[COVERED] Covered target 307 Assign id:  549
+[COVERED] Covered target 306 Assign id:  542
+[COVERED] Covered target 303 Assign id:  516
+[COVERED] Covered target 302 Assign id:  515
+[COVERED] Covered target 281 Assign id:  486
+[COVERED] Covered target 273 Assign id:  475
+[COVERED] Covered target 266 Assign id:  467
+[COVERED] Covered target 237 Assign id:  410
+[COVERED] Covered target 235 Assign id:  406
+[COVERED] Covered target 230 Assign id:  395
+[COVERED] Covered target 154 Assign id:  244
+[COVERED] Covered target 149 Assign id:  230
+[COVERED] Covered target 146 Assign id:  227
+[COVERED] Covered target 135 Assign id:  201
+[COVERED] Covered target 130 Assign id:  186
+[COVERED] Covered target 128 Assign id:  185
+[COVERED] Covered target 124 Assign id:  182
+[COVERED] Covered target 122 Assign id:  180
+[COVERED] Covered target 121 Assign id:  179
+[COVERED] Covered target 119 Assign id:  177
+[COVERED] Covered target 116 Assign id:  174
+[COVERED] Covered target 110 Assign id:  169
+[COVERED] Covered target 106 Assign id:  165
+[COVERED] Covered target 104 Assign id:  164
+[COVERED] Covered target 103 Assign id:  163
+[COVERED] Covered target 100 Assign id:  161
+[COVERED] Covered target 99 Assign id:  160
+[COVERED] Covered target 96 Assign id:  156
+[COVERED] Covered target 94 Assign id:  154
+[COVERED] Covered target 92 Assign id:  152
+[COVERED] Covered target 83 Assign id:  141
+[COVERED] Covered target 81 Assign id:  139
+[COVERED] Covered target 66 Assign id:  120
+[COVERED] Covered target 65 Assign id:  119
+[COVERED] Covered target 58 Assign id:  110
+[COVERED] Covered target 56 Assign id:  108
+[COVERED] Covered target 54 Assign id:  106
+[COVERED] Covered target 45 Assign id:  95
+[COVERED] Covered target 43 Assign id:  93
+[COVERED] Covered target 37 Assign id:  85
+[COVERED] Covered target 35 Assign id:  83
+[COVERED] Covered target 25 Assign id:  70
+[COVERED] Covered target 23 Assign id:  68
+[COVERED] Covered target 21 Assign id:  64
+[COVERED] Covered target 19 Assign id:  56
+[COVERED] Covered target 18 Assign id:  54
+[COVERED] Covered target 16 Assign id:  53
+[COVERED] Covered target 14 Assign id:  51
+[COVERED] Covered target 13 Assign id:  49
+[COVERED] Covered target 12 Assign id:  47
+[COVERED] Covered target 11 Assign id:  45
+[COVERED] Covered target 8 Assign id:  36
+[COVERED] Covered target 7 Assign id:  35
+[COVERED] Covered target 6 Assign id:  34
+[COVERED] Covered target 5 Assign id:  27
+[COVERED] Covered target 2 Assign id:  1
+[COVERED] Covered target 1 Assign id:  0
+[COVERED] Covered target 586 Assign id:  1008
+[COVERED] Covered target 584 Assign id:  1005
+[COVERED] Covered target 581 Assign id:  999
+[COVERED] Covered target 574 Assign id:  990
+[COVERED] Covered target 571 Assign id:  987
+[COVERED] Covered target 570 Assign id:  985
+[COVERED] Covered target 567 Assign id:  982
+[COVERED] Covered target 563 Assign id:  975
+[COVERED] Covered target 562 Assign id:  973
+[COVERED] Covered target 560 Assign id:  969
+[COVERED] Covered target 557 Assign id:  959
+[COVERED] Covered target 555 Assign id:  958
+[COVERED] Covered target 540 Assign id:  929
+[COVERED] Covered target 536 Assign id:  921
+[COVERED] Covered target 535 Assign id:  917
+[COVERED] Covered target 531 Assign id:  910
+[COVERED] Covered target 503 Assign id:  855
+[COVERED] Covered target 497 Assign id:  839
+[COVERED] Covered target 495 Assign id:  838
+[COVERED] Covered target 416 Assign id:  688
+[COVERED] Covered target 413 Assign id:  685
+[COVERED] Covered target 397 Assign id:  671
+[COVERED] Covered target 395 Assign id:  669
+[COVERED] Covered target 393 Assign id:  667
+[COVERED] Covered target 384 Assign id:  656
+[COVERED] Covered target 383 Assign id:  655
+[COVERED] Covered target 382 Assign id:  654
+[COVERED] Covered target 367 Assign id:  635
+[COVERED] Covered target 366 Assign id:  634
+[COVERED] Covered target 363 Assign id:  630
+[COVERED] Covered target 362 Assign id:  629
+[COVERED] Covered target 322 Assign id:  579
+[COVERED] Covered target 251 Assign id:  438
+[COVERED] Covered target 247 Assign id:  430
+[COVERED] Covered target 242 Assign id:  419
+[COVERED] Covered target 204 Assign id:  344
+[COVERED] Covered target 199 Assign id:  334
+[COVERED] Covered target 194 Assign id:  323
+[COVERED] Covered target 118 Assign id:  176
+[COVERED] Covered target 115 Assign id:  173
+[COVERED] Covered target 113 Assign id:  171
+[COVERED] Covered target 109 Assign id:  168
+[COVERED] Covered target 78 Assign id:  135
+[COVERED] Covered target 77 Assign id:  134
+[COVERED] Covered target 75 Assign id:  131
+[COVERED] Covered target 73 Assign id:  129
+[COVERED] Covered target 553 Assign id:  955
+[COVERED] Covered target 547 Assign id:  941
+[COVERED] Covered target 546 Assign id:  937
+[COVERED] Covered target 543 Assign id:  934
+[COVERED] Covered target 538 Assign id:  925
+[COVERED] Covered target 528 Assign id:  905
+[COVERED] Covered target 522 Assign id:  889
+[COVERED] Covered target 505 Assign id:  859
+[COVERED] Covered target 500 Assign id:  849
+[COVERED] Covered target 481 Assign id:  811
+[COVERED] Covered target 475 Assign id:  797
+[COVERED] Covered target 471 Assign id:  790
+[COVERED] Covered target 456 Assign id:  761
+[COVERED] Covered target 452 Assign id:  753
+[COVERED] Covered target 443 Assign id:  726
+[COVERED] Covered target 441 Assign id:  725
+[COVERED] Covered target 407 Assign id:  680
+[COVERED] Covered target 404 Assign id:  678
+[COVERED] Covered target 379 Assign id:  650
+[COVERED] Covered target 378 Assign id:  649
+[COVERED] Covered target 291 Assign id:  498
+[COVERED] Covered target 286 Assign id:  494
+[COVERED] Covered target 261 Assign id:  458
+[COVERED] Covered target 259 Assign id:  454
+[COVERED] Covered target 254 Assign id:  443
+[COVERED] Covered target 234 Assign id:  402
+[COVERED] Covered target 215 Assign id:  366
+[COVERED] Covered target 211 Assign id:  358
+[COVERED] Covered target 206 Assign id:  347
+[COVERED] Covered target 142 Assign id:  211
+[COVERED] Covered target 140 Assign id:  210
+[COVERED] Covered target 101 Assign id:  162
+[COVERED] Covered target 52 Assign id:  103
+[COVERED] Covered target 49 Assign id:  100
+[COVERED] Covered target 47 Assign id:  98
+[COVERED] Covered target 40 Assign id:  89
+[COVERED] Covered target 39 Assign id:  88
+[COVERED] Covered target 20 Assign id:  60
+[COVERED] Covered target 502 Assign id:  853
+[COVERED] Covered target 445 Assign id:  732
+[COVERED] Covered target 408 Assign id:  681
+[COVERED] Covered target 371 Assign id:  640
+[COVERED] Covered target 370 Assign id:  639
+[COVERED] Covered target 329 Assign id:  589
+[COVERED] Covered target 328 Assign id:  588
+[COVERED] Covered target 197 Assign id:  326
+[COVERED] Covered target 144 Assign id:  217
+[COVERED] Covered target 44 Assign id:  94
+[COVERED] Covered target 41 Assign id:  90
+[COVERED] Covered target 29 Assign id:  75
+[COVERED] Covered target 27 Assign id:  73
+[COVERED] Covered target 138 Assign id:  207
+[COVERED] Covered target 137 Assign id:  205
+[COVERED] Covered target 139 Assign id:  209
+[COVERED] Covered target 136 Assign id:  203
+[COVERED] Covered target 125 Assign id:  183
+[COVERED] Covered target 217 Assign id:  370
+[COVERED] Covered target 216 Assign id:  368
+[COVERED] Covered target 214 Assign id:  364
+[COVERED] Covered target 213 Assign id:  362
+[COVERED] Covered target 265 Assign id:  466
+[COVERED] Covered target 264 Assign id:  464
+[COVERED] Covered target 263 Assign id:  462
+[COVERED] Covered target 262 Assign id:  460
+[COVERED] Covered target 241 Assign id:  418
+[COVERED] Covered target 240 Assign id:  416
+[COVERED] Covered target 239 Assign id:  414
+[COVERED] Covered target 238 Assign id:  412
+[COVERED] Covered target 285 Assign id:  493
+[COVERED] Covered target 69 Assign id:  124
+[COVERED] Covered target 61 Assign id:  114
+[COVERED] Covered target 31 Assign id:  78
+[COVERED] Covered target 28 Assign id:  74
+[COVERED] Covered target 112 Assign id:  170
+[COVERED] Covered target 51 Assign id:  102
+[COVERED] Covered target 85 Assign id:  144
+[COVERED] Covered target 218 Assign id:  371
+[COVERED] Covered target 182 Assign id:  299
+[COVERED] Covered target 170 Assign id:  275
+[COVERED] Covered target 158 Assign id:  251
+[COVERED] Covered target 145 Assign id:  221
+[COVERED] Covered target 143 Assign id:  213
+[COVERED] Covered target 133 Assign id:  196
+[COVERED] Covered target 132 Assign id:  192
+[COVERED] Covered target 131 Assign id:  188
+[COVERED] Covered target 210 Assign id:  354
+[COVERED] Covered target 209 Assign id:  350
+[COVERED] Covered target 208 Assign id:  348
+[COVERED] Covered target 293 Assign id:  502
+[COVERED] Covered target 292 Assign id:  500
+[COVERED] Covered target 290 Assign id:  496
+[COVERED] Covered target 258 Assign id:  450
+[COVERED] Covered target 257 Assign id:  446
+[COVERED] Covered target 256 Assign id:  444
+[COVERED] Covered target 233 Assign id:  398
+[COVERED] Covered target 232 Assign id:  396
+[COVERED] Covered target 48 Assign id:  99
+[COVERED] Covered target 493 Assign id:  835
+[COVERED] Covered target 491 Assign id:  831
+[COVERED] Covered target 486 Assign id:  817
+[COVERED] Covered target 485 Assign id:  815
+[COVERED] Covered target 483 Assign id:  814
+[COVERED] Covered target 372 Assign id:  641
+[COVERED] Covered target 153 Assign id:  242
+[COVERED] Covered target 32 Assign id:  79
+[COVERED] Covered target 157 Assign id:  250
+[COVERED] Covered target 156 Assign id:  248
+[COVERED] Covered target 155 Assign id:  246
+[COVERED] Covered target 33 Assign id:  80
+[COVERED] Covered target 67 Assign id:  121
+[COVERED] Covered target 151 Assign id:  238
+[COVERED] Covered target 150 Assign id:  234
+[COVERED] Covered target 148 Assign id:  228
+[COVERED] Covered target 594 Assign id:  1017
+[COVERED] Covered target 587 Assign id:  1009
+[COVERED] Covered target 558 Assign id:  961
+[COVERED] Covered target 469 Assign id:  787
+[COVERED] Covered target 463 Assign id:  773
+[COVERED] Covered target 459 Assign id:  766
+[COVERED] Covered target 402 Assign id:  677
+[COVERED] Covered target 375 Assign id:  645
+[COVERED] Covered target 374 Assign id:  644
+[COVERED] Covered target 539 Assign id:  927
+[COVERED] Covered target 467 Assign id:  783
+[COVERED] Covered target 464 Assign id:  777
+[COVERED] Covered target 341 Assign id:  604
+[COVERED] Covered target 340 Assign id:  603
+[COVERED] Covered target 82 Assign id:  140
+[COVERED] Covered target 74 Assign id:  130
+[COVERED] Covered target 390 Assign id:  663
+[COVERED] Covered target 388 Assign id:  661
+[COVERED] Covered target 386 Assign id:  659
+[COVERED] Covered target 360 Assign id:  626
+[COVERED] Covered target 357 Assign id:  623
+[COVERED] Covered target 355 Assign id:  621
+[COVERED] Covered target 353 Assign id:  618
+[COVERED] Covered target 350 Assign id:  615
+[COVERED] Covered target 348 Assign id:  613
+[COVERED] Covered target 165 Assign id:  266
+[COVERED] Covered target 162 Assign id:  258
+[COVERED] Covered target 71 Assign id:  126
+[COVERED] Covered target 169 Assign id:  274
+[COVERED] Covered target 168 Assign id:  272
+[COVERED] Covered target 167 Assign id:  270
+[COVERED] Covered target 166 Assign id:  268
+[COVERED] Covered target 79 Assign id:  136
+[COVERED] Covered target 70 Assign id:  125
+[COVERED] Covered target 163 Assign id:  262
+[COVERED] Covered target 161 Assign id:  254
+[COVERED] Covered target 160 Assign id:  252
+[COVERED] Covered target 380 Assign id:  651
+[COVERED] Covered target 334 Assign id:  595
+[COVERED] Covered target 332 Assign id:  593
+[COVERED] Covered target 177 Assign id:  290
+[COVERED] Covered target 175 Assign id:  286
+[COVERED] Covered target 181 Assign id:  298
+[COVERED] Covered target 180 Assign id:  296
+[COVERED] Covered target 179 Assign id:  294
+[COVERED] Covered target 178 Assign id:  292
+[COVERED] Covered target 174 Assign id:  282
+[COVERED] Covered target 173 Assign id:  278
+[COVERED] Covered target 172 Assign id:  276
+[COVERED] Covered target 565 Assign id:  979
+[COVERED] Covered target 437 Assign id:  718
+[COVERED] Covered target 434 Assign id:  711
+[COVERED] Covered target 391 Assign id:  664
+[COVERED] Covered target 359 Assign id:  625
+[COVERED] Covered target 569 Assign id:  983
+[COVERED] Covered target 488 Assign id:  825
+[COVERED] Covered target 449 Assign id:  743
+[COVERED] Covered target 250 Assign id:  436
+[COVERED] Covered target 253 Assign id:  442
+[COVERED] Covered target 252 Assign id:  440
+[COVERED] Covered target 249 Assign id:  434
+[COVERED] Covered target 36 Assign id:  84
+[COVERED] Covered target 246 Assign id:  426
+[COVERED] Covered target 245 Assign id:  422
+[COVERED] Covered target 244 Assign id:  420
+[COVERED] Covered target 593 Assign id:  1015
+[COVERED] Covered target 450 Assign id:  745
+[COVERED] Covered target 345 Assign id:  609
+[COVERED] Covered target 344 Assign id:  608
+[COVERED] Covered target 591 Assign id:  1011
+[COVERED] Covered target 368 Assign id:  636
+[COVERED] Covered target 330 Assign id:  590
+[COVERED] Covered target 107 Assign id:  166
+[COVERED] Covered target 492 Assign id:  833
+[COVERED] Covered target 342 Assign id:  605
+[COVERED] Covered target 523 Assign id:  893
+[COVERED] Covered target 346 Assign id:  610
+[COVERED] Covered target 89 Assign id:  148
+[COVERED] Covered target 87 Assign id:  146
+[COVERED] Covered target 90 Assign id:  149
+[COVERED] Covered target 86 Assign id:  145
+[COVERED] Covered target 545 Assign id:  935
+[COVERED] Covered target 533 Assign id:  911
+[COVERED] Covered target 352 Assign id:  617
+[COVERED] Covered target 490 Assign id:  829
+[COVERED] Covered target 466 Assign id:  781
+[COVERED] Covered target 462 Assign id:  769
+[COVERED] Covered target 592 Assign id:  1013
+[COVERED] Covered target 515 Assign id:  879
+[COVERED] Covered target 509 Assign id:  863
+[COVERED] Covered target 507 Assign id:  862
+[COVERED] Covered target 433 Assign id:  707
+[COVERED] Covered target 572 Assign id:  988
+[COVERED] Covered target 457 Assign id:  763
+[COVERED] Covered target 203 Assign id:  342
+[COVERED] Covered target 205 Assign id:  346
+[COVERED] Covered target 202 Assign id:  340
+[COVERED] Covered target 201 Assign id:  338
+[COVERED] Covered target 198 Assign id:  330
+[COVERED] Covered target 196 Assign id:  324
+[COVERED] Covered target 24 Assign id:  69
+[COVERED] Covered target 479 Assign id:  807
+[COVERED] Covered target 473 Assign id:  791
+[COVERED] Covered target 444 Assign id:  728
+[COVERED] Covered target 268 Assign id:  468
+[COVERED] Covered target 478 Assign id:  805
+[COVERED] Covered target 474 Assign id:  793
+[COVERED] Covered target 228 Assign id:  392
+[COVERED] Covered target 221 Assign id:  374
+[COVERED] Covered target 541 Assign id:  931
+[COVERED] Covered target 529 Assign id:  907
+[COVERED] Covered target 283 Assign id:  490
+[COVERED] Covered target 270 Assign id:  472
+[COVERED] Covered target 269 Assign id:  470
+[COVERED] Covered target 271 Assign id:  473
+[COVERED] Covered target 274 Assign id:  477
+[COVERED] Covered target 284 Assign id:  492
+[COVERED] Covered target 282 Assign id:  488
+[COVERED] Covered target 280 Assign id:  484
+[COVERED] Covered target 480 Assign id:  809
+[COVERED] Covered target 97 Assign id:  157
+[COVERED] Covered target 59 Assign id:  111
+[COVERED] Covered target 93 Assign id:  153
+[COVERED] Covered target 55 Assign id:  107
+[COVERED] Covered target 468 Assign id:  785
+[COVERED] Covered target 192 Assign id:  320
+[COVERED] Covered target 185 Assign id:  302
+[COVERED] Covered target 461 Assign id:  767
+[COVERED] Covered target 398 Assign id:  672
+[COVERED] Covered target 583 Assign id:  1003
+[COVERED] Covered target 517 Assign id:  883
+[COVERED] Covered target 511 Assign id:  869
+[COVERED] Covered target 476 Assign id:  801
+[COVERED] Covered target 552 Assign id:  953
+[COVERED] Covered target 226 Assign id:  388
+[COVERED] Covered target 229 Assign id:  394
+[COVERED] Covered target 227 Assign id:  390
+[COVERED] Covered target 225 Assign id:  386
+[COVERED] Covered target 223 Assign id:  382
+[COVERED] Covered target 222 Assign id:  378
+[COVERED] Covered target 220 Assign id:  372
+[COVERED] Covered target 193 Assign id:  322
+[COVERED] Covered target 191 Assign id:  318
+[COVERED] Covered target 190 Assign id:  316
+[COVERED] Covered target 189 Assign id:  314
+[COVERED] Covered target 187 Assign id:  310
+[COVERED] Covered target 186 Assign id:  306
+[COVERED] Covered target 184 Assign id:  300
+[COVERED] Covered target 521 Assign id:  887
+[COVERED] Covered target 510 Assign id:  865
+[COVERED] Covered target 439 Assign id:  722
+[COVERED] Covered target 276 Assign id:  480
+[COVERED] Covered target 275 Assign id:  479
+[COVERED] Covered target 550 Assign id:  949
+[COVERED] Covered target 548 Assign id:  945
+[COVERED] Covered target 487 Assign id:  821
+[COVERED] Covered target 514 Assign id:  877
+[COVERED] Covered target 446 Assign id:  736
+[COVERED] Covered target 516 Assign id:  881
+[COVERED] Covered target 564 Assign id:  977
+[COVERED] Covered target 498 Assign id:  841
+[COVERED] Covered target 62 Assign id:  115
+[COVERED] Covered target 63 Assign id:  116
+[COVERED] Covered target 499 Assign id:  845
+[COVERED] Covered target 566 Assign id:  981
+[COVERED] Covered target 585 Assign id:  1007
+[COVERED] Covered target 582 Assign id:  1001
+[COVERED] Covered target 482 Assign id:  813
+[COVERED] Covered target 518 Assign id:  885
+[COVERED] Covered target 440 Assign id:  724
+[COVERED] Covered target 506 Assign id:  861
+[COVERED] Covered target 504 Assign id:  857
+[COVERED] Covered target 575 Assign id:  992
+[COVERED] Covered target 349 Assign id:  614
+[COVERED] Covered target 559 Assign id:  965
+[COVERED] Covered target 512 Assign id:  873
+[COVERED] Covered target 387 Assign id:  660
+[COVERED] Covered target 376 Assign id:  646
+[COVERED] Covered target 394 Assign id:  668
+[COVERED] Covered target 577 Assign id:  995
+[COVERED] Covered target 576 Assign id:  994
+[COVERED] Covered target 364 Assign id:  631
+[COVERED] Covered target 530 Assign id:  909
+[COVERED] Covered target 356 Assign id:  622
+[COVERED] Covered target 494 Assign id:  837
+[COVERED] Covered target 542 Assign id:  933
+[COVERED] Covered target 534 Assign id:  913
+[COVERED] Covered target 338 Assign id:  600
+[COVERED] Covered target 333 Assign id:  594
+[COVERED] Covered target 455 Assign id:  759
+[COVERED] Covered target 458 Assign id:  765
+[COVERED] Covered target 551 Assign id:  951
+[COVERED] Covered target 554 Assign id:  957
+[COVERED] Covered target 470 Assign id:  789
+[UNCOVERED] Uncovered target 278 Assign id:  483
+[UNCOVERED] Uncovered target 287 Assign id:  495
+[UNCOVERED] Uncovered target 579 Assign id:  998
+[UNCOVERED] Uncovered target 588 Assign id:  1010

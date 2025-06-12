@@ -1,5 +1,5 @@
 //Following code is from line 1
-module b20(clock, so, si, rd, wr, reset, __obs);
+module b20(wr, rd, reset, clock, si, so, __obs);
 
     input                clock;
     input                reset;
@@ -1329,9 +1329,7 @@ module b20(clock, so, si, rd, wr, reset, __obs);
                 end
             // Display the variables
             begin
-            $display(";R i_rx_phy_fs_ce = %d", i_rx_phy_fs_ce);
-            $display(";R i_rx_phy_clk = %d", i_rx_phy_clk);
-            $display(";R i_rx_phy_fs_ce_r1 = %d", i_rx_phy_fs_ce_r1);
+            $display(";R state = 1",);
             end
         end
 
@@ -2607,9 +2605,7 @@ module b20(clock, so, si, rd, wr, reset, __obs);
                 end
             // Display the variables
             begin
-            $display(";R i_rx_phy_fs_ce = %d", i_rx_phy_fs_ce);
-            $display(";R i_rx_phy_clk = %d", i_rx_phy_clk);
-            $display(";R i_rx_phy_fs_ce_r1 = %d", i_rx_phy_fs_ce_r1);
+            $display(";R state = 1",);
             end
         end
 
@@ -2653,9 +2649,7 @@ module b20(clock, so, si, rd, wr, reset, __obs);
                 end
             // Display the variables
             begin
-            $display(";R i_rx_phy_fs_ce = %d", i_rx_phy_fs_ce);
-            $display(";R i_rx_phy_clk = %d", i_rx_phy_clk);
-            $display(";R i_rx_phy_fs_ce_r1 = %d", i_rx_phy_fs_ce_r1);
+            $display(";R state = 1",);
             end
         end
 

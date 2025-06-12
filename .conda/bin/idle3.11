@@ -1,0 +1,5 @@
+#!/hpc/home/connect.ytan910/code/Concolic/.conda/bin/python3.11
+
+from idlelib.pyshell import main
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,418 @@
+VCD info: dumpfile ./test/b11/conquest_tb.vcd opened for output.
+WARNING: ./test/b11/conquest_tb.v:57: $readmemb(./test/b11/data.mem): Not enough words in the file for the requested range [0:70].
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;R state = 1 
+;_P x_in 000000
+;_P stbi 0
+;_P __obs 0
+;_C          1
+;_Input 00111001
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;R state = 1 
+;_P x_in 111001
+;_P stbi 0
+;_P __obs 0
+;_C          2
+;_Input 00111100
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P x_in 111100
+;_P stbi 0
+;_P __obs 0
+;_C          3
+;_Input 10001111
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 001111
+;_P stbi 0
+;_P __obs 1
+;_C          4
+;_Input 01010101
+;A 19
+;A 21
+;A 28
+;A 30
+;R state = 1 
+;_P x_in 010101
+;_P stbi 1
+;_P __obs 0
+;_C          5
+;_Input 01100101
+;A 32
+;A 33
+;A 35
+;A 37
+;R state = 1 
+;_P x_in 100101
+;_P stbi 1
+;_P __obs 0
+;_C          6
+;_Input 01001010
+;A 38
+;A 39
+;A 41
+;A 42
+;R state = 1 
+;_P x_in 001010
+;_P stbi 1
+;_P __obs 0
+;_C          7
+;_Input 01111010
+;A 45
+;A 47
+;A 50
+;R state = 1 
+;_P x_in 111010
+;_P stbi 1
+;_P __obs 0
+;_C          8
+;_Input 00010111
+;A 57
+;A 59
+;A 62
+;A 65
+;A 67
+;A 68
+;R state = 1 
+;_P x_in 010111
+;_P stbi 0
+;_P __obs 0
+;_C          9
+;_Input 01110000
+;A 69
+;A 71
+;A 73
+;A 74
+;R state = 1 
+;_P x_in 110000
+;_P stbi 1
+;_P __obs 0
+;_C         10
+;_Input 10011011
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 011011
+;_P stbi 0
+;_P __obs 1
+;_C         11
+;_Input 10000010
+;A 19
+;A 21
+;A 29
+;A 31
+;R state = 1 
+;_P x_in 000010
+;_P stbi 0
+;_P __obs 1
+;_C         12
+;_Input 10111001
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 111001
+;_P stbi 0
+;_P __obs 1
+;_C         13
+;_Input 00000010
+;A 19
+;A 21
+;A 29
+;A 31
+;R state = 1 
+;_P x_in 000010
+;_P stbi 0
+;_P __obs 0
+;_C         14
+;_Input 11101100
+;A 13
+;A 14
+;A 15
+;A 17
+;R state = 1 
+;_P x_in 101100
+;_P stbi 1
+;_P __obs 1
+;_C         15
+;_Input 10001110
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 001110
+;_P stbi 0
+;_P __obs 1
+;_C         16
+;_Input 11001000
+;A 19
+;A 21
+;A 28
+;A 30
+;R state = 1 
+;_P x_in 001000
+;_P stbi 1
+;_P __obs 1
+;_C         17
+;_Input 11010110
+;A 32
+;A 34
+;A 36
+;A 37
+;R state = 1 
+;_P x_in 010110
+;_P stbi 1
+;_P __obs 1
+;_C         18
+;_Input 11101111
+;A 38
+;A 39
+;A 41
+;A 42
+;R state = 1 
+;_P x_in 101111
+;_P stbi 1
+;_P __obs 1
+;_C         19
+;_Input 10011101
+;A 45
+;A 47
+;A 50
+;R state = 1 
+;_P x_in 011101
+;_P stbi 0
+;_P __obs 1
+;_C         20
+;_Input 01000010
+;A 57
+;A 59
+;A 62
+;A 65
+;A 67
+;A 68
+;R state = 1 
+;_P x_in 000010
+;_P stbi 1
+;_P __obs 0
+;_C         21
+;_Input 10001011
+;A 69
+;A 71
+;A 73
+;A 74
+;R state = 1 
+;_P x_in 001011
+;_P stbi 0
+;_P __obs 1
+;_C         22
+;_Input 00011000
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 011000
+;_P stbi 0
+;_P __obs 0
+;_C         23
+;_Input 10110100
+;A 19
+;A 21
+;A 28
+;A 30
+;R state = 1 
+;_P x_in 110100
+;_P stbi 0
+;_P __obs 1
+;_C         24
+;_Input 00011000
+;A 32
+;A 34
+;A 36
+;A 37
+;R state = 1 
+;_P x_in 011000
+;_P stbi 0
+;_P __obs 0
+;_C         25
+;_Input 01010010
+;A 38
+;A 40
+;A 43
+;A 44
+;R state = 1 
+;_P x_in 010010
+;_P stbi 1
+;_P __obs 0
+;_C         26
+;_Input 11010110
+;A 51
+;A 53
+;A 56
+;R state = 1 
+;_P x_in 010110
+;_P stbi 1
+;_P __obs 1
+;_C         27
+;_Input 11000111
+;A 57
+;A 59
+;A 62
+;A 64
+;A 66
+;A 68
+;R state = 1 
+;_P x_in 000111
+;_P stbi 1
+;_P __obs 1
+;_C         28
+;_Input 00111100
+;A 69
+;A 71
+;A 73
+;A 74
+;R state = 1 
+;_P x_in 111100
+;_P stbi 0
+;_P __obs 0
+;_C         29
+;_Input 11000011
+;A 13
+;A 14
+;A 15
+;A 17
+;R state = 1 
+;_P x_in 000011
+;_P stbi 1
+;_P __obs 1
+;_C         30
+;_Input 01000000
+;A 13
+;A 14
+;A 15
+;A 17
+;R state = 1 
+;_P x_in 000000
+;_P stbi 1
+;_P __obs 0
+;_C         31
+;_Input 10011101
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 011101
+;_P stbi 0
+;_P __obs 1
+;_C         32
+;_Input 01011100
+;A 19
+;A 21
+;A 29
+;A 31
+;R state = 1 
+;_P x_in 011100
+;_P stbi 1
+;_P __obs 0
+;_C         33
+;_Input 11010010
+;A 13
+;A 14
+;A 15
+;A 17
+;R state = 1 
+;_P x_in 010010
+;_P stbi 1
+;_P __obs 1
+;_C         34
+;_Input 00011011
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 011011
+;_P stbi 0
+;_P __obs 0
+;_C         35
+;_Input 01000000
+;A 19
+;A 21
+;A 29
+;A 31
+;R state = 1 
+;_P x_in 000000
+;_P stbi 1
+;_P __obs 0
+;_C         36
+;_Input 10111110
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 111110
+;_P stbi 0
+;_P __obs 1
+;_C         37
+;_Input 00010000
+;A 19
+;A 21
+;A 29
+;A 31
+;R state = 1 
+;_P x_in 010000
+;_P stbi 0
+;_P __obs 0
+;_C         38
+;_Input 10001010
+;A 13
+;A 14
+;A 16
+;A 18
+;R state = 1 
+;_P x_in 001010
+;_P stbi 0
+;_P __obs 1
+;_C         39
+;_Input 11010010
+;A 19
+;A 21
+;A 28
+;A 30
+;R state = 1 
+;_P x_in 010010
+;_P stbi 1
+;_P __obs 1
+;_C         40
+;_Input 11011010
+;A 32
+;A 34
+;A 36
+;A 37
+;R state = 1 
+;_P x_in 011010
+;_P stbi 1
+;_P __obs 1
+;_C         41
+;_Input xxxxxxxx

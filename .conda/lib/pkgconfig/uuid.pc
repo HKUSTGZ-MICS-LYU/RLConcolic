@@ -1,0 +1,11 @@
+prefix=/hpc/home/connect.ytan910/code/Concolic/.conda
+exec_prefix=/hpc/home/connect.ytan910/code/Concolic/.conda
+libdir=/hpc/home/connect.ytan910/code/Concolic/.conda/lib
+includedir=/hpc/home/connect.ytan910/code/Concolic/.conda/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.38.1
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid

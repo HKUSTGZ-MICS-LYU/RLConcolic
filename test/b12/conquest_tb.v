@@ -25,7 +25,7 @@ b12 _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0] _conc_pc     ;
 reg [5:0]  _conc_opcode ;
-reg [5:0]  _conc_ram    [0:60];
+reg [5:0]  _conc_ram    [0:70];
 
 
 // VCD file generation
@@ -62,6 +62,6 @@ initial begin
     #2 clock = 1'b1;
     reset = 1'b1;
     #10 reset = 1'b0;
-    #700 $finish;
+    #900 $finish;
 end
 endmodule

@@ -97,8 +97,17 @@ def single_target_coverage():
     SMTBasicBlock.print_all_targets_distance()
     SMTProcess.make_circular()
 
+    # for iteration in range(random_sim):
+    #     seed = int(time.time() * 1000) % (2**32)
+    #     random.seed(seed)
+    #     InputVector.randomize_input_vector_fuzzing()
+    #     simulate_build_stack()
+    #     remove_and_process_covered_targets()
+    #     path = InputVector.get_input_vector()
+    #     SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
 
     start_time = time.time()
+
     while len(SMTBasicBlock._target_list) > 0:
         # get the target
         if len(SMTBasicBlock._target_list) == 0:
@@ -106,7 +115,7 @@ def single_target_coverage():
         else:
             target = SMTBasicBlock._target_list[0]
     
-        for iteration in range(random_sim):
+        for iteration in range(3):
             seed = int(time.time() * 1000) % (2**32)
             random.seed(seed)
             InputVector.randomize_input_vector_fuzzing()
@@ -116,22 +125,17 @@ def single_target_coverage():
             SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
             
         if len(SMTBasicBlock._target_list) == 0:
-            end_time = time.time()
-            print(f"[INFO] No more targets to cover, total time: {end_time - start_time:.2f} seconds")
             break
         else:
             target = SMTBasicBlock._target_list[0]
         
         target.update_distance_from_adjacency_list()
         print(f"[TARGET] Trying to cover target {target.id}, the assign is {target.assign_list[0].id}")
-        temp_time = time.time() - start_time
-        print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
         if target.closest_path is None and target.closest_path != path:
             path = target.closest_path
             path.dump_input_vector()
 
         global_variable.add_target(target)
-        
         global_variable.first_explore_label = True
         while (path := concolic_iteration(path)):
             if len(path['input_vector']) > unroll :   
@@ -142,6 +146,8 @@ def single_target_coverage():
                 global_variable.clear_target()
                 InputVector.input_vector_clear()
                 Constraint._constraint_stack.clear()
+                temp_time = time.time() - start_time
+                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
                 break
             if target.assign_list[0].covered_in_sim:
                 global_variable.explore_time = 0
@@ -150,6 +156,8 @@ def single_target_coverage():
                 # sim_not_cnst()
                 remove_and_process_covered_targets()
                 global_variable.clear_target()
+                temp_time = time.time() - start_time
+                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
                 break
 
     print_cover_clock()
@@ -251,6 +259,7 @@ def concolic_iteration(path):
     #     closest_fuzzing(target)
 
     init_clock = len(path['input_vector'])
+    print(f"Explore one step with clock {init_clock}")
     explore_one_step()
     current_clock = len(path['input_vector'])
 
@@ -320,23 +329,16 @@ def find_next_cfg( init_clock, current_clock,path):
 
 
     if global_variable.first_explore_label:
-        branch_dict = get_available_branches(temp_branches, 2, end_clock)
-        uncover_dict = get_available_branches(uncover_branches, 2, end_clock)
+        temp_branch_dict = get_available_branches(temp_branches, 1, end_clock)
+        uncover_dict = get_available_branches(uncover_branches, 1, end_clock)
     else:
-        branch_dict = get_available_branches(temp_branches, begin_clock, end_clock)
+        temp_branch_dict = get_available_branches(temp_branches, begin_clock, end_clock)
         uncover_dict = get_available_branches(uncover_branches,begin_clock, end_clock)
 
-
-    
-    temp_branches = sort_and_filter_branches(branch_dict) 
-    uncover_branches = sort_and_filter_branches(uncover_dict)    
-
-    sorted_branches = uncover_branches
-   
-    
-    # print(f"[INFO] The number of branches is {len(sorted_branches)}")
-    # for item in sorted_branches:
-    #     print(f"Assign id is {item.br.id},at clock {item.constraint.clock}, distance is {item.br.block.distance}")
+    branches = sort_and_filter_branches(uncover_dict)
+    branches.reverse()    
+    sorted_branches = branches + sort_and_filter_branches(temp_branch_dict)
+    print(f"[INFO] The number of branches is {len(sorted_branches)} begin clock is {begin_clock}, end clock is {end_clock}")
 
     check_num = 0
 
@@ -345,14 +347,14 @@ def find_next_cfg( init_clock, current_clock,path):
         unsat_flag = False
         check_num += 1
         clock = item.constraint.clock
-        print(f"Choosing Branch id is {item.br.id},at clock {clock},constraint is {item.constraint.constraint}")
+        # print(f"Choosing Branch id is {item.br.id},at clock {clock},constraint is {item.constraint.constraint}")
         s.reset()
         idx = 0    
 
         # add constraints before the clock
 
-        while(Constraint._constraint_stack[idx].clock < clock):
-            if Constraint._constraint_stack[idx].type != CNST_TYPE.CNST_CLK and Constraint._constraint_stack[idx].clock > 1:
+        while(Constraint._constraint_stack[idx].clock < clock ):
+            if Constraint._constraint_stack[idx].type != CNST_TYPE.CNST_CLK and Constraint._constraint_stack[idx].clock > begin_clock:
                 s.add(simplify(Constraint._constraint_stack[idx].constraint))
                 # print(f"Assign is {Constraint._constraint_stack[idx].assign_id},clock is {Constraint._constraint_stack[idx].clock},constriant is {simplify(Constraint._constraint_stack[idx].constraint)}")
                 # if s.check() == z3.unsat:
@@ -369,9 +371,9 @@ def find_next_cfg( init_clock, current_clock,path):
         SMTSigCore.restore_version(clock)
 
         if s.check() == z3.unsat:
-            unsat_flag = True
-            # print(f"[INFO] Block ID {item.br.block.id} The constraints before are unsat.")
+            print(f"[UNSAT] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock} The constraints before clock are unsat.")
             s.reset()
+
         # add constraints at the same clock 添加同周期但非mutate目标的cnst
         target_process = item.constraint.obj.process
         while(Constraint._constraint_stack[idx]._constraint_index != item.constraint._constraint_index):
@@ -380,12 +382,6 @@ def find_next_cfg( init_clock, current_clock,path):
                 s.add(simplify(Constraint._constraint_stack[idx].constraint))
 
             idx += 1
-
-
-        if s.check() == z3.unsat:
-            unsat_flag = True
-            # print(f"[INFO] Block ID {item.br.block.id} The constraints are unsat.")
-            s.reset()
         
         # add the mutated branch constraint
         s.add(simplify(item.br._update_term(SMTCLKType.SMT_CLK_CURR)))
@@ -394,9 +390,10 @@ def find_next_cfg( init_clock, current_clock,path):
 
         if s.check() == z3.unsat:
             unsat_flag = True
-            # print(f"[INFO] The constraints after are unsat.")
+            print(f"[INFO] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock} The constraints after mutate are unsat.")
             s.reset()
-        sat_num = 0
+
+        
         # solve the constraints
         if s.check() == z3.sat:
             explored_branches.append(item.br.id)
@@ -406,32 +403,32 @@ def find_next_cfg( init_clock, current_clock,path):
             assign._set_covered(clock)
             print(f"[Enter] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock}, distance is {item.br.block.distance}")
             InputVector.InputVector['input_vector'] = input_vector
-            sat_num += 1
             global_variable.branch = item
             model = s.model()
             print_results(model)
             get_the_next_path(clock)
+            remove_and_process_covered_targets()
         
-            # # 生成下一个时钟周期的输入向量，然后仿真
-            # InputVector.input_vector_temp_clear()
-            # InputVector.generate_unroll_temp()
-            # InputVector.concat_input_vector()
-            # InputVector.dump_input_vector()
-            # sim_not_cnst()
-            # remove_and_process_covered_targets()
+            # 生成下一个时钟周期的输入向量，然后仿真
+            # if not unsat_flag:
+            #     print(f"[EXTEND] Extend simulation for block ID {item.br.block.id}at clock {item.constraint.clock}")
+            #     InputVector.input_vector_temp_clear()
+            #     InputVector.generate_unroll_temp()
+            #     InputVector.concat_input_vector()
+            #     InputVector.dump_input_vector()
+            #     sim_not_cnst()
 
-            if not global_variable.target and not unsat_flag:
-                BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,999)
-            if global_variable.target.assign_list[0].covered_in_sim and not unsat_flag:
-                BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,999)
 
-            score = len(InputVector.InputVector['input_vector'])**0.75*1/(item.br.block.distance+1)
+            # if not global_variable.target and not unsat_flag:
+            #     BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,999)
+            # if global_variable.target.assign_list[0].covered_in_sim and not unsat_flag:
+            #     BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,999)
+
+            # score = len(InputVector.InputVector['input_vector'])**0.75*1/(item.br.block.distance+1)
             # score = 1/(item.br.block.distance+1)
-            BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,score)
-            item.br.block.distance += 1
-            if global_variable.target.assign_list[0].covered_in_sim:
-                return True
-            if random.randint(0,2) == 0:
+            # BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,score)
+            # item.br.block.distance += 1
+            if check_num >= len(branches) and random.randint(0,1) == 0:
                 return True
         global_variable.branch = None
     return find_flag
@@ -502,7 +499,8 @@ def sim():
 
     end_time = time.time()  
     elapsed_time = end_time - start_time 
-    print(f"仿真耗时 {elapsed_time:.2f}")
+    # print(f"仿真耗时 {elapsed_time:.2f}")
+
 
 def build_stack():
     import time
@@ -511,7 +509,7 @@ def build_stack():
     f_test = open(folder_pth + 'sim.log', 'r')
 
     read_time = time.time() - start_time
-    print(f"读取仿真日志耗时 {read_time:.2f}")
+    # print(f"读取仿真日志耗时 {read_time:.2f}")
 
     assert f_test, "The simulation log file is not found."
 

@@ -1,5 +1,5 @@
 //Following code is from line 1
-module b11(stbi, x_out, reset, clock, x_in, __obs);
+module b11(clock, stbi, reset, x_in, x_out, __obs);
 
     input         [5:0] x_in;
     input               stbi;

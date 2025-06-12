@@ -1,0 +1,11 @@
+prefix=/hpc/home/connect.ytan910/code/Concolic/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/hpc/home/connect.ytan910/code/Concolic/.conda/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.6
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
