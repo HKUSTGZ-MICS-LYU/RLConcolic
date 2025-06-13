@@ -8,6 +8,7 @@ class global_variable:
     assign_type = None
     search_time = 0
     explore_time = 0
+    begin_clock = 0
     def add_target(target):
         global_variable.target = target
 

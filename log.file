@@ -1,4 +1,4 @@
-Thu Jun 12 15:27:19 2025       
+Thu Jun 12 23:35:37 2025       
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 525.105.17   Driver Version: 525.105.17   CUDA Version: 12.0     |
 |-------------------------------+----------------------+----------------------+
@@ -7,7 +7,7 @@ Thu Jun 12 15:27:19 2025
 |                               |                      |               MIG M. |
 |===============================+======================+======================|
 |   0  NVIDIA A30          Off  | 00000000:9B:00.0 Off |                    0 |
-| N/A   56C    P0   121W / 165W |  17442MiB / 24576MiB |     98%      Default |
+| N/A   60C    P0   171W / 165W |  17442MiB / 24576MiB |     98%      Default |
 |                               |                      |             Disabled |
 +-------------------------------+----------------------+----------------------+
                                                                                
@@ -18,3 +18,32 @@ Thu Jun 12 15:27:19 2025
 |=============================================================================|
 |    0   N/A  N/A     22848      C   ...conda/envs/mst/bin/python    17438MiB |
 +-----------------------------------------------------------------------------+
+Generating LALR tables
+WARNING: 183 shift/reduce conflicts
+[INFO] Running command: iverilog -o ./test/b20/conc_run.vvp ./test/b20/conquest_dut.v ./test/b20/conquest_tb.v
+[INFO] Select the target branch from the branch_id.txt file
+[INFO] Target count: 456
+Traceback (most recent call last):
+  File "/hpc/home/connect.ytan910/code/Concolic/src/main.py", line 216, in <module>
+    concolic.main()
+  File "/hpc/home/connect.ytan910/code/Concolic/src/main.py", line 88, in main
+    self.run_concolic()
+  File "/hpc/home/connect.ytan910/code/Concolic/src/main.py", line 16, in wrapper
+    result = func(*args, **kwargs)
+  File "/hpc/home/connect.ytan910/code/Concolic/src/main.py", line 135, in run_concolic
+    single_target_coverage()
+  File "/hpc/home/connect.ytan910/code/Concolic/src/Simulate.py", line 95, in single_target_coverage
+    SMTBasicBlock.edge_realignment()
+  File "/hpc/home/connect.ytan910/code/Concolic/src/SMTlib.py", line 405, in edge_realignment
+    current._update_edge()
+  File "/hpc/home/connect.ytan910/code/Concolic/src/SMTlib.py", line 553, in _update_edge
+    br._update_edge()
+  File "/hpc/home/connect.ytan910/code/Concolic/src/SMTlib.py", line 860, in _update_edge
+    s.add(combined_cond)
+  File "/hpc/home/connect.ytan910/anaconda3/envs/cuda/lib/python3.8/site-packages/z3/z3.py", line 7090, in add
+    self.assert_exprs(*args)
+  File "/hpc/home/connect.ytan910/anaconda3/envs/cuda/lib/python3.8/site-packages/z3/z3.py", line 7079, in assert_exprs
+    Z3_solver_assert(self.ctx.ref(), self.solver, arg.as_ast())
+  File "/hpc/home/connect.ytan910/anaconda3/envs/cuda/lib/python3.8/site-packages/z3/z3core.py", line 4125, in Z3_solver_assert
+    _elems.f(a0, a1, a2)
+KeyboardInterrupt

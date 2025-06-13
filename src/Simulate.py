@@ -260,6 +260,10 @@ def concolic_iteration(path):
 
     init_clock = len(path['input_vector'])
     print(f"Explore one step with clock {init_clock}")
+    if global_variable.first_explore_label:
+        global_variable.begin_clock = 0
+    else:
+        global_variable.begin_clock =  init_clock 
     explore_one_step()
     current_clock = len(path['input_vector'])
 
@@ -518,6 +522,9 @@ def build_stack():
     latest_val = None
     latest_block = []
     reg_block = []
+    begin_clock = global_variable.begin_clock
+    # begin_clock = 0
+    started = False
     Constraint._constraint_stack.append(Constraint.create_clock(clock))
     SMTSigCore._set_wire_version(clock) 
     SMTSigCore._set_variable_version(clock)
@@ -531,17 +538,21 @@ def build_stack():
         if val != []:
             if val[0] == ';_C':
                 clock = int(val[1])
-                if clock == stop_clock:
-                    break
+                if clock >= begin_clock:
+                    if not started:
+                        started = True
+                    if clock == stop_clock:
+                        break
+                    Constraint._constraint_stack.append(Constraint.create_clock(clock))
+                    SMTSigCore._set_wire_version(clock) 
+                    SMTSigCore._set_variable_version(clock)
+                    for _, assign in SMTAssign._assign_list.items():
+                        if assign.assign_type == SMTAssignType.SMT_ASSIGN:
+                            Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
+                            # print(f"Assign ID {assign.id},block ID {assign.block.id},constraint {Constraint.create_constraint(assign, clock).constraint}")
                 
-                Constraint._constraint_stack.append(Constraint.create_clock(clock))
-                SMTSigCore._set_wire_version(clock) 
-                SMTSigCore._set_variable_version(clock)
-                for _, assign in SMTAssign._assign_list.items():
-                    if assign.assign_type == SMTAssignType.SMT_ASSIGN:
-                        Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
-                        # print(f"Assign ID {assign.id},block ID {assign.block.id},constraint {Constraint.create_constraint(assign, clock).constraint}")
-                          
+            elif not started:
+                continue          
                
             elif val[0] == ';A':
                 assign_id = int(val[1])
@@ -576,8 +587,6 @@ def build_stack():
     end_time = time.time()  
     elapsed_time = end_time - start_time 
     print(f"建立约束耗时 {elapsed_time:.2f}")
-            
-    
 
 def sim_not_cnst():
     sim()

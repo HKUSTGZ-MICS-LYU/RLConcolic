@@ -1,3 +1,1 @@
-tlMasterXbar__reset_31 = 0
-tlMasterXbar__winner_0_31 = 1
-tlMasterXbar__winner_1_31 = 1
+tlMasterXbar__latch_39 = 0

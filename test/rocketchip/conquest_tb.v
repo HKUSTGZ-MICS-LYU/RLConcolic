@@ -105,7 +105,7 @@ RocketTile _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0]  _conc_pc     ;
 reg [141:0] _conc_opcode ;
-reg [141:0] _conc_ram    [0:80];
+reg [141:0] _conc_ram    [0:125];
 
 
 // VCD file generation
@@ -188,6 +188,6 @@ initial begin
     #2 clock = 1'b1;
     reset = 1'b1;
     #10 reset = 1'b0;
-    #1000 $finish;
+    #1500 $finish;
 end
 endmodule
