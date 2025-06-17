@@ -1,5 +1,5 @@
 //Following code is from line 1
-module b20(so, reset, wr, si, clock, rd, __obs);
+module b20(rd, clock, si, reset, so, wr, __obs);
 
     input                clock;
     input                reset;

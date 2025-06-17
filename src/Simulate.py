@@ -97,14 +97,14 @@ def single_target_coverage():
     SMTBasicBlock.print_all_targets_distance()
     SMTProcess.make_circular()
 
-    # for iteration in range(random_sim):
-    #     seed = int(time.time() * 1000) % (2**32)
-    #     random.seed(seed)
-    #     InputVector.randomize_input_vector_fuzzing()
-    #     simulate_build_stack()
-    #     remove_and_process_covered_targets()
-    #     path = InputVector.get_input_vector()
-    #     SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
+    for iteration in range(random_sim):
+        seed = int(time.time() * 1000) % (2**32)
+        random.seed(seed)
+        InputVector.randomize_input_vector_fuzzing()
+        sim_not_cnst()
+        remove_and_process_covered_targets()
+        path = InputVector.get_input_vector()
+        SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
 
     start_time = time.time()
 
@@ -115,7 +115,8 @@ def single_target_coverage():
         else:
             target = SMTBasicBlock._target_list[0]
     
-        for iteration in range(3):
+        for iteration in range(1):
+            print(f"[RANDOM] Randomize input vector for target {target.id}, the assign is {target.assign_list[0].id}")
             seed = int(time.time() * 1000) % (2**32)
             random.seed(seed)
             InputVector.randomize_input_vector_fuzzing()
@@ -333,16 +334,21 @@ def find_next_cfg( init_clock, current_clock,path):
 
 
     if global_variable.first_explore_label:
-        temp_branch_dict = get_available_branches(temp_branches, 1, end_clock)
-        uncover_dict = get_available_branches(uncover_branches, 1, end_clock)
+        temp_branch_dict = get_available_branches(temp_branches, 2, end_clock)
+        uncover_dict = get_available_branches(uncover_branches, 2, end_clock)
+        global_variable.first_explore_label = False
     else:
-        temp_branch_dict = get_available_branches(temp_branches, begin_clock, end_clock)
-        uncover_dict = get_available_branches(uncover_branches,begin_clock, end_clock)
+        temp_branch_dict = get_available_branches(temp_branches, begin_clock + 1, end_clock)
+        uncover_dict = get_available_branches(uncover_branches,begin_clock +1 , end_clock)
 
     branches = sort_and_filter_branches(uncover_dict)
-    branches.reverse()    
-    sorted_branches = branches + sort_and_filter_branches(temp_branch_dict)
+    branches.reverse()
+  
+    # sorted_branches = sort_and_filter_branches(uncover_dict) + sort_and_filter_branches(temp_branch_dict)
+    sorted_branches = branches
+    print(f"[INFO] The number of branches is {len(branches)} begin clock is {begin_clock}, end clock is {end_clock}")
     print(f"[INFO] The number of branches is {len(sorted_branches)} begin clock is {begin_clock}, end clock is {end_clock}")
+
 
     check_num = 0
 
@@ -392,11 +398,6 @@ def find_next_cfg( init_clock, current_clock,path):
 
         SMTSigCore.data_synchronization(clock)
 
-        if s.check() == z3.unsat:
-            unsat_flag = True
-            print(f"[INFO] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock} The constraints after mutate are unsat.")
-            s.reset()
-
         
         # solve the constraints
         if s.check() == z3.sat:
@@ -431,8 +432,10 @@ def find_next_cfg( init_clock, current_clock,path):
             # score = len(InputVector.InputVector['input_vector'])**0.75*1/(item.br.block.distance+1)
             # score = 1/(item.br.block.distance+1)
             # BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,score)
-            # item.br.block.distance += 1
-            if check_num >= len(branches) and random.randint(0,1) == 0:
+            item.br.block.distance += 1
+            if global_variable.target.assign_list[0].covered_in_sim:
+                return True
+            if random.randint(0,2) == 0:
                 return True
         global_variable.branch = None
     return find_flag
@@ -528,7 +531,7 @@ def build_stack():
     Constraint._constraint_stack.append(Constraint.create_clock(clock))
     SMTSigCore._set_wire_version(clock) 
     SMTSigCore._set_variable_version(clock)
-
+    clock_count = 0
     
   
 
@@ -546,6 +549,7 @@ def build_stack():
                     Constraint._constraint_stack.append(Constraint.create_clock(clock))
                     SMTSigCore._set_wire_version(clock) 
                     SMTSigCore._set_variable_version(clock)
+                    clock_count += 1
                     for _, assign in SMTAssign._assign_list.items():
                         if assign.assign_type == SMTAssignType.SMT_ASSIGN:
                             Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
@@ -587,6 +591,7 @@ def build_stack():
     end_time = time.time()  
     elapsed_time = end_time - start_time 
     print(f"建立约束耗时 {elapsed_time:.2f}")
+    print(f"begin clock is {begin_clock}, end clock is {stop_clock}, clock count is {clock_count}")
 
 def sim_not_cnst():
     sim()

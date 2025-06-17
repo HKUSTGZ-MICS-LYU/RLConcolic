@@ -274,7 +274,7 @@ configurations = {
 
 initial_distance = 999
 unroll = 100
-steps = 20
+steps = 2
 
 # assert steps*5<=unroll, "5*steps should be less than unroll for fuzzing"
 assert steps<=unroll, "steps should be less than unroll"
@@ -282,7 +282,7 @@ limit_iter = 3
 random_sim = 3
 simulator = 'iverilog'
 
-testbench = 'b20'  # Change this to the desired testbench name
+testbench = 'or1200'  # Change this to the desired testbench name
 selected_config = configurations[testbench]
 
 file_pth = selected_config['file_path']

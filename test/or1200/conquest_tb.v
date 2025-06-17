@@ -121,7 +121,7 @@ or1200_top _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0]  _conc_pc     ;
 reg [165:0] _conc_opcode ;
-reg [165:0] _conc_ram    [0:70];
+reg [165:0] _conc_ram    [0:102];
 
 
 // VCD file generation
@@ -196,6 +196,6 @@ initial begin
     #2 clk_i = 1'b1;
     rst_i = 1'b1;
     #10 rst_i = 1'b0;
-    #900 $finish;
+    #1040 $finish;
 end
 endmodule

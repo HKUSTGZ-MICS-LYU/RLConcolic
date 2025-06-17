@@ -1,1 +1,2 @@
-or1200_tt_restart_31 = 1
+dwb_biu_wb_fsm_state_cur_1 = 1
+dwb_biu_wb_fsm_idle_18 = 0

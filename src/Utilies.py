@@ -93,7 +93,7 @@ class InputVector:
         InputVector.input_vector_clear()
         input_vector = InputVector.InputVector['input_vector']
         width = InputVector.InputVector['full_width']
-        for _ in range(2*steps): 
+        for _ in range(3*steps): 
             # row = [0 for _ in range(width)]
             row = [random.randint(0, 1) for _ in range(width)]
             input_vector.append(''.join(map(str, row)))
