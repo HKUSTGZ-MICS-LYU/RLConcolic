@@ -1,5 +1,5 @@
 //Following code is from line 9
-module or1200_dc_fsm(dcram_di_sel, dcram_we, dc_no_writethrough, mtspr_dc_done, tag_we, biudata_valid, clk, burst, dc_block_writeback, dirty, dc_en, dcqmem_cycstb_i, dcqmem_sel_i, biu_read, biu_do_sel, first_miss_err, spr_cswe, spr_dat_i, dc_block_flush, first_miss_ack, rst, tag_valid, tagcomp_miss, lsu_addr, tag, dcqmem_we_i, dcqmem_ci_i, tag_dirty, first_hit_ack, biu_write, dc_addr, biudata_error, tag_v, __obs);
+module or1200_dc_fsm(biu_read, dcqmem_ci_i, dc_block_writeback, tag_dirty, clk, first_hit_ack, dcqmem_cycstb_i, dirty, dcram_we, first_miss_err, dc_no_writethrough, tag_we, biu_do_sel, tag, rst, first_miss_ack, spr_dat_i, dcram_di_sel, dc_addr, dcqmem_we_i, biudata_error, dc_block_flush, dc_en, lsu_addr, tagcomp_miss, biudata_valid, biu_write, dcqmem_sel_i, tag_v, tag_valid, burst, mtspr_dc_done, spr_cswe, __obs);
 
     input                clk;
     input                rst;
@@ -438,19 +438,7 @@ module or1200_dc_fsm(dcram_di_sel, dcram_we, dc_no_writethrough, mtspr_dc_done, 
                 end
             // Display the variables
             begin
-            $display(";R addr_r = %d", addr_r);
-            $display(";R cache_dirty_needs_writeback = %d", cache_dirty_needs_writeback);
-            $display(";R cache_inhibit = %d", cache_inhibit);
-            $display(";R cache_miss = %d", cache_miss);
-            $display(";R cache_spr_block_flush = %d", cache_spr_block_flush);
-            $display(";R cache_spr_block_writeback = %d", cache_spr_block_writeback);
-            $display(";R cache_wb = %d", cache_wb);
-            $display(";R cnt = %d", cnt);
-            $display(";R did_early_load_ack = %d", did_early_load_ack);
-            $display(";R hitmiss_eval = %d", hitmiss_eval);
-            $display(";R load = %d", load);
-            $display(";R state = %d", state);
-            $display(";R store = %d", store);
+            $display(";R state = 1",);
             end
         end
 

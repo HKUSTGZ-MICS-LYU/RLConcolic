@@ -109,7 +109,6 @@ def single_target_coverage():
     start_time = time.time()
 
     while len(SMTBasicBlock._target_list) > 0:
-        # get the target
         if len(SMTBasicBlock._target_list) == 0:
             break
         else:
@@ -152,9 +151,6 @@ def single_target_coverage():
                 break
             if target.assign_list[0].covered_in_sim:
                 global_variable.explore_time = 0
-                # InputVector.generate_unroll_temp()
-                # InputVector.concat_input_vector()
-                # sim_not_cnst()
                 remove_and_process_covered_targets()
                 global_variable.clear_target()
                 temp_time = time.time() - start_time
@@ -163,102 +159,7 @@ def single_target_coverage():
 
     print_cover_clock()
 
-
-def get_input_vector_file():
-    filename = llm_input_file
-    sig_name_and_width = [item[0] for item in InputVector.InputVector['sig_name_and_width']]
-    clock_values = extract_line_values(filename,sig_name_and_width)
-    for clock,line in enumerate(clock_values):
-        InputVector.generate_oneclk_inputvector()
-        for item in sig_name_and_width:
-            if item != '__obs':
-                InputVector.repalce_llm_input_vector(item, clock+1, line[item])
-    InputVector.dump_llm_input_vector()
-    
-def extract_line_values(filename, sig_name_and_width):
-    line_values = []
-
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-        for line in lines:
-            # 去掉行尾的换行符并分割字符串
-            parts = line.strip().split(', ')
-            values = {}
-            for part in parts:
-                sig_name, value = part.split('=')
-                values[sig_name.strip()] = value.strip()
-            
-            # 提取 sig_name_and_width 中的信号值并存储到字典中
-            line_dict = {}
-            for sig_name in sig_name_and_width:
-                if sig_name in values:
-                    line_dict[sig_name] = values[sig_name]
-                else:
-                    line_dict[sig_name] = None
-            
-            line_values.append(line_dict)
-    
-    return line_values
-
-def print_branches(sorted_branches):
-    f = open(folder_pth + 'branches.txt', 'w')
-    f.write("[BRANCHES] Sorted Branches:\n")
-    for idx, item in enumerate(sorted_branches):
-        f.write(f"[{idx}]:Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock}\n")
-    f.close()
-
-
-
-def beam_concolic_iteration(path):
-    
-    target = global_variable.target
-
-    if global_variable.first_explore_label:
-        closest_fuzzing(target)
-        # Search the path of the covered parent blocks
-        for parent in target.assign_list[0].parent_node.branch_list[::]:
-            if parent.covered_in_sim == True and parent.block.id in BeamInput.BeamInput['target_input_vectors'] and parent.block.id != target.id:
-                parent_path = BeamInput.get_best_input_vectors(parent.block.id)
-                BeamInput.add_input_vector(target,parent_path[:],parent.block.id,0.2)
-                # print(f"[INFO] Add the path of coverd parent block {parent.block.id} to the target {target.id}")
-        # Search the closest path of the uncovered targets
-        # sorted_adjacency_list = sorted(target.adjacency_list.items(), key=lambda item: item[1])
-        # for index, (id, value) in enumerate(sorted_adjacency_list):
-        #     if value < 2 and id in BeamInput.BeamInput['target_input_vectors'] and id != target.id:
-        #         closest_path = BeamInput.get_best_input_vectors(id)
-        #         BeamInput.add_input_vector(target,closest_path[:],id,0.1)
-                # print(f"[INFO] Add the closest path of block {id} to the target {target.id}")
-    BeamInput.add_input_vector(target,path['input_vector'],0,0)
-    beam_pathes = BeamInput.get_input_vectors_for_target(target.id)
-    BeamInput.clear_target_input_vectors(target.id)
-    for beam_path in beam_pathes:
-        InputVector.InputVector['input_vector'] = beam_path['input_vector']
-        init_clock = len(InputVector.InputVector['input_vector'])
-        explore_one_step()
-        current_clock = len(InputVector.InputVector['input_vector'])
-
-        if(find_next_cfg(init_clock, current_clock,InputVector.InputVector)):
-            s.reset()
-        else:
-            BeamInput.add_input_vector(target,InputVector.InputVector['input_vector'],0,0)
-
-        if target.assign_list[0].covered_in_sim:
-            break
-
-    BeamInput.sort_by_score(target.id)
-    # BeamInput.remove_duplicates(target.id)
-    InputVector.InputVector['input_vector'] = BeamInput.get_best_input_vectors(target.id)
-    path = InputVector.InputVector
-    global_variable.first_explore_label = False
-
-    return path
-
 def concolic_iteration(path):
-
-    target = global_variable.target
-    # if global_variable.first_explore_label:
-    #     closest_fuzzing(target)
-
     init_clock = len(path['input_vector'])
     print(f"Explore one step with clock {init_clock}")
     if global_variable.first_explore_label:
@@ -272,18 +173,6 @@ def concolic_iteration(path):
         s.reset()
         path = InputVector.InputVector
     return path
-
-def closest_fuzzing(target):
-    sorted_adjacency_list = sorted(target.adjacency_list.items(), key=lambda item: item[1])
-    for index, (id, value) in enumerate(sorted_adjacency_list):
-        if value < 3 and id in BeamInput.BeamInput['target_input_vectors'] and id != target.id:
-            # print(f"[INFO] Add the closest path of block {id} to the target {target.id}")
-            closest_path = BeamInput.get_best_input_vectors(id)
-            InputVector.InputVector['input_vector'] = closest_path
-            InputVector.generate_unroll_temp()
-            InputVector.concat_input_vector()
-            sim_not_cnst()
-            remove_and_process_covered_targets()
 
 def explore_one_step():
     InputVector.randomize_input_vector_temp()
@@ -334,30 +223,21 @@ def find_next_cfg( init_clock, current_clock,path):
 
 
     if global_variable.first_explore_label:
-        temp_branch_dict = get_available_branches(temp_branches, 2, end_clock)
         uncover_dict = get_available_branches(uncover_branches, 2, end_clock)
         global_variable.first_explore_label = False
     else:
-        temp_branch_dict = get_available_branches(temp_branches, begin_clock + 1, end_clock)
         uncover_dict = get_available_branches(uncover_branches,begin_clock +1 , end_clock)
 
     branches = sort_and_filter_branches(uncover_dict)
     branches.reverse()
-  
-    # sorted_branches = sort_and_filter_branches(uncover_dict) + sort_and_filter_branches(temp_branch_dict)
-    sorted_branches = branches
-    print(f"[INFO] The number of branches is {len(branches)} begin clock is {begin_clock}, end clock is {end_clock}")
-    print(f"[INFO] The number of branches is {len(sorted_branches)} begin clock is {begin_clock}, end clock is {end_clock}")
-
 
     check_num = 0
 
 
-    for item in sorted_branches:
+    for item in branches:
         unsat_flag = False
         check_num += 1
         clock = item.constraint.clock
-        # print(f"Choosing Branch id is {item.br.id},at clock {clock},constraint is {item.constraint.constraint}")
         s.reset()
         idx = 0    
 
@@ -366,11 +246,6 @@ def find_next_cfg( init_clock, current_clock,path):
         while(Constraint._constraint_stack[idx].clock < clock ):
             if Constraint._constraint_stack[idx].type != CNST_TYPE.CNST_CLK and Constraint._constraint_stack[idx].clock > begin_clock:
                 s.add(simplify(Constraint._constraint_stack[idx].constraint))
-                # print(f"Assign is {Constraint._constraint_stack[idx].assign_id},clock is {Constraint._constraint_stack[idx].clock},constriant is {simplify(Constraint._constraint_stack[idx].constraint)}")
-                # if s.check() == z3.unsat:
-                    # print("The constraints are unsatisfiable before the clock of the branch.")
-                    # print_constraints(s)
-                    # continue
             idx += 1
 
         assert Constraint._constraint_stack[idx].clock == clock, "The clock is not equal to the clock of the branch constraint."
@@ -405,7 +280,7 @@ def find_next_cfg( init_clock, current_clock,path):
             global_variable.explore_time +=1
             find_flag = True
             assign = SMTAssign.get_assign(item.br.id)
-            assign._set_covered(clock)
+            # assign._set_covered(clock) # 只统计仿真覆盖的分支
             print(f"[Enter] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock}, distance is {item.br.block.distance}")
             InputVector.InputVector['input_vector'] = input_vector
             global_variable.branch = item
@@ -415,23 +290,14 @@ def find_next_cfg( init_clock, current_clock,path):
             remove_and_process_covered_targets()
         
             # 生成下一个时钟周期的输入向量，然后仿真
-            # if not unsat_flag:
-            #     print(f"[EXTEND] Extend simulation for block ID {item.br.block.id}at clock {item.constraint.clock}")
-            #     InputVector.input_vector_temp_clear()
-            #     InputVector.generate_unroll_temp()
-            #     InputVector.concat_input_vector()
-            #     InputVector.dump_input_vector()
-            #     sim_not_cnst()
+            if not unsat_flag:
+                print(f"[EXTEND] Extend simulation for block ID {item.br.block.id}at clock {item.constraint.clock}")
+                InputVector.input_vector_temp_clear()
+                InputVector.generate_unroll_temp()
+                InputVector.concat_input_vector()
+                InputVector.dump_input_vector()
+                sim_not_cnst()
 
-
-            # if not global_variable.target and not unsat_flag:
-            #     BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,999)
-            # if global_variable.target.assign_list[0].covered_in_sim and not unsat_flag:
-            #     BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,999)
-
-            # score = len(InputVector.InputVector['input_vector'])**0.75*1/(item.br.block.distance+1)
-            # score = 1/(item.br.block.distance+1)
-            # BeamInput.add_input_vector(global_variable.target,InputVector.InputVector['input_vector'],item.br.block.id,score)
             item.br.block.distance += 1
             if global_variable.target.assign_list[0].covered_in_sim:
                 return True
@@ -499,41 +365,30 @@ def sim():
 
     if simulator == 'iverilog':
         cmd = f"vvp {folder_pth}conc_run.vvp > {folder_pth}sim.log"
-    # print(f"[INFO] Running command: {cmd}")
     elif simulator == 'verilator':
         cmd = f'{folder_pth}obj_dir/Vconquest > {folder_pth}sim.log'
     os.system(cmd)
 
     end_time = time.time()  
     elapsed_time = end_time - start_time 
-    # print(f"仿真耗时 {elapsed_time:.2f}")
 
 
 def build_stack():
-    import time
     start_time = time.time()
-
     f_test = open(folder_pth + 'sim.log', 'r')
-
     read_time = time.time() - start_time
-    # print(f"读取仿真日志耗时 {read_time:.2f}")
-
     assert f_test, "The simulation log file is not found."
-
     clock = 0
     stop_clock = 0
     latest_val = None
     latest_block = []
     reg_block = []
     begin_clock = global_variable.begin_clock
-    # begin_clock = 0
     started = False
     Constraint._constraint_stack.append(Constraint.create_clock(clock))
     SMTSigCore._set_wire_version(clock) 
     SMTSigCore._set_variable_version(clock)
     clock_count = 0
-    
-  
 
     while True:
         stripped_line = f_test.readline().strip()
@@ -562,11 +417,8 @@ def build_stack():
                 assign_id = int(val[1])
                 assign = SMTAssign.get_assign(assign_id)
                 Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
-                # check the block 
                 if assign.block.id not in latest_block:
                     latest_block.append(assign.block.id)
-
-
 
             elif val[0] == ';_Input':
                 input = val[1]
@@ -576,13 +428,6 @@ def build_stack():
             elif val[0] == ';R':
                 if assign.block.id not in reg_block:
                     reg_block.append(assign.block.id)
-                # b20时序问题和非阻塞问题 在每个block reg变化前，把所有基本赋值操作的约束都再添加一遍
-                # if latest_val[0] == ';A':
-                #     # print(f"Block {latest_block}")
-                #     for _, assign in SMTAssign._assign_list.items():
-                #         if assign.assign_type == SMTAssignType.SMT_ASSIGN :
-                #             # print(f"Assign ID {assign.id}")
-                #             Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
                 state_name = val[1]
                 state_val = val[3]
                 StateVariable.add_state(state_name, state_val, clock)
@@ -591,7 +436,6 @@ def build_stack():
     end_time = time.time()  
     elapsed_time = end_time - start_time 
     print(f"建立约束耗时 {elapsed_time:.2f}")
-    print(f"begin clock is {begin_clock}, end clock is {stop_clock}, clock count is {clock_count}")
 
 def sim_not_cnst():
     sim()
@@ -614,14 +458,13 @@ def sim_not_cnst():
                 if val[0] == ';_C':
                     clock = int(val[1])
                     if clock == stop_clock:
-                        # print("[INFO] Not cover the branch selected.")
                         break
                     
                 elif val[0] == ';A':
                     assign_id = int(val[1])
                     assign = SMTAssign.get_assign(assign_id)
                     if assign.assign_type == SMTAssignType.SMT_ASSIGN_BRANCH:
-                        assign._set_covered(clock) #仿真到了就算覆盖到
+                        assign._set_covered(clock) #仿真到了算覆盖到
             
                 elif val[0] == ';_Input':
                     input = val[1]
@@ -647,53 +490,12 @@ def print_sorted_branches(sorted_branches, state, state_name):
     f.close()
 
 
-def find_assignments(file_path, inputs, states):
-    with open(file_path, 'r') as file:
-        verilog_code = file.read()
-
-    # 匹配阻塞赋值或非阻塞赋值的正则表达式
-    assignment_pattern = re.compile(r"(\w+)\s*(<=|=)\s*(.+);")
-    
-    # 存储变量之间的赋值关系
-    assignments = defaultdict(list)
-    
-    # 查找所有赋值语句
-    for match in assignment_pattern.findall(verilog_code):
-        variable, operator, expression = match
-        variable = variable.strip()
-        expression = expression.strip()
-        assignments[variable].append(expression)
-    
-    # 找到由输入赋值的状态变量
-    affected_states = set()
-
-    def find_affected_states(input_list):
-        nonlocal affected_states
-        for state in states:
-            for expr in assignments[state]:
-                involved_vars = expr
-                if any(input_var in involved_vars for input_var in input_list):
-                    if state not in affected_states:
-                        affected_states.add(state)
-                        # 递归查找由当前状态变量影响的其他状态变量
-                        find_affected_states([state])
-    
-    # 从输入开始递归查找
-    find_affected_states(inputs)
-    
-    return affected_states
-
-
 def print_cover_clock():
     sorted_targets = sorted(SMTBasicBlock._covered_target_list, key=lambda target: target.assign_list[0].covered_at_clock)
     for target in sorted_targets:
         print(f"Target {target.id} is covered in clock {target.assign_list[0].covered_at_clock}")
 
 def remove_and_process_covered_targets():
-    """
-    原有函数:SMTBasicBlock.remove_covered_targets()
-    移除已覆盖的目标，并将相关信息添加到 BeamSearch 中。
-    """
     for i in range(len(SMTBasicBlock._target_list) - 1, -1, -1):
         target = SMTBasicBlock._target_list[i]
         for assign in target.assign_list:
@@ -704,12 +506,7 @@ def remove_and_process_covered_targets():
                     SMTBasicBlock._covered_target_list.append(target)
                 # 从目标列表中移除该目标
                 SMTBasicBlock._target_list.pop(i)
-
-                # 调用 BeamSearch.add_cover_branch 来处理覆盖的目标
                 if assign.covered_at_clock == 0:
                     input_vector = InputVector.InputVector['input_vector'][:]
                 else:
                     input_vector = InputVector.InputVector['input_vector'][:assign.covered_at_clock]
-                if target.id not in BeamInput.BeamInput['target_input_vectors']:
-                    BeamInput.add_input_vector(target,input_vector,target.id,999)
-                break  

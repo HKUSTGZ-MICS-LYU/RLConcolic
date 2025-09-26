@@ -45,7 +45,7 @@ or1200_ic_fsm _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0] _conc_pc     ;
 reg [38:0] _conc_opcode ;
-reg [38:0] _conc_ram    [0:105];
+reg [38:0] _conc_ram    [0:55];
 
 
 // VCD file generation
@@ -92,6 +92,6 @@ initial begin
     #2 clk = 1'b1;
     rst = 1'b1;
     #10 rst = 1'b0;
-    #1100 $finish;
+    #600 $finish;
 end
 endmodule
