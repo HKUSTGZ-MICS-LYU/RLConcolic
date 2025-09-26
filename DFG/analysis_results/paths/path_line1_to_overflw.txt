@@ -1,9 +1,0 @@
-传播路径分析结果：从 line1 到 overflw
-==================================================
-找到 1 条传播路径:
-
-路径 1: line1 -> stato -> reset -> overflw
-详细信息:
-  line1 -> stato (操作: control_dependency, 条件: equality)
-  stato -> reset (操作: less_equal, 赋值类型: blocking)
-  reset -> overflw (操作: control_dependency, 条件: equality)
