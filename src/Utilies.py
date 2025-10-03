@@ -88,21 +88,27 @@ class InputVector:
 
     @staticmethod
     def randomize_input_vector_fuzzing():
-        import time
-        start_time = time.time()
         InputVector.input_vector_clear()
         input_vector = InputVector.InputVector['input_vector']
         width = InputVector.InputVector['full_width']
-        for _ in range(3*steps): 
+        for _ in range(2*steps): 
             # row = [0 for _ in range(width)]
             row = [random.randint(0, 1) for _ in range(width)]
             input_vector.append(''.join(map(str, row)))
         InputVector.InputVector['input_vector'] = input_vector
         InputVector.dump_input_vector()
-        end_time = time.time()
-        elapsed_time = end_time - start_time
-        # print(f"随机生成耗时: {elapsed_time:.4f} 秒")
-        # print(f"生成了 {len(input_vector)} 个输入向量")
+
+    @staticmethod
+    def randomize_fuzzing():
+        InputVector.input_vector_clear()
+        input_vector = InputVector.InputVector['input_vector']
+        width = InputVector.InputVector['full_width']
+        for _ in range(unroll): 
+            # row = [0 for _ in range(width)]
+            row = [random.randint(0, 1) for _ in range(width)]
+            input_vector.append(''.join(map(str, row)))
+        InputVector.InputVector['input_vector'] = input_vector
+        InputVector.dump_input_vector()
 
     @staticmethod
     def randomize_input_vector_temp():

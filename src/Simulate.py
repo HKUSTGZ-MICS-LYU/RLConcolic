@@ -21,6 +21,7 @@ from pathlib import Path
 import math
 from collections import defaultdict
 import re
+import shutil
 
 
 
@@ -98,70 +99,75 @@ def single_target_coverage():
     SMTProcess.make_circular()
 
     for iteration in range(random_sim):
+        print(f"[RANDOM] Randomize input vector for initial simulation, iteration {iteration+1}")
         seed = int(time.time() * 1000) % (2**32)
         random.seed(seed)
-        InputVector.randomize_input_vector_fuzzing()
-        sim_not_cnst()
+        InputVector.randomize_fuzzing()
+        simulate_build_stack()
         remove_and_process_covered_targets()
+        save_input()
         path = InputVector.get_input_vector()
         SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
-
     start_time = time.time()
 
-    while len(SMTBasicBlock._target_list) > 0:
-        if len(SMTBasicBlock._target_list) == 0:
-            break
-        else:
-            target = SMTBasicBlock._target_list[0]
-    
-        for iteration in range(1):
-            print(f"[RANDOM] Randomize input vector for target {target.id}, the assign is {target.assign_list[0].id}")
-            seed = int(time.time() * 1000) % (2**32)
-            random.seed(seed)
-            InputVector.randomize_input_vector_fuzzing()
-            simulate_build_stack()
-            remove_and_process_covered_targets()
-            path = InputVector.get_input_vector()
-            SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
-            
-        if len(SMTBasicBlock._target_list) == 0:
-            break
-        else:
-            target = SMTBasicBlock._target_list[0]
-        
-        target.update_distance_from_adjacency_list()
-        print(f"[TARGET] Trying to cover target {target.id}, the assign is {target.assign_list[0].id}")
-        if target.closest_path is None and target.closest_path != path:
-            path = target.closest_path
-            path.dump_input_vector()
+    # while len(SMTBasicBlock._target_list) > 0:
+    #     if len(SMTBasicBlock._target_list) == 0:
+    #         break
+    #     else:
+    #         target = SMTBasicBlock._target_list[0]
 
-        global_variable.add_target(target)
-        global_variable.first_explore_label = True
-        while (path := concolic_iteration(path)):
-            if len(path['input_vector']) > unroll :   
-                global_variable.explore_time = 0
-                if not target.assign_list[0].covered_in_sim:
-                    SMTBasicBlock._target_list.pop(0)
-                    SMTBasicBlock._uncovered_target_list.append(target)
-                global_variable.clear_target()
-                InputVector.input_vector_clear()
-                Constraint._constraint_stack.clear()
-                temp_time = time.time() - start_time
-                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
-                break
-            if target.assign_list[0].covered_in_sim:
-                global_variable.explore_time = 0
-                remove_and_process_covered_targets()
-                global_variable.clear_target()
-                temp_time = time.time() - start_time
-                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
-                break
+    #     for iteration in range(1):
+    #         seed = int(time.time() * 1000) % (2**32)
+    #         random.seed(seed)
+    #         InputVector.randomize_input_vector_fuzzing()
+    #         sim_not_cnst()
+    #         if remove_and_process_covered_targets():
+    #             print("[Save input] Find new covered targets during randomization.")
+    #             save_input()
+    #         path = InputVector.get_input_vector()
+    #         SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
+            
+    #     if len(SMTBasicBlock._target_list) == 0:
+    #         break
+    #     else:
+    #         target = SMTBasicBlock._target_list[0]
+        
+    #     target.update_distance_from_adjacency_list()
+    #     print(f"[TARGET] Trying to cover target {target.id}, the assign is {target.assign_list[0].id}")
+    #     if target.closest_path is None and target.closest_path != path:
+    #         path = target.closest_path
+    #         path.dump_input_vector()
+
+    #     global_variable.add_target(target)
+    #     global_variable.first_explore_label = True
+    #     while (path := concolic_iteration(path)):
+    #         if len(path['input_vector']) > unroll :   
+    #             global_variable.explore_time = 0
+    #             save_input()
+    #             if not target.assign_list[0].covered_in_sim:
+    #                 SMTBasicBlock._target_list.pop(0)
+    #                 SMTBasicBlock._uncovered_target_list.append(target)
+    #             global_variable.clear_target()
+    #             InputVector.input_vector_clear()
+    #             Constraint._constraint_stack.clear()
+    #             temp_time = time.time() - start_time
+    #             print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
+    #             break
+    #         if target.assign_list[0].covered_in_sim:
+    #             global_variable.explore_time = 0
+    #             save_input()
+    #             if remove_and_process_covered_targets():
+    #                 print("[Save input] Find new covered targets during concolic iteration.")
+    #                 save_input()
+    #             global_variable.clear_target()
+    #             temp_time = time.time() - start_time
+    #             print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
+    #             break
 
     print_cover_clock()
 
 def concolic_iteration(path):
     init_clock = len(path['input_vector'])
-    print(f"Explore one step with clock {init_clock}")
     if global_variable.first_explore_label:
         global_variable.begin_clock = 0
     else:
@@ -178,7 +184,9 @@ def explore_one_step():
     InputVector.randomize_input_vector_temp()
     InputVector.concat_input_vector()
     simulate_build_stack()
-    remove_and_process_covered_targets()
+    if remove_and_process_covered_targets():
+        print("[Save input] Find new covered targets during explore one step.")
+        save_input()
 
 
 
@@ -287,21 +295,22 @@ def find_next_cfg( init_clock, current_clock,path):
             model = s.model()
             print_results(model)
             get_the_next_path(clock)
-            remove_and_process_covered_targets()
-        
+            
             # 生成下一个时钟周期的输入向量，然后仿真
-            if not unsat_flag:
-                print(f"[EXTEND] Extend simulation for block ID {item.br.block.id}at clock {item.constraint.clock}")
-                InputVector.input_vector_temp_clear()
-                InputVector.generate_unroll_temp()
-                InputVector.concat_input_vector()
-                InputVector.dump_input_vector()
-                sim_not_cnst()
+            print(f"[EXTEND] Extend simulation for block ID {item.br.block.id}at clock {item.constraint.clock}")
+            InputVector.input_vector_temp_clear()
+            InputVector.generate_unroll_temp()
+            InputVector.concat_input_vector()
+            InputVector.dump_input_vector()
+            sim_not_cnst()
+            if remove_and_process_covered_targets():
+                print("[Save input] Find new covered targets during extension.")
+                save_input()
 
             item.br.block.distance += 1
             if global_variable.target.assign_list[0].covered_in_sim:
                 return True
-            if random.randint(0,2) == 0:
+            if random.randint(0,1) == 0:
                 return True
         global_variable.branch = None
     return find_flag
@@ -358,19 +367,27 @@ def simulate_build_stack():
 
 
 
-# Todo ：Change to vri
 def sim():
-    import time
-    start_time = time.time()
-
     if simulator == 'iverilog':
         cmd = f"vvp {folder_pth}conc_run.vvp > {folder_pth}sim.log"
     elif simulator == 'verilator':
         cmd = f'{folder_pth}obj_dir/Vconquest > {folder_pth}sim.log'
     os.system(cmd)
 
-    end_time = time.time()  
-    elapsed_time = end_time - start_time 
+
+def save_input():
+    """
+    备份当前 folder_pth 下的 data.mem 文件到 inputs_history 文件夹，文件名用自增编号防止重复。
+    """
+    input_file = os.path.join(folder_pth, "data.mem")
+    inputs_dir = os.path.join(folder_pth, "inputs_history")
+    os.makedirs(inputs_dir, exist_ok=True)
+    existing = [f for f in os.listdir(inputs_dir) if f.startswith("data_") and f.endswith(".mem")]
+    next_id = len(existing) + 1
+    backup_file = os.path.join(inputs_dir, f"data_{next_id}.mem")
+    shutil.copy(input_file, backup_file)
+    print(f"Saved input: {backup_file}")
+    return backup_file
 
 
 def build_stack():
@@ -436,6 +453,7 @@ def build_stack():
     end_time = time.time()  
     elapsed_time = end_time - start_time 
     print(f"建立约束耗时 {elapsed_time:.2f}")
+    print(f"begin clock is {begin_clock}, end clock is {stop_clock}, clock count is {clock_count}")
 
 def sim_not_cnst():
     sim()
@@ -444,32 +462,25 @@ def sim_not_cnst():
     clock = 0
     stop_clock = 0
     
-    if global_variable.branch is None:
-        pass
-    else: 
-        br = global_variable.branch.br
-        clk = global_variable.branch.constraint.clock
-        if br.block.assign_list:
-            branch_id = br.block.assign_list[0].id
-        while True:
-            stripped_line = f_test.readline().strip()
-            val = stripped_line.split()
-            if val != []:
-                if val[0] == ';_C':
-                    clock = int(val[1])
-                    if clock == stop_clock:
-                        break
-                    
-                elif val[0] == ';A':
-                    assign_id = int(val[1])
-                    assign = SMTAssign.get_assign(assign_id)
-                    if assign.assign_type == SMTAssignType.SMT_ASSIGN_BRANCH:
-                        assign._set_covered(clock) #仿真到了算覆盖到
-            
-                elif val[0] == ';_Input':
-                    input = val[1]
-                    if input.startswith('x'):
-                        stop_clock = clock + 1
+    while True:
+        stripped_line = f_test.readline().strip()
+        val = stripped_line.split()
+        if val != []:
+            if val[0] == ';_C':
+                clock = int(val[1])
+                if clock == stop_clock:
+                    break
+                
+            elif val[0] == ';A':
+                assign_id = int(val[1])
+                assign = SMTAssign.get_assign(assign_id)
+                if assign.assign_type == SMTAssignType.SMT_ASSIGN_BRANCH:
+                    assign._set_covered(clock) #仿真到了算覆盖到
+        
+            elif val[0] == ';_Input':
+                input = val[1]
+                if input.startswith('x'):
+                    stop_clock = clock + 1
 
 
 def print_constraints(solver):
@@ -496,10 +507,12 @@ def print_cover_clock():
         print(f"Target {target.id} is covered in clock {target.assign_list[0].covered_at_clock}")
 
 def remove_and_process_covered_targets():
+    find_new_covered = False
     for i in range(len(SMTBasicBlock._target_list) - 1, -1, -1):
         target = SMTBasicBlock._target_list[i]
         for assign in target.assign_list:
             if assign.covered_in_sim:
+                find_new_covered = True
                 print(f"[COVERED] Removing target {target.id}, the assign is {target.assign_list[0].id}, at clock {assign.covered_at_clock}")
                 # 检查目标是否已在覆盖列表中，避免重复添加
                 if target not in SMTBasicBlock._covered_target_list:
@@ -510,3 +523,6 @@ def remove_and_process_covered_targets():
                     input_vector = InputVector.InputVector['input_vector'][:]
                 else:
                     input_vector = InputVector.InputVector['input_vector'][:assign.covered_at_clock]
+    return find_new_covered
+
+

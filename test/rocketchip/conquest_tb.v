@@ -105,12 +105,12 @@ RocketTile _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0]  _conc_pc     ;
 reg [141:0] _conc_opcode ;
-reg [141:0] _conc_ram    [0:60];
+reg [141:0] _conc_ram    [0:40];
 
 
 // VCD file generation
 initial begin
-    $dumpfile("./test/rocketchip/conquest_tb.vcd");
+    $dumpfile("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/conquest_tb.vcd");
     $dumpvars(0, conquest_tb);
 end
 
@@ -184,10 +184,10 @@ initial begin
     clock = 1'b0;
     reset = 1'b0;
     _conc_pc = 32'b0;
-    $readmemb("./test/rocketchip/data.mem", _conc_ram);
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_6.mem", _conc_ram);
     #2 clock = 1'b1;
     reset = 1'b1;
     #10 reset = 1'b0;
-    #700 $finish;
+    #500 $finish;
 end
 endmodule
