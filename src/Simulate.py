@@ -377,14 +377,23 @@ def sim():
 
 def save_input():
     """
-    备份当前 folder_pth 下的 data.mem 文件到 inputs_history 文件夹，文件名用自增编号防止重复。
+    在inputs_history下创建input_x子文件夹，并在其中保存data.mem文件
     """
     input_file = os.path.join(folder_pth, "data.mem")
     inputs_dir = os.path.join(folder_pth, "inputs_history")
     os.makedirs(inputs_dir, exist_ok=True)
-    existing = [f for f in os.listdir(inputs_dir) if f.startswith("data_") and f.endswith(".mem")]
+    
+    # 查找现有的input_x文件夹
+    existing = [d for d in os.listdir(inputs_dir) if os.path.isdir(os.path.join(inputs_dir, d)) 
+               and d.startswith("input")]
     next_id = len(existing) + 1
-    backup_file = os.path.join(inputs_dir, f"data_{next_id}.mem")
+    
+    # 创建新的子文件夹
+    new_dir = os.path.join(inputs_dir, f"input{next_id}")
+    os.makedirs(new_dir, exist_ok=True)
+    
+    # 复制文件到新目录
+    backup_file = os.path.join(new_dir, "data.mem")
     shutil.copy(input_file, backup_file)
     print(f"Saved input: {backup_file}")
     return backup_file

@@ -1,0 +1,774 @@
+VCD info: dumpfile ./test/b10/conquest_tb.vcd opened for output.
+WARNING: ./test/b10/inputs_history/input1/conquest_tb.v:85: $readmemb(./test/b10/inputs_history/input1/data.mem): Not enough words in the file for the requested range [0:11].
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C          1
+;_Input 100010111111
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C          2
+;_Input 000011010000
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 0
+;_C          3
+;_Input 000001111011
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 0
+;_C          4
+;_Input 100011101101
+;A 43
+;A 45
+;A 47
+;A 49
+;A 51
+;A 53
+;A 55
+;A 56
+;A 57
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C          5
+;_Input 101011101011
+;A 43
+;A 45
+;A 48
+;A 58
+;A 59
+;A 60
+;A 61
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C          6
+;_Input 000011100111
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 0
+;_C          7
+;_Input 011010010101
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C          8
+;_Input 100001001100
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 1
+;_C          9
+;_Input 000110100001
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 0
+;_C         10
+;_Input 001000010010
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         11
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         12
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         13
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         14
+;_Input xxxxxxxxxxxx
+./test/b10/inputs_history/input1/conquest_tb.v:89: $finish called at 132 (1s)
+VCD info: dumpfile ./test/b10/conquest_tb.vcd opened for output.
+WARNING: ./test/b10/inputs_history/input2/conquest_tb.v:85: $readmemb(./test/b10/inputs_history/input2/data.mem): Not enough words in the file for the requested range [0:11].
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C          1
+;_Input 000100100010
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C          2
+;_Input 011110000010
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 20
+;A 22
+;A 23
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C          3
+;_Input 011100100100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C          4
+;_Input 001110001000
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C          5
+;_Input 100010101101
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C          6
+;_Input 001101101001
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C          7
+;_Input 000001110011
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 0
+;_C          8
+;_Input 101010000010
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C          9
+;_Input 010110011111
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         10
+;_Input 111111011001
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 1
+;_C         11
+;_Input xxxxxxxxxxxx
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 105
+;A 107
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         12
+;_Input xxxxxxxxxxxx
+;A 108
+;A 109
+;A 110
+;A 111
+;A 112
+;A 113
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         13
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         14
+;_Input xxxxxxxxxxxx
+./test/b10/inputs_history/input2/conquest_tb.v:89: $finish called at 132 (1s)
+VCD info: dumpfile ./test/b10/conquest_tb.vcd opened for output.
+WARNING: ./test/b10/inputs_history/input3/conquest_tb.v:85: $readmemb(./test/b10/inputs_history/input3/data.mem): Not enough words in the file for the requested range [0:11].
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C          1
+;_Input 001100001001
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C          2
+;_Input 011101110111
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C          3
+;_Input 111000100111
+;A 29
+;A 31
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C          4
+;_Input 010010001001
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C          5
+;_Input 111000100110
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C          6
+;_Input 110110100000
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C          7
+;_Input 110100010001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C          8
+;_Input 000010000001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C          9
+;_Input 110110101100
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         10
+;_Input 000010110011
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         11
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         12
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         13
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         14
+;_Input xxxxxxxxxxxx
+./test/b10/inputs_history/input3/conquest_tb.v:89: $finish called at 132 (1s)

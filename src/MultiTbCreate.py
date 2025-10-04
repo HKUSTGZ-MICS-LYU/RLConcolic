@@ -186,6 +186,7 @@ class CreateMultiInputTestBench:
         f.write("// Internal signals used in the testbench\n")
         for sig_type, sig_name, extra in signals:
             f.write(f"reg {sig_type:<{max_type_len}} {sig_name:<{max_name_len}} {extra};\n")
+        f.write("reg _conc_valid;")
         f.write("\n")
 
     def _write_mapping_comment(self, f):
@@ -205,6 +206,7 @@ class CreateMultiInputTestBench:
         vec = InputVector.InputVector
         f.write("// Program counter logic\n")
         f.write(f"always @(posedge {self.clk_name}) begin\n")
+        f.write("    if (!reset && _conc_valid) begin\n")
         f.write("    _conc_opcode = _conc_ram[_conc_pc];\n")
 
         for sig_name, _, msb, lsb in vec["sig_name_and_width"]:
@@ -219,6 +221,7 @@ class CreateMultiInputTestBench:
         f.write("    _conc_pc = _conc_pc + 1;\n")
         f.write('    $strobe(";_C %d", _conc_pc);\n')
         f.write('    $strobe(";_Input %b", _conc_opcode);\n')
+        f.write("    end\n")
         f.write("end\n\n")
 
     def _write_initial_block_multi_inputs(self, f):
@@ -227,6 +230,7 @@ class CreateMultiInputTestBench:
         f.write(f"    {self.clk_name} = 1'b0;\n")
         f.write(f"    {self.reset_name} = {self.reset_edge_inactive};\n")
         f.write("    _conc_pc = 32'b0;\n")
+        f.write("    _conc_valid = 1'b0;\n")
 
         f.write("\n    // Inputs directory and memory files\n")
         f.write(f"    // Python side collected: {self.inputs_dir}\n")
@@ -239,12 +243,13 @@ class CreateMultiInputTestBench:
             f.write(f'    $readmemb("{mem_path}", _conc_ram);\n')
 
             f.write(f"    _conc_pc = 32'b0;\n")
+            f.write(f"    _conc_valid = 1'b0;\n")
             f.write(f"    {self.reset_name} = {self.reset_edge_active};\n")
             f.write(f"    repeat (2) @(posedge {self.clk_name});\n")
             f.write(f"    {self.reset_name} = {self.reset_edge_inactive};\n")
-
+            f.write(f"    _conc_valid = 1'b1;\n")
             f.write(f"    repeat ({self.unroll + 2*steps}) @(posedge {self.clk_name});\n")
-
+            f.write(f"    _conc_valid = 1'b0;\n")
         f.write("    $finish;\n")
         f.write("end\n\n")
 

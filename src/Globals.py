@@ -220,7 +220,7 @@ configurations = {
     },
 
     'rocketchip': {
-        'file_path': './test/rocketchip/rocketchip.v',
+        'file_path': '/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/rocketchip.v',
         'top_module': 'RocketTile',
         'clk_name': 'clock',
         'reset_name': 'reset',
@@ -279,7 +279,7 @@ steps = 10
 # assert steps*5<=unroll, "5*steps should be less than unroll for fuzzing"
 assert steps<=unroll, "steps should be less than unroll"
 limit_iter = 3
-random_sim = 3
+random_sim = 5
 simulator = 'iverilog'
 
 testbench = 'rocketchip'  # Change this to the desired testbench name
@@ -296,7 +296,7 @@ folder_pth = os.path.dirname(file_pth) + '/'
 target_pth = os.path.dirname(file_pth) + '/target_constraints.txt'
 dut_file = folder_pth + 'conquest_dut.v'
 tb_file = folder_pth + 'conquest_tb.v'
-llm_input_file = folder_pth + 'llm_input.txt'
+multi_tb_file = folder_pth + 'conquest_tb_multi.v'
 
 
 

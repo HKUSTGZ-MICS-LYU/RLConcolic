@@ -1,8 +1,10 @@
-module conquest_tb(input clock, input reset);
+module conquest_tb();
 
 // Generated top module signals
+reg         [0:0] clock;
 reg         [0:0] line1 = 1'b0;
 reg         [0:0] line2 = 1'b0;
+reg         [0:0] reset;
 wire        [0:0] outp;
 wire        [0:0] overflw;
 reg               __obs = 1'b0;
@@ -21,7 +23,19 @@ b01 _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0] _conc_pc     ;
 reg [2:0]  _conc_opcode ;
-reg [2:0]  _conc_ram    [0:8];
+reg [2:0]  _conc_ram    [0:60];
+
+
+// VCD file generation
+initial begin
+    $dumpfile("./test/b01/conquest_tb.vcd");
+    $dumpvars(0, conquest_tb);
+end
+
+// Clock pulse generator
+always begin
+    #5 clock = ~clock;
+end
 
 // Program counter logic
 always @(posedge clock) begin
@@ -29,9 +43,9 @@ always @(posedge clock) begin
     line1 <= #5 _conc_opcode[0];
     line2 <= #5 _conc_opcode[1];
     __obs <= #5 _conc_opcode[2];
-    $strobe(";R outp %d", _conc_top_inst.outp);
-    $strobe(";R overflw %d", _conc_top_inst.overflw);
-    $strobe(";R stato %d", _conc_top_inst.stato);
+    $strobe(";_P line1 %b", line1);
+    $strobe(";_P line2 %b", line2);
+    $strobe(";_P __obs %b", __obs);
     _conc_pc = _conc_pc + 1;
     $strobe(";_C %d", _conc_pc);
     $strobe(";_Input %b", _conc_opcode);
@@ -39,7 +53,13 @@ end
 
 // Generate the initial block
 initial begin
+    clock = 1'b0;
+    reset = 1'b0;
     _conc_pc = 32'b0;
     $readmemb("./test/b01/data.mem", _conc_ram);
+    #2 clock = 1'b1;
+    reset = 1'b1;
+    #10 reset = 1'b0;
+    #700 $finish;
 end
 endmodule

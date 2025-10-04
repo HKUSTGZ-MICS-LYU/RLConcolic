@@ -1,5 +1,5 @@
 //Following code is from line 1
-module b01(reset, clock, line1, outp, overflw, line2, __obs);
+module b01(clock, outp, line1, overflw, line2, reset, __obs);
 
     input               clock;
     input               line1;
