@@ -110,59 +110,59 @@ def single_target_coverage():
         SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
     start_time = time.time()
 
-    # while len(SMTBasicBlock._target_list) > 0:
-    #     if len(SMTBasicBlock._target_list) == 0:
-    #         break
-    #     else:
-    #         target = SMTBasicBlock._target_list[0]
+    while len(SMTBasicBlock._target_list) > 300:
+        if len(SMTBasicBlock._target_list) == 0:
+            break
+        else:
+            target = SMTBasicBlock._target_list[0]
 
-    #     for iteration in range(1):
-    #         seed = int(time.time() * 1000) % (2**32)
-    #         random.seed(seed)
-    #         InputVector.randomize_input_vector_fuzzing()
-    #         sim_not_cnst()
-    #         if remove_and_process_covered_targets():
-    #             print("[Save input] Find new covered targets during randomization.")
-    #             save_input()
-    #         path = InputVector.get_input_vector()
-    #         SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
+        for iteration in range(1):
+            seed = int(time.time() * 1000) % (2**32)
+            random.seed(seed)
+            InputVector.randomize_input_vector_fuzzing()
+            sim_not_cnst()
+            if remove_and_process_covered_targets():
+                print("[Save input] Find new covered targets during randomization.")
+                save_input()
+            path = InputVector.get_input_vector()
+            SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
             
-    #     if len(SMTBasicBlock._target_list) == 0:
-    #         break
-    #     else:
-    #         target = SMTBasicBlock._target_list[0]
+        if len(SMTBasicBlock._target_list) == 0:
+            break
+        else:
+            target = SMTBasicBlock._target_list[0]
         
-    #     target.update_distance_from_adjacency_list()
-    #     print(f"[TARGET] Trying to cover target {target.id}, the assign is {target.assign_list[0].id}")
-    #     if target.closest_path is None and target.closest_path != path:
-    #         path = target.closest_path
-    #         path.dump_input_vector()
+        target.update_distance_from_adjacency_list()
+        print(f"[TARGET] Trying to cover target {target.id}, the assign is {target.assign_list[0].id}")
+        if target.closest_path is None and target.closest_path != path:
+            path = target.closest_path
+            path.dump_input_vector()
 
-    #     global_variable.add_target(target)
-    #     global_variable.first_explore_label = True
-    #     while (path := concolic_iteration(path)):
-    #         if len(path['input_vector']) > unroll :   
-    #             global_variable.explore_time = 0
-    #             save_input()
-    #             if not target.assign_list[0].covered_in_sim:
-    #                 SMTBasicBlock._target_list.pop(0)
-    #                 SMTBasicBlock._uncovered_target_list.append(target)
-    #             global_variable.clear_target()
-    #             InputVector.input_vector_clear()
-    #             Constraint._constraint_stack.clear()
-    #             temp_time = time.time() - start_time
-    #             print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
-    #             break
-    #         if target.assign_list[0].covered_in_sim:
-    #             global_variable.explore_time = 0
-    #             save_input()
-    #             if remove_and_process_covered_targets():
-    #                 print("[Save input] Find new covered targets during concolic iteration.")
-    #                 save_input()
-    #             global_variable.clear_target()
-    #             temp_time = time.time() - start_time
-    #             print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
-    #             break
+        global_variable.add_target(target)
+        global_variable.first_explore_label = True
+        while (path := concolic_iteration(path)):
+            if len(path['input_vector']) > unroll :   
+                global_variable.explore_time = 0
+                save_input()
+                if not target.assign_list[0].covered_in_sim:
+                    SMTBasicBlock._target_list.pop(0)
+                    SMTBasicBlock._uncovered_target_list.append(target)
+                global_variable.clear_target()
+                InputVector.input_vector_clear()
+                Constraint._constraint_stack.clear()
+                temp_time = time.time() - start_time
+                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
+                break
+            if target.assign_list[0].covered_in_sim:
+                global_variable.explore_time = 0
+                save_input()
+                if remove_and_process_covered_targets():
+                    print("[Save input] Find new covered targets during concolic iteration.")
+                    save_input()
+                global_variable.clear_target()
+                temp_time = time.time() - start_time
+                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
+                break
 
     print_cover_clock()
 

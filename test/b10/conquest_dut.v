@@ -1,5 +1,5 @@
 //Following code is from line 2
-module b10(r_button, v_in, test, key, cts, reset, ctr, v_out, rtr, g_button, clock, rts, start, __obs);
+module b10(rts, r_button, test, ctr, start, rtr, v_in, cts, key, g_button, v_out, reset, clock, __obs);
 
     input               r_button;
     input               g_button;

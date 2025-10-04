@@ -105,7 +105,7 @@ RocketTile _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0]  _conc_pc     ;
 reg [141:0] _conc_opcode ;
-reg [141:0] _conc_ram    [0:60];
+reg [141:0] _conc_ram    [0:70];
 reg _conc_valid;
 // Packing map from _conc_opcode to DUT inputs (msb:lsb)
 // auto_buffer_out_a_ready <- _conc_opcode[0:0]  width=1
@@ -228,10 +228,130 @@ initial begin
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (70) @(posedge clock);
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
 
-    // --- Test input 2: data_2.mem ---
+    // --- Test input 2: data_10.mem ---
+    $display("Testing data_10.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_10.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 3: data_11.mem ---
+    $display("Testing data_11.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_11.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 4: data_12.mem ---
+    $display("Testing data_12.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_12.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 5: data_13.mem ---
+    $display("Testing data_13.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_13.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 6: data_14.mem ---
+    $display("Testing data_14.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_14.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 7: data_15.mem ---
+    $display("Testing data_15.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_15.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 8: data_16.mem ---
+    $display("Testing data_16.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_16.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 9: data_17.mem ---
+    $display("Testing data_17.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_17.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 10: data_18.mem ---
+    $display("Testing data_18.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_18.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 11: data_19.mem ---
+    $display("Testing data_19.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_19.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 12: data_2.mem ---
     $display("Testing data_2.mem");
     $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_2.mem", _conc_ram);
     _conc_pc = 32'b0;
@@ -240,10 +360,70 @@ initial begin
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (70) @(posedge clock);
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
 
-    // --- Test input 3: data_3.mem ---
+    // --- Test input 13: data_20.mem ---
+    $display("Testing data_20.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_20.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 14: data_21.mem ---
+    $display("Testing data_21.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_21.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 15: data_22.mem ---
+    $display("Testing data_22.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_22.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 16: data_23.mem ---
+    $display("Testing data_23.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_23.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 17: data_24.mem ---
+    $display("Testing data_24.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_24.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 18: data_3.mem ---
     $display("Testing data_3.mem");
     $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_3.mem", _conc_ram);
     _conc_pc = 32'b0;
@@ -252,10 +432,10 @@ initial begin
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (70) @(posedge clock);
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
 
-    // --- Test input 4: data_4.mem ---
+    // --- Test input 19: data_4.mem ---
     $display("Testing data_4.mem");
     $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_4.mem", _conc_ram);
     _conc_pc = 32'b0;
@@ -264,10 +444,10 @@ initial begin
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (70) @(posedge clock);
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
 
-    // --- Test input 5: data_5.mem ---
+    // --- Test input 20: data_5.mem ---
     $display("Testing data_5.mem");
     $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_5.mem", _conc_ram);
     _conc_pc = 32'b0;
@@ -276,7 +456,55 @@ initial begin
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (70) @(posedge clock);
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 21: data_6.mem ---
+    $display("Testing data_6.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_6.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 22: data_7.mem ---
+    $display("Testing data_7.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_7.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 23: data_8.mem ---
+    $display("Testing data_8.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_8.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 24: data_9.mem ---
+    $display("Testing data_9.mem");
+    $readmemb("/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/inputs_history/data_9.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
     $finish;
 end

@@ -274,7 +274,7 @@ configurations = {
 
 initial_distance = 999
 unroll = 50
-steps = 10
+steps = 20
 
 # assert steps*5<=unroll, "5*steps should be less than unroll for fuzzing"
 assert steps<=unroll, "steps should be less than unroll"
