@@ -1,1 +1,2 @@
-tlMasterXbar__latch_31 = 0
+tlMasterXbar__monitor___GEN_16_31 = 1
+tlMasterXbar__monitor___GEN_24_31 = 0

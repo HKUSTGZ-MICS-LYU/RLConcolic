@@ -1,9 +1,0 @@
-reset = 0, line1 = 1, line2 = 1
-reset = 0, line1 = 0, line2 = 0
-reset = 0, line1 = 1, line2 = 1
-reset = 0, line1 = 0, line2 = 0
-reset = 0, line1 = 0, line2 = 0
-reset = 0, line1 = 1, line2 = 1
-reset = 0, line1 = 0, line2 = 0
-reset = 0, line1 = 1, line2 = 1
-reset = 0, line1 = 0, line2 = 0

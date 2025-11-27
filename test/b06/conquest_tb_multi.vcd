@@ -1,0 +1,57 @@
+$date
+	Thu Nov 27 15:29:16 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module conquest_tb_multi $end
+$var wire 2 ! uscite [1:0] $end
+$var wire 1 " enable_count $end
+$var wire 2 # cc_mux [1:0] $end
+$var wire 1 $ ackout $end
+$var reg 1 % __obs $end
+$var reg 3 & _conc_opcode [2:0] $end
+$var reg 32 ' _conc_pc [31:0] $end
+$var reg 1 ( _conc_valid $end
+$var reg 1 ) clock $end
+$var reg 1 * cont_eql $end
+$var reg 1 + eql $end
+$var reg 1 , reset $end
+$scope module _conc_top_inst $end
+$var wire 1 % __obs $end
+$var wire 1 ) clock $end
+$var wire 1 * cont_eql $end
+$var wire 1 + eql $end
+$var wire 1 , reset $end
+$var reg 1 $ ackout $end
+$var reg 2 - cc_mux [1:0] $end
+$var reg 1 " enable_count $end
+$var reg 3 . state [2:0] $end
+$var reg 2 / uscite [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 /
+b0 .
+b0 -
+0,
+0+
+0*
+0)
+0(
+b0 '
+bx &
+0%
+0$
+b0 #
+0"
+b0 !
+$end

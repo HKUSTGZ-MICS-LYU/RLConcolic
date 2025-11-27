@@ -58,7 +58,6 @@ class CNST_TYPE(Enum):
     CNST_STATE = auto()
     CNST_SYNC = auto()
 
-#Global parameter
 configurations = {
     'grammerTest': {
         'file_path': './test/grammertest/grammerTest.v',
@@ -67,7 +66,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1',
     },
-    # success and full coverage, 26
+
     'b01': {
         'file_path': './test/b01/b01.v',
         'top_module': 'b01',
@@ -75,7 +74,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # success and full coverage, 23
+
     'b06': {
         'file_path': './test/b06/b06.v',
         'top_module': 'b06',
@@ -83,7 +82,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # Cover: 19 Uncover: 1
+
     'b07': {
         'file_path': './test/b07/b07.v',
         'top_module': 'b07',
@@ -91,17 +90,15 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # success and full coverage
+
     'b10': {
         'file_path': './test/b10/b10.v',
         'top_module': 'b10',
         'clk_name': 'clock',
         'reset_name': 'reset',
-        'reset_edge': '1',
-        'assign_num': 113
-
+        'reset_edge': '1'
     },
-    # Cover:33 Uncover: 2
+
     'b11': {
         'file_path': './test/b11/b11.v',
         'top_module': 'b11',
@@ -117,7 +114,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # Cover: 191 Uncover: 4
+
     'b14': {
         'file_path': './test/b14/b14.v',
         'top_module': 'b14',
@@ -125,7 +122,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # Cover: 168 Uncover: 23
+
     'b15': {
         'file_path': './test/b15/b15.v',
         'top_module': 'b15',
@@ -133,7 +130,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # Total:540 
+
     'b17': {
         'file_path': './test/b17/b17.v',
         'top_module': 'b17',
@@ -149,7 +146,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # Cover: 412 Uncover: 44 
+
     'b20': {
         'file_path': './test/b20/b20.v',
         'top_module': 'b20',
@@ -158,7 +155,6 @@ configurations = {
         'reset_edge': '1'
     },
 
-    # Cover: 414 Uncover: 42
     'b21': {
         'file_path': './test/b21/b21.v',
         'top_module': 'b21',
@@ -166,7 +162,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # TotalP: 683 ,549以后formal达不到，有225个达不到(458)
+
     'b22': {
         'file_path': './test/b22/b22.v',
         'top_module': 'b22',
@@ -174,7 +170,7 @@ configurations = {
         'reset_name': 'reset',
         'reset_edge': '1'
     },
-    # Total: 1182
+
     'b30':{
         'file_path': './test/b30/b30.v',
         'top_module': 'b30',
@@ -183,7 +179,6 @@ configurations = {
         'reset_edge': '1' 
     },
   
-    # Total: 992 
     'or1200': {
         'file_path': './test/or1200/f_or1200.v',
         'top_module': 'or1200_top',
@@ -192,7 +187,6 @@ configurations = {
         'reset_edge': '1'
     },
 
-    #Cover: 43 Uncover: 5
     'DCache': {
         'file_path': './test/DCache/or1200_DCache_95.v',
         'top_module': 'or1200_dc_fsm',
@@ -200,8 +194,6 @@ configurations = {
         'reset_name': 'rst',
         'reset_edge': '1'
     },
-
-    #Cover: 23 Uncover: 1
     'ICache': {
         'file_path': './test/ICache/or1200_ICache_95.v',
         'top_module': 'or1200_ic_fsm',
@@ -209,8 +201,6 @@ configurations = {
         'reset_name': 'rst',
         'reset_edge': '1'
     },
-
-    #Cover: 62 Uncover: 2
     'Exception': {
         'file_path': './test/Exception/or1200_Exception_95.v',
         'top_module': 'or1200_except',
@@ -218,7 +208,6 @@ configurations = {
         'reset_name': 'rst',
         'reset_edge': '1'
     },
-
     'rocketchip': {
         'file_path': '/hpc/home/connect.ytan910/code/Concolic/test/rocketchip/rocketchip.v',
         'top_module': 'RocketTile',
@@ -274,15 +263,14 @@ configurations = {
 
 initial_distance = 999
 unroll = 50
-steps = 20
+steps = 5
 
-# assert steps*5<=unroll, "5*steps should be less than unroll for fuzzing"
 assert steps<=unroll, "steps should be less than unroll"
 limit_iter = 3
 random_sim = 5
 simulator = 'iverilog'
 
-testbench = 'rocketchip'  # Change this to the desired testbench name
+testbench = 'b06'  # Change this to the desired testbench name
 selected_config = configurations[testbench]
 
 file_pth = selected_config['file_path']
@@ -290,7 +278,6 @@ top_module = selected_config['top_module']
 clk_name = selected_config['clk_name']
 reset_name = selected_config['reset_name']
 reset_edge = selected_config['reset_edge']
-# assign_num = selected_config['assign_num']
 
 folder_pth = os.path.dirname(file_pth) + '/'
 target_pth = os.path.dirname(file_pth) + '/target_constraints.txt'
@@ -304,27 +291,6 @@ dqn_init = False
 dqn_agent = None
 debug = False
 s = z3.Solver()
-
-
-
-# GPT 
-conversation_history = []
-verilog_history = []
-url = "https://gpt-api.hkust-gz.edu.cn/v1/chat/completions"
-headers = { 
-        "Content-Type": "application/json", 
-        "Authorization": "Bearer af10c5bcb8c44790ad3abb45a57c3734d8b9130c581b492fa8db539c1c659568"
-    } 
-
-#LLM
-# 确保 base.py 文件在指定目录中
-from pathlib import Path
-import sys
-base_path = Path("/hpc/home/connect.ytan910/code/LLM_Concolic/litgpt/litgpt/chat/base.py")
-if not base_path.exists():
-    raise FileNotFoundError(f"{base_path} not found. Please make sure you are running this script from the root of the litgpt repository.")
-sys.path.append(str(base_path.parent.parent.parent))
-
 
 llm_agent = False
 bing_search = True

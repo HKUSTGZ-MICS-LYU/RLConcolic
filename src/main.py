@@ -92,15 +92,30 @@ class Concolic:
         # Step 4: Generate the coverage report
         self.generate_coverage_report()
 
-        # Step 5: Generate multi-input testbench and doublecheck coverage with simulation log
+        # Step 5: Merge all testbenches and run simulation
+        self.merge_testbench()
+
+        # Step 6: Generate multi-input testbench with simulation log
         self.multi_testbench()
-        self.doublecheck_branch_coverage()
+
 
     def generate_testbench(self, folder_pth):
         """
         Generate the testbench for the given Verilog file(s).
         """
         # Parse the Verilog file and extract the AST
+
+        if isinstance(self.file_pth, list):
+            print(f"file_pth is list: {self.file_pth}")
+            for f in self.file_pth:
+                print(f"  File exists: {os.path.exists(f)} - {f}")
+        else:
+            print(f"File exists: {os.path.exists(self.file_pth)}")
+            if os.path.exists(self.file_pth):
+                with open(self.file_pth, 'r') as f:
+                    content = f.read()
+                    print(f"File first 100 chars: {repr(content[:100])}")
+            
         codeparser = VerilogCodeParser(self.file_pth)
         self.ast = codeparser.parse()
 
@@ -150,6 +165,51 @@ class Concolic:
         print(f"Time taken: {self.end_time - self.start_time} seconds")
         SMTBasicBlock.print_covered_result()
 
+    def merge_testbench(self):
+        inputs_dir = os.path.join(self.folder_pth, 'inputs_history')
+        all_coverage = set()
+        
+        for input_dir in sorted(os.listdir(inputs_dir)):
+            if not input_dir.startswith('input'):
+                continue
+                
+            input_folder = os.path.join(inputs_dir, input_dir)
+            if not os.path.isdir(input_folder):
+                continue
+                
+            # 在input文件夹中创建tb文件
+            tb_file = os.path.join(input_folder, 'conquest_tb.v')
+            data_mem = os.path.join(input_folder, 'data.mem')
+            
+            # 生成新的tb文件
+            with open(self.tb_file, 'r') as f:
+                content = f.read()
+            
+            # 更新data.mem路径
+            modified_content = content.replace(
+                f'$readmemb("{self.folder_pth}data.mem"',
+                f'$readmemb("{data_mem}"'
+            )
+            
+            with open(tb_file, 'w') as f:
+                f.write(modified_content)
+            
+            # 编译和运行
+            compile_cmd = f"iverilog -o {input_folder}/conc_run.vvp {self.dut_file} {tb_file}"
+            os.system(compile_cmd)
+            sim_cmd = f"vvp {input_folder}/conc_run.vvp > {input_folder}/sim.log"
+            os.system(sim_cmd)
+            
+        # 合并所有sim.log
+        with open(f"{self.folder_pth}mergesim.log", 'w') as outfile:
+            for input_dir in sorted(os.listdir(inputs_dir)):
+                if not input_dir.startswith('input'):
+                    continue
+                input_folder = os.path.join(inputs_dir, input_dir)
+                sim_log = os.path.join(input_folder, 'sim.log')
+                if os.path.exists(sim_log):
+                    with open(sim_log, 'r') as infile:
+                        outfile.write(infile.read())
 
     def multi_testbench(self):
         tb = CreateMultiInputTestBench(self.ast, self.top_module, self.clk_name, self.reset_name, self.reset_edge, self.folder_pth, self.unroll)
@@ -160,37 +220,6 @@ class Concolic:
         sim_cmd = f"vvp {self.folder_pth}conc_run.vvp > {self.folder_pth}multisim.log"
         print(f"[INFO] Running command: {sim_cmd}")
         os.system(sim_cmd)
-
-    def doublecheck_branch_coverage(self):
-        print("Double checking branch coverage from simulation log...")
-        branch_id_file = os.path.join(self.folder_pth, 'branch_id.txt')
-        log_file = os.path.join(self.folder_pth, 'multisim.log')
-
-        with open(branch_id_file, 'r') as f:
-                all_branches = [int(line.strip()) for line in f if line.strip() != '']
-                all_branches = set(all_branches)
-
-        covered = set()
-        # add covered branches from log
-        with open(log_file, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith(';A '):
-                    try:
-                        bid = int(line.split()[1])
-                        covered.add(bid)
-                    except:
-                        print(f"[ERROR] 解析行失败: {line}, 错误: {str(e)}")
-                        pass
-
-        not_covered = sorted(all_branches - covered)
-        covered_sorted = sorted(all_branches & covered)
-        coverage_rate = len(covered_sorted) / len(all_branches) if all_branches else 0
-        print("需要覆盖分支数:", len(all_branches))
-        print("已覆盖分支数:", len(covered_sorted))
-        print("未覆盖分支数:", len(not_covered))
-        print("覆盖率: {:.2%}".format(coverage_rate))
-        print("未覆盖分支:", not_covered)
 
 if __name__ == '__main__':
 

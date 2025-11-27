@@ -1,5 +1,5 @@
 //Following code is from line 1
-module b06(uscite, enable_count, ackout, clock, cc_mux, reset, cont_eql, eql, __obs);
+module b06(uscite, ackout, clock, cc_mux, enable_count, cont_eql, reset, eql, __obs);
 
     input               eql;
     input               clock;

@@ -37,7 +37,7 @@ b10 _conc_top_inst(
 // Internal signals used in the testbench
 reg [31:0] _conc_pc     ;
 reg [11:0] _conc_opcode ;
-reg [11:0] _conc_ram    [0:6];
+reg [11:0] _conc_ram    [0:70];
 reg _conc_valid;
 // Packing map from _conc_opcode to DUT inputs (msb:lsb)
 // r_button         <- _conc_opcode[0:0]  width=1
@@ -100,40 +100,124 @@ initial begin
     // Inputs directory and memory files
     // Python side collected: ./test/b10/inputs_history
 
-    // --- Test input 1: data_1.mem ---
-    $display("Testing data_1.mem");
-    $readmemb("./test/b10/inputs_history/data_1.mem", _conc_ram);
+    // --- Test input 1: input1/data.mem ---
+    $display("Testing input1/data.mem");
+    $readmemb("./test/b10/inputs_history/input1/data.mem", _conc_ram);
     _conc_pc = 32'b0;
     _conc_valid = 1'b0;
     reset = 1'b1;
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (7) @(posedge clock);
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
 
-    // --- Test input 2: data_2.mem ---
-    $display("Testing data_2.mem");
-    $readmemb("./test/b10/inputs_history/data_2.mem", _conc_ram);
+    // --- Test input 2: input10/data.mem ---
+    $display("Testing input10/data.mem");
+    $readmemb("./test/b10/inputs_history/input10/data.mem", _conc_ram);
     _conc_pc = 32'b0;
     _conc_valid = 1'b0;
     reset = 1'b1;
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (7) @(posedge clock);
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
 
-    // --- Test input 3: data_3.mem ---
-    $display("Testing data_3.mem");
-    $readmemb("./test/b10/inputs_history/data_3.mem", _conc_ram);
+    // --- Test input 3: input2/data.mem ---
+    $display("Testing input2/data.mem");
+    $readmemb("./test/b10/inputs_history/input2/data.mem", _conc_ram);
     _conc_pc = 32'b0;
     _conc_valid = 1'b0;
     reset = 1'b1;
     repeat (2) @(posedge clock);
     reset = 1'b0;
     _conc_valid = 1'b1;
-    repeat (7) @(posedge clock);
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 4: input3/data.mem ---
+    $display("Testing input3/data.mem");
+    $readmemb("./test/b10/inputs_history/input3/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 5: input4/data.mem ---
+    $display("Testing input4/data.mem");
+    $readmemb("./test/b10/inputs_history/input4/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 6: input5/data.mem ---
+    $display("Testing input5/data.mem");
+    $readmemb("./test/b10/inputs_history/input5/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 7: input6/data.mem ---
+    $display("Testing input6/data.mem");
+    $readmemb("./test/b10/inputs_history/input6/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 8: input7/data.mem ---
+    $display("Testing input7/data.mem");
+    $readmemb("./test/b10/inputs_history/input7/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 9: input8/data.mem ---
+    $display("Testing input8/data.mem");
+    $readmemb("./test/b10/inputs_history/input8/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
+    _conc_valid = 1'b0;
+
+    // --- Test input 10: input9/data.mem ---
+    $display("Testing input9/data.mem");
+    $readmemb("./test/b10/inputs_history/input9/data.mem", _conc_ram);
+    _conc_pc = 32'b0;
+    _conc_valid = 1'b0;
+    reset = 1'b1;
+    repeat (2) @(posedge clock);
+    reset = 1'b0;
+    _conc_valid = 1'b1;
+    repeat (90) @(posedge clock);
     _conc_valid = 1'b0;
     $finish;
 end

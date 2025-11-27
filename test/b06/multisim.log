@@ -1,0 +1,2 @@
+VCD info: dumpfile ./test/b06/conquest_tb_multi.vcd opened for output.
+./test/b06/conquest_tb_multi.v:74: $finish called at 0 (1s)

@@ -1,6 +1,6 @@
 VCD info: dumpfile ./test/b10/conquest_tb_multi.vcd opened for output.
-Testing data_1.mem
-WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history/data_1.mem): Not enough words in the file for the requested range [0:6].
+Testing input1/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history/input1/data.mem): Not enough words in the file for the requested range [0:70].
 ;A 2
 ;A 3
 ;A 4
@@ -46,7 +46,26 @@ WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history
 ;_P v_in 0000
 ;_P __obs 0
 ;_C          1
-;_Input 110110110110
+;_Input 101110111101
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C          2
+;_Input 110101101110
 ;A 99
 ;A 100
 ;A 101
@@ -58,14 +77,33 @@ WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history
 ;_P r_button 0
 ;_P g_button 1
 ;_P key 1
-;_P start 0
-;_P test 1
+;_P start 1
+;_P test 0
 ;_P rts 1
-;_P rtr 0
-;_P v_in 1011
+;_P rtr 1
+;_P v_in 1010
 ;_P __obs 1
-;_C          2
-;_Input 101001011111
+;_C          3
+;_Input 111011101100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C          4
+;_Input 101010111111
 ;A 99
 ;A 100
 ;A 101
@@ -79,12 +117,50 @@ WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history
 ;_P key 1
 ;_P start 1
 ;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C          5
+;_Input 001110100011
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C          6
+;_Input 110001010000
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
 ;_P rts 0
 ;_P rtr 1
-;_P v_in 0100
+;_P v_in 1000
 ;_P __obs 1
-;_C          3
-;_Input 111101111001
+;_C          7
+;_Input 101011011101
 ;A 99
 ;A 100
 ;A 101
@@ -95,15 +171,319 @@ WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history
 ;R state = 1 
 ;_P r_button 1
 ;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C          8
+;_Input 110111101100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 1
+;_C          9
+;_Input 011101111010
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
 ;_P key 0
 ;_P start 1
 ;_P test 1
 ;_P rts 1
 ;_P rtr 1
 ;_P v_in 1110
+;_P __obs 0
+;_C         10
+;_Input 100111011001
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
 ;_P __obs 1
-;_C          4
-;_Input 110000111101
+;_C         11
+;_Input 110010011100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         12
+;_Input 111011001111
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         13
+;_Input 011101101111
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         14
+;_Input 001010001101
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         15
+;_Input 010100101101
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         16
+;_Input 010010011111
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         17
+;_Input 001011011000
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         18
+;_Input 011101011110
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         19
+;_Input 110100111011
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         20
+;_Input 000011001011
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 0
+;_C         21
+;_Input 010101110010
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         22
+;_Input 100011000100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         23
+;_Input 010000000011
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C         24
+;_Input 100000111101
 ;A 99
 ;A 100
 ;A 101
@@ -119,10 +499,48 @@ WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history
 ;_P test 1
 ;_P rts 1
 ;_P rtr 0
-;_P v_in 1000
+;_P v_in 0000
 ;_P __obs 1
-;_C          5
-;_Input 011110111001
+;_C         25
+;_Input 100101000111
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         26
+;_Input 000100101100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C         27
+;_Input 011011000101
 ;A 99
 ;A 100
 ;A 101
@@ -133,119 +551,307 @@ WARNING: ./test/b10/conquest_tb_multi.v:105: $readmemb(./test/b10/inputs_history
 ;R state = 1 
 ;_P r_button 1
 ;_P g_button 0
-;_P key 0
-;_P start 1
-;_P test 1
-;_P rts 1
-;_P rtr 0
-;_P v_in 1111
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
 ;_P __obs 0
-;_C          6
-;_Input xxxxxxxxxxxx
-Testing data_2.mem
-WARNING: ./test/b10/conquest_tb_multi.v:117: $readmemb(./test/b10/inputs_history/data_2.mem): Not enough words in the file for the requested range [0:6].
-;A 2
-;A 3
-;A 4
-;A 5
-;A 6
-;A 7
-;A 8
-;A 9
-;A 10
-;A 11
-;A 12
-;R state = 1 
-;A 2
-;A 3
-;A 4
-;A 5
-;A 6
-;A 7
-;A 8
-;A 9
-;A 10
-;A 11
-;A 12
-;R state = 1 
-;A 13
-;A 14
-;A 15
-;A 16
-;A 17
-;A 18
-;A 19
-;A 21
-;A 24
-;A 25
-;A 26
-;A 27
-;A 28
-;R state = 1 
-;_P r_button x
-;_P g_button x
-;_P key x
-;_P start x
-;_P test x
-;_P rts x
-;_P rtr x
-;_P v_in xxxx
-;_P __obs x
-;_C          1
-;_Input 001110111010
-;A 29
-;A 30
-;A 32
-;A 33
-;A 34
-;A 35
-;A 36
-;A 38
-;A 40
-;A 42
+;_C         28
+;_Input 010110001010
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
 ;R state = 1 
 ;_P r_button 0
 ;_P g_button 1
 ;_P key 0
 ;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         29
+;_Input 001101111100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
 ;_P test 1
 ;_P rts 1
-;_P rtr 0
-;_P v_in 0111
+;_P rtr 1
+;_P v_in 0110
 ;_P __obs 0
-;_C          2
-;_Input 001111100010
-;A 43
-;A 44
-;A 46
+;_C         30
+;_Input 010111011011
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 0
+;_C         31
+;_Input 111000000010
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
 ;R state = 1 
 ;_P r_button 0
 ;_P g_button 1
 ;_P key 0
 ;_P start 0
 ;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C         32
+;_Input 110100110000
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         33
+;_Input 011110010100
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 106
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C         34
+;_Input 000010010110
+;A 99
+;A 100
+;A 101
+;A 102
+;A 103
+;A 104
+;A 105
+;A 107
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         35
+;_Input 101110000100
+;A 108
+;A 109
+;A 110
+;A 111
+;A 112
+;A 113
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C         36
+;_Input 000101110000
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         37
+;_Input 001111110000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
 ;_P rts 1
 ;_P rtr 1
 ;_P v_in 0111
 ;_P __obs 0
-;_C          3
-;_Input 010101001000
-;A 62
-;A 63
-;A 64
-;A 65
+;_C         38
+;_Input 001100111000
+;A 75
+;A 77
 ;R state = 1 
 ;_P r_button 0
 ;_P g_button 0
 ;_P key 0
 ;_P start 1
-;_P test 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         39
+;_Input 101010111100
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C         40
+;_Input 100010010110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
 ;_P rts 0
-;_P rtr 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         41
+;_Input 011010011000
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         42
+;_Input 010100100000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
 ;_P v_in 1010
 ;_P __obs 0
-;_C          4
-;_Input 010111011011
+;_C         43
+;_Input 111000001010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C         44
+;_Input 001000011100
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         45
+;_Input 101111011101
 ;A 66
 ;A 67
 ;A 69
@@ -254,32 +860,98 @@ WARNING: ./test/b10/conquest_tb_multi.v:117: $readmemb(./test/b10/inputs_history
 ;A 74
 ;R state = 1 
 ;_P r_button 1
-;_P g_button 1
-;_P key 0
+;_P g_button 0
+;_P key 1
 ;_P start 1
 ;_P test 1
 ;_P rts 0
 ;_P rtr 1
-;_P v_in 1011
-;_P __obs 0
-;_C          5
-;_Input 010111111001
+;_P v_in 0111
+;_P __obs 1
+;_C         46
+;_Input 010101100101
 ;A 75
 ;A 77
 ;R state = 1 
 ;_P r_button 1
 ;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         47
+;_Input 110011010010
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C         48
+;_Input 000010111100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         49
+;_Input 010001001011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         50
+;_Input 100010111000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
 ;_P key 0
 ;_P start 1
 ;_P test 1
 ;_P rts 1
-;_P rtr 1
-;_P v_in 1011
-;_P __obs 0
-;_C          6
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         51
 ;_Input xxxxxxxxxxxx
-;A 75
-;A 77
+;A 66
+;A 68
 ;R state = 1 
 ;_P r_button x
 ;_P g_button x
@@ -290,13 +962,531 @@ WARNING: ./test/b10/conquest_tb_multi.v:117: $readmemb(./test/b10/inputs_history
 ;_P rtr x
 ;_P v_in xxxx
 ;_P __obs x
-;_C          7
+;_C         52
 ;_Input xxxxxxxxxxxx
-;A 75
-;A 77
+;A 66
+;A 68
 ;R state = 1 
-Testing data_3.mem
-WARNING: ./test/b10/conquest_tb_multi.v:129: $readmemb(./test/b10/inputs_history/data_3.mem): Not enough words in the file for the requested range [0:6].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 66
+;A 68
+;R state = 1 
+Testing input10/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:117: $readmemb(./test/b10/inputs_history/input10/data.mem): Not enough words in the file for the requested range [0:70].
 ;_P r_button x
 ;_P g_button x
 ;_P key x
@@ -356,41 +1546,7 @@ WARNING: ./test/b10/conquest_tb_multi.v:129: $readmemb(./test/b10/inputs_history
 ;_P v_in xxxx
 ;_P __obs x
 ;_C          1
-;_Input 011010000111
-;A 29
-;A 31
-;A 38
-;A 40
-;A 42
-;R state = 1 
-;_P r_button 1
-;_P g_button 1
-;_P key 1
-;_P start 0
-;_P test 0
-;_P rts 0
-;_P rtr 0
-;_P v_in 1101
-;_P __obs 0
-;_C          2
-;_Input 010110100010
-;A 29
-;A 31
-;A 38
-;A 40
-;A 42
-;R state = 1 
-;_P r_button 0
-;_P g_button 1
-;_P key 0
-;_P start 0
-;_P test 0
-;_P rts 1
-;_P rtr 0
-;_P v_in 1011
-;_P __obs 0
-;_C          3
-;_Input 110110000001
+;_Input 101100100001
 ;A 29
 ;A 31
 ;A 38
@@ -402,12 +1558,6982 @@ WARNING: ./test/b10/conquest_tb_multi.v:129: $readmemb(./test/b10/inputs_history
 ;_P key 0
 ;_P start 0
 ;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 1
+;_C          2
+;_Input 000000101010
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C          3
+;_Input 011000000111
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C          4
+;_Input 001111100011
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C          5
+;_Input 010001010101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C          6
+;_Input 111101000001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C          7
+;_Input 101011110000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C          8
+;_Input 000011100111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 0
+;_C          9
+;_Input 011001100011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 0
+;_C         10
+;_Input 001000110001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         11
+;_Input 101111001101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 1
+;_C         12
+;_Input 111001111111
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 1
+;_C         13
+;_Input 001111001100
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C         14
+;_Input 111100110110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 1
+;_C         15
+;_Input 000111000100
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 0
+;_C         16
+;_Input 101001000000
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         17
+;_Input 111111110011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 1
+;_C         18
+;_Input 011000000100
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C         19
+;_Input 110110110100
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         20
+;_Input 100010101110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         21
+;_Input 111101001110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         22
+;_Input 100011011101
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         23
+;_Input 010110100111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         24
+;_Input 010111110111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 0
+;_C         25
+;_Input 100111110011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         26
+;_Input 001001110011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         27
+;_Input 001011111101
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         28
+;_Input 101000010000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         29
+;_Input 010010111111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         30
+;_Input 110101011111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 1
+;_C         31
+;_Input 001101111001
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         32
+;_Input 000011010000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 0
+;_C         33
+;_Input 011110010000
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C         34
+;_Input 111011110101
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         35
+;_Input 000101100001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         36
+;_Input 010111011000
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 0
+;_C         37
+;_Input 100010000100
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         38
+;_Input 010100111111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         39
+;_Input 110001001100
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         40
+;_Input 111000010001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C         41
+;_Input 010010100111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         42
+;_Input 101111011111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 1
+;_C         43
+;_Input 100100101011
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         44
+;_Input 010010011111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         45
+;_Input 111111010010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 1
+;_C         46
+;_Input 001010010010
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         47
+;_Input 001000111110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         48
+;_Input 110000011101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 1
+;_C         49
+;_Input 101101001111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         50
+;_Input 000100111100
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+Testing input2/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:129: $readmemb(./test/b10/inputs_history/input2/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 110001010001
+;A 29
+;A 31
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C          2
+;_Input 000010111011
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C          3
+;_Input 111101110000
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C          4
+;_Input 100110101100
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 1
+;_C          5
+;_Input 010000001010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C          6
+;_Input 010011010101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C          7
+;_Input 110001001111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C          8
+;_Input 110110001101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
 ;_P rts 0
 ;_P rtr 0
 ;_P v_in 1011
 ;_P __obs 1
+;_C          9
+;_Input 001110001000
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C         10
+;_Input 001110011110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C         11
+;_Input 011010001010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         12
+;_Input 111000100111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C         13
+;_Input 100111011001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         14
+;_Input 100100101110
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         15
+;_Input 111101010111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         16
+;_Input 101111001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 1
+;_C         17
+;_Input 111010001110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 1
+;_C         18
+;_Input 001100101000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         19
+;_Input 110110010100
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         20
+;_Input 001000010101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         21
+;_Input 001011110010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 71
+;A 73
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         22
+;_Input 000001100011
+;A 94
+;A 96
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 0
+;_C         23
+;_Input 110000011001
+;A 94
+;A 95
+;A 97
+;A 98
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 1
+;_C         24
+;_Input 011011110000
+;A 29
+;A 31
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 0
+;_C         25
+;_Input 001011011001
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         26
+;_Input 010001011010
+;A 43
+;A 45
+;A 48
+;A 58
+;A 59
+;A 60
+;A 61
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         27
+;_Input 101001101010
+;A 43
+;A 45
+;A 48
+;A 58
+;A 59
+;A 60
+;A 61
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         28
+;_Input 011001110101
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 0
+;_C         29
+;_Input 001100100000
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         30
+;_Input 000000110000
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         31
+;_Input 100000001110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         32
+;_Input 011010100110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         33
+;_Input 100000101001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         34
+;_Input 010110111110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         35
+;_Input 111011111010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         36
+;_Input 010100011000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         37
+;_Input 000101010000
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         38
+;_Input 001010100100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         39
+;_Input 001011100111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         40
+;_Input 101000110010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         41
+;_Input 011011011101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 0
+;_C         42
+;_Input 101001001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         43
+;_Input 101000000101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         44
+;_Input 101111000101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 1
+;_C         45
+;_Input 100001110011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 1
+;_C         46
+;_Input 000010000111
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         47
+;_Input 000000000010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         48
+;_Input 001110110101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C         49
+;_Input 100010101111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         50
+;_Input 001101110111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+Testing input3/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:141: $readmemb(./test/b10/inputs_history/input3/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 101001001110
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C          2
+;_Input 110111100011
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 1
+;_C          3
+;_Input 011110111000
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
 ;_C          4
-;_Input 111100111101
+;_Input 101000100100
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C          5
+;_Input 011000100000
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C          6
+;_Input 011000010111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C          7
+;_Input 100000000001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C          8
+;_Input 110001111110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C          9
+;_Input 010010111000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         10
+;_Input 000110101101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 0
+;_C         11
+;_Input 101101110111
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         12
+;_Input 001010001111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         13
+;_Input 000101011101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         14
+;_Input 001000000110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         15
+;_Input 010101101011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         16
+;_Input 001100101000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         17
+;_Input 110101010101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 1
+;_C         18
+;_Input 100000010011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         19
+;_Input 010111011010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 0
+;_C         20
+;_Input 001011011000
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         21
+;_Input 111010010100
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 1
+;_C         22
+;_Input 011111101010
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 0
+;_C         23
+;_Input 101010010001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C         24
+;_Input 110011001010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C         25
+;_Input 100101010100
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         26
+;_Input 010010110111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         27
+;_Input 110010010000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         28
+;_Input 001001110001
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         29
+;_Input 101011011111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C         30
+;_Input 101101011010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         31
+;_Input 001000000100
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         32
+;_Input 011110100100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C         33
+;_Input 001101111100
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         34
+;_Input 111100100001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 1
+;_C         35
+;_Input 101000010101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         36
+;_Input 001010000011
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         37
+;_Input 000010000011
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         38
+;_Input 111011011110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         39
+;_Input 000001110110
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 0
+;_C         40
+;_Input 100011111100
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         41
+;_Input 000100111111
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C         42
+;_Input 110100011101
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         43
+;_Input 000110111100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 0
+;_C         44
+;_Input 111011111000
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         45
+;_Input 000111111100
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 0
+;_C         46
+;_Input 000000110000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         47
+;_Input 011100110010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         48
+;_Input 110011000100
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C         49
+;_Input 101110001111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C         50
+;_Input 000101110100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+Testing input4/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:153: $readmemb(./test/b10/inputs_history/input4/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 010000000101
+;A 29
+;A 31
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C          2
+;_Input 101001010000
+;A 29
+;A 31
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C          3
+;_Input 100011010011
+;A 29
+;A 31
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C          4
+;_Input 111000001011
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C          5
+;_Input 010110110001
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C          6
+;_Input 110101111011
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 1
+;_C          7
+;_Input 111001001111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 1
+;_C          8
+;_Input 001000000110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C          9
+;_Input 010101000010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         10
+;_Input 010100010011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         11
+;_Input 010101010100
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         12
+;_Input 101100010101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 1
+;_C         13
+;_Input 001000000100
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         14
+;_Input 100010010100
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         15
+;_Input 101110010000
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C         16
+;_Input 011110110111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C         17
+;_Input 100100011011
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         18
+;_Input 011100110101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         19
+;_Input 101000110010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         20
+;_Input 100101010000
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         21
+;_Input 111101011001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         22
+;_Input 001110000100
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C         23
+;_Input 010110011101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         24
+;_Input 101111101001
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 1
+;_C         25
+;_Input 111111100110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 1
+;_C         26
+;_Input 001101100000
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         27
+;_Input 100011011100
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         28
+;_Input 101001111111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         29
+;_Input 000000100111
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         30
+;_Input 110001100010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         31
+;_Input 001111000110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C         32
+;_Input 010011011111
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         33
+;_Input 010110101100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         34
+;_Input 000010011110
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         35
+;_Input 111110111111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 1
+;_C         36
+;_Input 010100010100
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         37
+;_Input 011101101111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         38
+;_Input 001010000101
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         39
+;_Input 111010100010
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 1
+;_C         40
+;_Input 110001100110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         41
+;_Input 110010100001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         42
+;_Input 100111100110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         43
+;_Input 101110011001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C         44
+;_Input 001001100100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         45
+;_Input 011101011101
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         46
+;_Input 110000000111
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 1
+;_C         47
+;_Input 010101101010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         48
+;_Input 011000101100
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C         49
+;_Input 101010101010
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C         50
+;_Input 000101000111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+Testing input5/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:165: $readmemb(./test/b10/inputs_history/input5/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 101110111100
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C          2
+;_Input 101101100100
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C          3
+;_Input 111000011100
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C          4
+;_Input 010010101000
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C          5
+;_Input 110100100111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C          6
+;_Input 110011110110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C          7
+;_Input 011110010101
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C          8
+;_Input 111011111111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C          9
+;_Input 100010001010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         10
+;_Input 110100001000
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         11
+;_Input 111101101001
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         12
+;_Input 100111100110
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         13
+;_Input 110000110111
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 1
+;_C         14
+;_Input 000000111000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         15
+;_Input 100111001101
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         16
+;_Input 011000001010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C         17
+;_Input 101011100001
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C         18
+;_Input 111010001001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 1
+;_C         19
+;_Input 010100100001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         20
+;_Input 101100010011
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 1
+;_C         21
+;_Input 100111000010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         22
+;_Input 010001011100
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         23
+;_Input 111111000011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 1
+;_C         24
+;_Input 100000110000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         25
+;_Input 110100101101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         26
+;_Input 100101011100
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         27
+;_Input 011010000000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         28
+;_Input 101001100100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         29
+;_Input 100111110001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         30
+;_Input 011001000111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 0
+;_C         31
+;_Input 010010010101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         32
+;_Input 111011010101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         33
+;_Input 110110011110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         34
+;_Input 100001101011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 1
+;_C         35
+;_Input 101011011001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C         36
+;_Input 100000100111
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         37
+;_Input 100010000001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         38
+;_Input 100100001010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         39
+;_Input 110111101001
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 1
+;_C         40
+;_Input 111101001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         41
+;_Input 010100010001
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         42
+;_Input 000000001010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         43
+;_Input 100010110010
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         44
+;_Input 110110011000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         45
+;_Input 110101100011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 1
+;_C         46
+;_Input 100000000011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         47
+;_Input 111111101110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 1
+;_C         48
+;_Input 011001110001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 0
+;_C         49
+;_Input 111011110010
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         50
+;_Input 000101111001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+Testing input6/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:177: $readmemb(./test/b10/inputs_history/input6/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 101100101101
 ;A 29
 ;A 30
 ;A 32
@@ -423,16 +8549,2021 @@ WARNING: ./test/b10/conquest_tb_multi.v:129: $readmemb(./test/b10/inputs_history
 ;_P g_button 0
 ;_P key 1
 ;_P start 1
-;_P test 1
+;_P test 0
 ;_P rts 1
 ;_P rtr 0
-;_P v_in 1110
+;_P v_in 0110
 ;_P __obs 1
-;_C          5
-;_Input 101111110000
+;_C          2
+;_Input 011000100010
 ;A 43
 ;A 44
 ;A 46
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C          3
+;_Input 000110001111
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 0
+;_C          4
+;_Input 011111100110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 0
+;_C          5
+;_Input 001100000011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C          6
+;_Input 011000101111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C          7
+;_Input 101110110101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C          8
+;_Input 111101001111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C          9
+;_Input 101010110111
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C         10
+;_Input 111101001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         11
+;_Input 010111011110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 0
+;_C         12
+;_Input 010011101001
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         13
+;_Input 011100001001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         14
+;_Input 011011111011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 0
+;_C         15
+;_Input 001110101101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 0
+;_C         16
+;_Input 101101111000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         17
+;_Input 010001011011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         18
+;_Input 000100100110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C         19
+;_Input 111100010101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 1
+;_C         20
+;_Input 100010001101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         21
+;_Input 001100010001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         22
+;_Input 011100101000
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         23
+;_Input 111110100010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 1
+;_C         24
+;_Input 000111011110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 0
+;_C         25
+;_Input 101000011000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         26
+;_Input 100110010101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 1
+;_C         27
+;_Input 001001111101
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         28
+;_Input 000100100000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C         29
+;_Input 000000011111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         30
+;_Input 001100110111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         31
+;_Input 100100111110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         32
+;_Input 110001110010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         33
+;_Input 100101001000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         34
+;_Input 010001110100
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         35
+;_Input 011010111010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         36
+;_Input 010000101110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C         37
+;_Input 110100011101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         38
+;_Input 100111011101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         39
+;_Input 110110001001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         40
+;_Input 011100000111
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         41
+;_Input 000100010101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 0
+;_C         42
+;_Input 010011111000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         43
+;_Input 001011001110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C         44
+;_Input 001100010010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         45
+;_Input 010000000010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C         46
+;_Input 111000110001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C         47
+;_Input 110001010011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         48
+;_Input 001101111011
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         49
+;_Input 010011100010
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         50
+;_Input 100001101010
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 1
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 75
+;A 77
+;R state = 1 
+Testing input7/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:189: $readmemb(./test/b10/inputs_history/input7/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 001001101010
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C          2
+;_Input 110011111101
+;A 43
+;A 45
+;A 47
+;A 49
+;A 51
+;A 53
+;A 55
+;A 56
+;A 57
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C          3
+;_Input 111101110011
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C          4
+;_Input 010001100000
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C          5
+;_Input 011100011000
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C          6
+;_Input 010001101000
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C          7
+;_Input 000010011110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C          8
+;_Input 011101000101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C          9
+;_Input 010001111101
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         10
+;_Input 111000010101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 1
+;_C         11
+;_Input 001111000111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C         12
+;_Input 001001100101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         13
+;_Input 001000111000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         14
+;_Input 011101100000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         15
+;_Input 111001101011
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 1
+;_C         16
+;_Input 100110100000
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 1
+;_C         17
+;_Input 110010111001
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         18
+;_Input 001100001000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 0
+;_C         19
+;_Input 011110111111
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C         20
+;_Input 110000000111
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 1
+;_C         21
+;_Input 100000101111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         22
+;_Input 100011111100
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         23
+;_Input 100001010011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 1
+;_C         24
+;_Input 011011010111
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 0
+;_C         25
+;_Input 100111110011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         26
+;_Input 100101000110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         27
+;_Input 101011001100
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 1
+;_C         28
+;_Input 001101000110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         29
+;_Input 110011100010
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C         30
+;_Input 010110111101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         31
+;_Input 010111110110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 0
+;_C         32
+;_Input 100010110101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         33
+;_Input 100010100101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         34
+;_Input 000000001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         35
+;_Input 110000001110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 1
+;_C         36
+;_Input 111110011101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 1
+;_C         37
+;_Input 110010001011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         38
+;_Input 100101010010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         39
+;_Input 011010000011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         40
+;_Input 001010001011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         41
+;_Input 101010110000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
 ;R state = 1 
 ;_P r_button 0
 ;_P g_button 0
@@ -440,10 +10571,3501 @@ WARNING: ./test/b10/conquest_tb_multi.v:129: $readmemb(./test/b10/inputs_history
 ;_P start 0
 ;_P test 1
 ;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C         42
+;_Input 011101111010
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         43
+;_Input 111101100111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         44
+;_Input 011101001000
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         45
+;_Input 010000110110
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C         46
+;_Input 111010011100
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 1
+;_C         47
+;_Input 111101001111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         48
+;_Input 010110110010
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         49
+;_Input 110011010001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 1
+;_C         50
+;_Input 010101100000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+Testing input8/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:201: $readmemb(./test/b10/inputs_history/input8/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 000110111100
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 0
+;_C          2
+;_Input 001111100001
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C          3
+;_Input 000000100011
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C          4
+;_Input 001111001010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C          5
+;_Input 001001001101
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C          6
+;_Input 000010100011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C          7
+;_Input 001011111111
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0101
+;_P __obs 0
+;_C          8
+;_Input 110010110011
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C          9
+;_Input 101101111101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         10
+;_Input 010011110011
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         11
+;_Input 111011011011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 1
+;_C         12
+;_Input 011111010101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 0
+;_C         13
+;_Input 101000001110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         14
+;_Input 010000000101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C         15
+;_Input 001001111010
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         16
+;_Input 110100010010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         17
+;_Input 101010011101
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 1
+;_C         18
+;_Input 100111111101
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C         19
+;_Input 100000100110
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         20
+;_Input 100001100101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 1
+;_C         21
+;_Input 000000011001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         22
+;_Input 101001010101
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         23
+;_Input 111001111110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 1
+;_C         24
+;_Input 111101000010
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         25
+;_Input 011111101011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 0
+;_C         26
+;_Input 100011010001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         27
+;_Input 000000101001
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 0
+;_C         28
+;_Input 110001100110
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         29
+;_Input 011100010000
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         30
+;_Input 001010110011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0101
+;_P __obs 0
+;_C         31
+;_Input 011101000110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         32
+;_Input 110100000111
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         33
+;_Input 001111101011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C         34
+;_Input 101000110101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 1
+;_C         35
+;_Input 010000011111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1000
+;_P __obs 0
+;_C         36
+;_Input 101001101110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         37
+;_Input 010100000110
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         38
+;_Input 110110011111
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 1
+;_C         39
+;_Input 110100101110
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         40
+;_Input 010100001001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 0
+;_C         41
+;_Input 011010000010
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 0
+;_C         42
+;_Input 110100011011
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         43
+;_Input 010101101111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         44
+;_Input 110001100101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C         45
+;_Input 001001110011
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 0
+;_C         46
+;_Input 011110011010
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1111
+;_P __obs 0
+;_C         47
+;_Input 001111010010
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0111
+;_P __obs 0
+;_C         48
+;_Input 110100001001
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1010
+;_P __obs 1
+;_C         49
+;_Input 011101010111
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 0
+;_C         50
+;_Input 010110000011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1011
+;_P __obs 0
+;_C         51
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 80
+;A 82
+;R state = 1 
+Testing input9/data.mem
+WARNING: ./test/b10/conquest_tb_multi.v:213: $readmemb(./test/b10/inputs_history/input9/data.mem): Not enough words in the file for the requested range [0:70].
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          0
+;_Input xxxxxxxxxxxx
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 2
+;A 3
+;A 4
+;A 5
+;A 6
+;A 7
+;A 8
+;A 9
+;A 10
+;A 11
+;A 12
+;R state = 1 
+;A 13
+;A 14
+;A 15
+;A 16
+;A 17
+;A 18
+;A 19
+;A 21
+;A 24
+;A 25
+;A 26
+;A 27
+;A 28
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C          1
+;_Input 111010110100
+;A 29
+;A 31
+;A 38
+;A 40
+;A 42
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 1101
+;_P __obs 1
+;_C          2
+;_Input 011111010100
+;A 29
+;A 31
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1111
+;_P __obs 0
+;_C          3
+;_Input 110001001100
+;A 29
+;A 30
+;A 32
+;A 33
+;A 34
+;A 35
+;A 36
+;A 37
+;A 39
+;A 41
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 1
+;_C          4
+;_Input 100111101010
+;A 43
+;A 45
+;A 48
+;A 58
+;A 59
+;A 60
+;A 61
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 1
+;_C          5
+;_Input 000001001110
+;A 43
+;A 45
+;A 47
+;A 49
+;A 50
+;A 52
+;A 54
+;A 56
+;A 57
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 0
+;_C          6
+;_Input 110111000101
+;A 43
+;A 44
+;A 46
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 1
+;_C          7
+;_Input 100000001011
+;A 62
+;A 63
+;A 64
+;A 65
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C          8
+;_Input 101100110011
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0110
+;_P __obs 1
+;_C          9
+;_Input 011001010001
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 0
+;_C         10
+;_Input 100110101101
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 0011
+;_P __obs 1
+;_C         11
+;_Input 111001000001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 1
+;_C         12
+;_Input 011100010001
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1110
+;_P __obs 0
+;_C         13
+;_Input 101101000011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         14
+;_Input 101101010110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 1
+;_C         15
+;_Input 010010101010
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 0
+;_C         16
+;_Input 011011111110
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1101
+;_P __obs 0
+;_C         17
+;_Input 010101001001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 0
+;_C         18
+;_Input 000010010101
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 0
+;_C         19
+;_Input 000101100010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         20
+;_Input 110101010011
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1010
+;_P __obs 1
+;_C         21
+;_Input 011001110101
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1100
+;_P __obs 0
+;_C         22
+;_Input 100010111011
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0001
+;_P __obs 1
+;_C         23
+;_Input 100000010001
+;A 66
+;A 68
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0000
+;_P __obs 1
+;_C         24
+;_Input 001101100011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0110
+;_P __obs 0
+;_C         25
+;_Input 100100000110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         26
+;_Input 110010010011
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         27
+;_Input 101110111011
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C         28
+;_Input 110010000100
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 1001
+;_P __obs 1
+;_C         29
+;_Input 010011101111
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         30
+;_Input 110111001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 1
+;_C         31
+;_Input 111101100001
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         32
+;_Input 100101101010
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         33
+;_Input 000011010001
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 0
+;_C         34
+;_Input 011000011011
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C         35
+;_Input 100011111011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 0001
+;_P __obs 1
+;_C         36
+;_Input 110111100111
+;A 75
+;A 77
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 1011
+;_P __obs 1
+;_C         37
+;_Input 101001001001
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 0100
+;_P __obs 1
+;_C         38
+;_Input 010011111000
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1001
+;_P __obs 0
+;_C         39
+;_Input 011000010010
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 1100
+;_P __obs 0
+;_C         40
+;_Input 000111100011
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0011
+;_P __obs 0
+;_C         41
+;_Input 100100000111
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0010
+;_P __obs 1
+;_C         42
+;_Input 001000010110
+;A 80
+;A 82
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 0
+;_P v_in 0100
+;_P __obs 0
+;_C         43
+;_Input 000101100110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 0
+;_C         44
+;_Input 000001100000
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 1
+;_P rtr 1
+;_P v_in 0000
+;_P __obs 0
+;_C         45
+;_Input 101110000000
+;A 89
+;A 90
+;A 92
+;A 93
+;R state = 1 
+;_P r_button 0
+;_P g_button 0
+;_P key 0
+;_P start 0
+;_P test 0
+;_P rts 0
+;_P rtr 0
+;_P v_in 0111
+;_P __obs 1
+;_C         46
+;_Input 111101010010
+;A 66
+;A 67
+;A 69
+;A 70
+;A 72
+;A 74
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 0
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 1110
+;_P __obs 1
+;_C         47
+;_Input 101111001110
+;A 75
+;A 76
+;A 78
+;A 79
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 0
+;_P rts 0
 ;_P rtr 1
 ;_P v_in 0111
 ;_P __obs 1
-;_C          6
+;_C         48
+;_Input 010001111110
+;A 80
+;A 81
+;A 83
+;A 84
+;A 85
+;A 86
+;A 87
+;A 88
+;R state = 1 
+;_P r_button 0
+;_P g_button 1
+;_P key 1
+;_P start 1
+;_P test 1
+;_P rts 1
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         49
+;_Input 100101010101
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 0
+;_P key 1
+;_P start 0
+;_P test 1
+;_P rts 0
+;_P rtr 1
+;_P v_in 0010
+;_P __obs 1
+;_C         50
+;_Input 010001001011
+;A 89
+;A 91
+;R state = 1 
+;_P r_button 1
+;_P g_button 1
+;_P key 0
+;_P start 1
+;_P test 0
+;_P rts 0
+;_P rtr 1
+;_P v_in 1000
+;_P __obs 0
+;_C         51
 ;_Input xxxxxxxxxxxx
-./test/b10/conquest_tb_multi.v:138: $finish called at 265 (1s)
-;A 62
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         52
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         53
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         54
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         55
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         56
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         57
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         58
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         59
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         60
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         61
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         62
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         63
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         64
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         65
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         66
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         67
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         68
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         69
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         70
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         71
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         72
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         73
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         74
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         75
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         76
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         77
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         78
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         79
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         80
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         81
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         82
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         83
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         84
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         85
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         86
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         87
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         88
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         89
+;_Input xxxxxxxxxxxx
+;A 89
+;A 91
+;R state = 1 
+./test/b10/conquest_tb_multi.v:222: $finish called at 9195 (1s)
+;_P r_button x
+;_P g_button x
+;_P key x
+;_P start x
+;_P test x
+;_P rts x
+;_P rtr x
+;_P v_in xxxx
+;_P __obs x
+;_C         90
+;_Input xxxxxxxxxxxx

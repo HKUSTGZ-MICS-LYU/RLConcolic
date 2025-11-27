@@ -1,159 +1,74 @@
 //Following code is from line 1
-module b01(clock, outp, line1, overflw, line2, reset, __obs);
+module b01(reset, in, out, clock, __obs);
 
     input               clock;
-    input               line1;
-    input               line2;
     input               reset;
-    output              outp;
-    output              overflw;
+    input         [2:0] in;
+    output              out;
     input               __obs;
 
-    reg outp = 1'b0;
-    reg overflw = 1'b0;
+    reg out = 1'b0;
     //Parameter Declaration
-    reg  [2:0]  stato = 3'b0;
+    reg  [7:0]  a = 8'b0;
+    reg  [7:0]  b = 8'b0;
+    reg  [1:0]  state = 2'b0;
 
-    //Following code is from line 15
+    //Following code is from line 12
         always @(posedge clock) begin
-            if ((reset == 1'b1))
+            if (reset)
                 begin
-                    stato <= 3'b0;  $display(";A 2");  //assertion( stato = 0) 2
-                    outp <= 1'b0;  $display(";A 3");  //assertion( outp = 0) 3
-                    overflw <= 1'b0;  $display(";A 4");  //assertion( overflw = 0) 4
+                    a <= 0;  $display(";A 2");  //assertion( a = 0) 2
+                    b <= 0;  $display(";A 3");  //assertion( b = 0) 3
+                    out <= 0;  $display(";A 4");  //assertion( out = 0) 4
+                    state <= 0;  $display(";A 5");  //assertion( state = 0) 5
                 end
             else
                 begin
-                    case (stato)
-                      3'b0:
+                    if ((in == 0))
                         begin
-                          $display(";A 5");                          //assertion( 0 == stato = True) 5
-                            if (((line1 == 1'b1) && (line2 == 1'b1)))
-                                begin
-                                  $display(";A 6");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 6
-                                    stato <= 3'b100;  $display(";A 8");  //assertion( stato = 4) 8
-                                end
-                            else
-                                begin
-                                  $display(";A 7");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 7
-                                    stato <= 3'b001;  $display(";A 9");  //assertion( stato = 1) 9
-                                end
-                            outp <= (line1 | line2);  $display(";A 10");  //assertion( outp = line1 | line2) 10
-                            overflw <= 1'b0;  $display(";A 11");  //assertion( overflw = 0) 11
+                          $display(";A 6");                          //assertion( in == ZeroExt(2, 0) = True) 6
+                            a <= (a + 1);  $display(";A 8");  //assertion( a = a + ZeroExt(7, 1)) 8
                         end
-                      3'b011:
+                    else
+                          $display(";A 7");                          //assertion( in == ZeroExt(2, 0) = False) 7
+                    if ((a < 4))
                         begin
-                          $display(";A 12");                          //assertion( 3 == stato = True) 12
-                            if (((line1 == 1'b1) && (line2 == 1'b1)))
+                          $display(";A 9");                          //assertion( ULT(a, ZeroExt(5, 4)) = True) 9
+                            case (state)
+                              0:
                                 begin
-                                  $display(";A 13");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 13
-                                    stato <= 3'b100;  $display(";A 15");  //assertion( stato = 4) 15
+                                  $display(";A 11");                                  //assertion( state == ZeroExt(1, 0) = True) 11
+                                    if ((in == 1))
+                                        begin
+                                          $display(";A 12");                                          //assertion( in == ZeroExt(2, 1) = True) 12
+                                            state <= 1;  $display(";A 14");  //assertion( state = 1) 14
+                                        end
+                                    else
+                                          $display(";A 13");                                          //assertion( in == ZeroExt(2, 1) = False) 13
                                 end
-                            else
+                              1:
                                 begin
-                                  $display(";A 14");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 14
-                                    stato <= 3'b001;  $display(";A 16");  //assertion( stato = 1) 16
+                                  $display(";A 15");                                  //assertion( state == ZeroExt(1, 1) = True) 15
+                                    if ((in == 2))
+                                        begin
+                                          $display(";A 16");                                          //assertion( in == ZeroExt(1, 2) = True) 16
+                                            b <= (b + 1);  $display(";A 18");  //assertion( b = b + ZeroExt(7, 1)) 18
+                                            state <= 0;  $display(";A 19");  //assertion( state = 0) 19
+                                        end
+                                    else
+                                          $display(";A 17");                                          //assertion( in == ZeroExt(1, 2) = False) 17
                                 end
-                            outp <= (line1 | line2);  $display(";A 17");  //assertion( outp = line1 | line2) 17
-                            overflw <= 1'b1;  $display(";A 18");  //assertion( overflw = 1) 18
+                            endcase
                         end
-                      3'b001:
+                    else
+                          $display(";A 10");                          //assertion( ULT(a, ZeroExt(5, 4)) = False) 10
+                    if (((a > 5) && (b > 6)))
                         begin
-                          $display(";A 19");                          //assertion( 1 == stato = True) 19
-                            if (((line1 == 1'b1) && (line2 == 1'b1)))
-                                begin
-                                  $display(";A 20");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 20
-                                    stato <= 3'b101;  $display(";A 22");  //assertion( stato = 5) 22
-                                end
-                            else
-                                begin
-                                  $display(";A 21");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 21
-                                    stato <= 3'b010;  $display(";A 23");  //assertion( stato = 2) 23
-                                end
-                            outp <= (line1 | line2);  $display(";A 24");  //assertion( outp = line1 | line2) 24
-                            overflw <= 1'b0;  $display(";A 25");  //assertion( overflw = 0) 25
+                          $display(";A 20");                          //assertion( And(If(UGT(a, ZeroExt(5, 5)) == True, 1, 0) == 1, If(UGT(b, ZeroExt(5, 6)) == True, 1, 0) == 1) = True) 20
+                            out <= 1;  $display(";A 22");  //assertion( out = 1) 22
                         end
-                      3'b100:
-                        begin
-                          $display(";A 26");                          //assertion( 4 == stato = True) 26
-                            if (((line1 == 1'b1) || (line2 == 1'b1)))
-                                begin
-                                  $display(";A 27");                                  //assertion( Or(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 27
-                                    stato <= 3'b101;  $display(";A 29");  //assertion( stato = 5) 29
-                                end
-                            else
-                                begin
-                                  $display(";A 28");                                  //assertion( Or(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 28
-                                    stato <= 3'b010;  $display(";A 30");  //assertion( stato = 2) 30
-                                end
-                            outp <= (~(line1 ^ line2));  $display(";A 31");  //assertion( outp = ~(line1 ^ line2)) 31
-                            overflw <= 1'b0;  $display(";A 32");  //assertion( overflw = 0) 32
-                        end
-                      3'b010:
-                        begin
-                          $display(";A 33");                          //assertion( 2 == stato = True) 33
-                            if (((line1 == 1'b1) && (line2 == 1'b1)))
-                                begin
-                                  $display(";A 34");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 34
-                                    stato <= 3'b111;  $display(";A 36");  //assertion( stato = 7) 36
-                                end
-                            else
-                                begin
-                                  $display(";A 35");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 35
-                                    stato <= 3'b110;  $display(";A 37");  //assertion( stato = 6) 37
-                                end
-                            outp <= (line1 | line2);  $display(";A 38");  //assertion( outp = line1 | line2) 38
-                            overflw <= 1'b0;  $display(";A 39");  //assertion( overflw = 0) 39
-                        end
-                      3'b101:
-                        begin
-                          $display(";A 40");                          //assertion( 5 == stato = True) 40
-                            if (((line1 == 1'b1) || (line2 == 1'b1)))
-                                begin
-                                  $display(";A 41");                                  //assertion( Or(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 41
-                                    stato <= 3'b111;  $display(";A 43");  //assertion( stato = 7) 43
-                                end
-                            else
-                                begin
-                                  $display(";A 42");                                  //assertion( Or(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 42
-                                    stato <= 3'b110;  $display(";A 44");  //assertion( stato = 6) 44
-                                end
-                            outp <= (~(line1 | line2));  $display(";A 45");  //assertion( outp = ~(line1 | line2)) 45
-                            overflw <= 1'b0;  $display(";A 46");  //assertion( overflw = 0) 46
-                        end
-                      3'b110:
-                        begin
-                          $display(";A 47");                          //assertion( 6 == stato = True) 47
-                            if (((line1 == 1'b1) && (line2 == 1'b1)))
-                                begin
-                                  $display(";A 48");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 48
-                                    stato <= 3'b011;  $display(";A 50");  //assertion( stato = 3) 50
-                                end
-                            else
-                                begin
-                                  $display(";A 49");                                  //assertion( And(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 49
-                                    stato <= 3'b0;  $display(";A 51");  //assertion( stato = 0) 51
-                                end
-                            outp <= (line1 | line2);  $display(";A 52");  //assertion( outp = line1 | line2) 52
-                            overflw <= 1'b0;  $display(";A 53");  //assertion( overflw = 0) 53
-                        end
-                      3'b111:
-                        begin
-                          $display(";A 54");                          //assertion( 7 == stato = True) 54
-                            if (((line1 == 1'b1) || (line2 == 1'b1)))
-                                begin
-                                  $display(";A 55");                                  //assertion( Or(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = True) 55
-                                    stato <= 3'b011;  $display(";A 57");  //assertion( stato = 3) 57
-                                end
-                            else
-                                begin
-                                  $display(";A 56");                                  //assertion( Or(If((1 == line1) == True, 1, 0) == 1, If((1 == line2) == True, 1, 0) == 1) = False) 56
-                                    stato <= 3'b000;  $display(";A 58");  //assertion( stato = 0) 58
-                                end
-                            outp <= (~(line1 | line2));  $display(";A 59");  //assertion( outp = ~(line1 | line2)) 59
-                            overflw <= 1'b0;  $display(";A 60");  //assertion( overflw = 0) 60
-                        end
-                    endcase
+                    else
+                          $display(";A 21");                          //assertion( And(If(UGT(a, ZeroExt(5, 5)) == True, 1, 0) == 1, If(UGT(b, ZeroExt(5, 6)) == True, 1, 0) == 1) = False) 21
                 end
             // Display the variables
             begin

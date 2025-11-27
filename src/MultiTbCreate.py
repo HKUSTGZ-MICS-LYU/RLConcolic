@@ -86,13 +86,26 @@ class CreateMultiInputTestBench:
             raise ValueError("Invalid reset edge value; expected '1' or '0'.")
 
     def _collect_mem_files(self):
-        if not os.path.isdir(self.inputs_dir):
-            raise FileNotFoundError(f"inputs_dir not found: {self.inputs_dir}")
-
-        files = [f for f in os.listdir(self.inputs_dir) if f.lower().endswith(".mem")]
-        if not files:
-            raise FileNotFoundError(f"No .mem files found in: {self.inputs_dir}")
-
+        """收集inputs_history文件夹下所有input_x子文件夹中的data.mem文件"""
+        inputs_dir = os.path.join(self.folder_pth, "inputs_history")
+        
+        if not os.path.isdir(inputs_dir):
+            raise FileNotFoundError(f"inputs_history directory not found: {inputs_dir}")
+        
+        # 获取所有input_x子文件夹中的data.mem文件
+        files = []
+        for input_dir in sorted(os.listdir(inputs_dir)):
+            if not input_dir.startswith("input"):
+                continue
+                
+            input_path = os.path.join(inputs_dir, input_dir)
+            if not os.path.isdir(input_path):
+                continue
+                
+            data_mem = os.path.join(input_dir, "data.mem")
+            if os.path.exists(os.path.join(inputs_dir, data_mem)):
+                files.append(data_mem)
+        
         self.mem_files = sorted(files)
 
     def create_testbench(self):
@@ -236,11 +249,19 @@ class CreateMultiInputTestBench:
         f.write(f"    // Python side collected: {self.inputs_dir}\n")
 
         inputs_dir = os.path.join(self.folder_pth, "inputs_history")
-        for idx, mem_file in enumerate(self.mem_files):
-            mem_path = os.path.join(inputs_dir, mem_file).replace("\\", "/")
-            f.write(f"\n    // --- Test input {idx+1}: {mem_file} ---\n")
-            f.write(f'    $display("Testing {mem_file}");\n')
-            f.write(f'    $readmemb("{mem_path}", _conc_ram);\n')
+        input_dirs = sorted([d for d in os.listdir(inputs_dir) 
+                            if os.path.isdir(os.path.join(inputs_dir, d)) 
+                            and d.startswith("input")])
+        
+        for idx, input_dir in enumerate(input_dirs):
+            data_mem = os.path.join(inputs_dir, input_dir, "data.mem")
+            if not os.path.exists(data_mem):
+                continue
+                
+            data_mem = data_mem.replace("\\", "/")
+            f.write(f"\n    // --- Test input {idx+1}: {input_dir}/data.mem ---\n")
+            f.write(f'    $display("Testing {input_dir}/data.mem");\n')
+            f.write(f'    $readmemb("{data_mem}", _conc_ram);\n')
 
             f.write(f"    _conc_pc = 32'b0;\n")
             f.write(f"    _conc_valid = 1'b0;\n")
@@ -250,6 +271,7 @@ class CreateMultiInputTestBench:
             f.write(f"    _conc_valid = 1'b1;\n")
             f.write(f"    repeat ({self.unroll + 2*steps}) @(posedge {self.clk_name});\n")
             f.write(f"    _conc_valid = 1'b0;\n")
+        
         f.write("    $finish;\n")
         f.write("end\n\n")
 
