@@ -1,6 +1,6 @@
 # RLConcolic
 
-RLConcolic is a research/prototype repository that combines Reinforcement Learning (RL) with concolic (concrete symbolic) execution to improve coverage-driven testing for RTL (Register Transfer Level) designs.  This tool leverages symbolic execution, constraint solving, and machine learning techniques to systematically generate high-quality test cases for Verilog hardware designs.
+RLConcolic is a research repository that combines Reinforcement Learning (RL) with concolic (concrete symbolic) execution to improve coverage-driven testing for RTL (Register Transfer Level) designs.  This tool leverages symbolic execution, constraint solving, and machine learning techniques to systematically generate high-quality test cases for Verilog hardware designs.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ cd RLConcolic
 ```bash
 # Create virtual environment
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  
 ```
 
 ### 3. Install System Dependencies
@@ -36,9 +36,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install Icarus Verilog
 sudo apt-get update
 sudo apt-get install iverilog
-
-# Install build tools (if needed)
-sudo apt-get install build-essential
 ```
 
 ### 4. Install Python Dependencies
