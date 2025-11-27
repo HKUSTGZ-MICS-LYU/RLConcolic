@@ -8,3 +8,5 @@ src/script.py
 **/cfg.txt
 .conda
 .pytest_cache
+parser.out
+parsertab.py
