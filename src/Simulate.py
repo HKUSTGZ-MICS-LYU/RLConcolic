@@ -26,6 +26,7 @@ import shutil
 
 
 
+
 def init():
     # Compile the necessary components
     compile()
@@ -71,38 +72,6 @@ def compile():
         os.chdir(current_path)
 
 
-def calculate_distance(target_state, state):
-    distance = 0
-
-    for key, value in state.items():
-        if key in target_state and value is not None:
-            distance += abs(target_state[key] - value)
-            if debug: print(f"target: {key}: {target_state[key]}; state: {key}: {value}")
-
-    if 'gamma' in target_state and'gamma' in state:
-        distance = abs(target_state['gamma'] - state['gamma'])
-
-    return distance
-
-
-def calculate_reward(state_distance, block_distance):
-    block_weight = 0.5
-    state_weight = 0.5
-
-
-    if block_distance <= 10:
-        block_reward = 5-block_distance
-    else:
-        block_reward = -1
-
-    if state_distance <= 3:
-        state_reward = 5-state_distance
-    else:
-        state_reward = -1
-    
-
-    return block_weight*block_reward + state_weight*state_reward
-
 
 def select_target(branch_file_path):
     with open(branch_file_path, 'r') as f_branch_id:
@@ -118,6 +87,8 @@ def select_target(branch_file_path):
                 SMTBasicBlock.add_target(assign.block)
 
     return SMTBasicBlock
+
+
 
 def single_target_coverage():
     SMTBasicBlock.extract_cfg()
@@ -139,7 +110,7 @@ def single_target_coverage():
         SMTBasicBlock.update_all_closest_paths(path, Constraint._constraint_stack)
     start_time = time.time()
 
-    while len(SMTBasicBlock._target_list) > 300:
+    while len(SMTBasicBlock._target_list) > 0:
         if len(SMTBasicBlock._target_list) == 0:
             break
         else:
@@ -180,95 +151,61 @@ def single_target_coverage():
                 InputVector.input_vector_clear()
                 Constraint._constraint_stack.clear()
                 temp_time = time.time() - start_time
-                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
                 break
             if target.assign_list[0].covered_in_sim:
                 global_variable.explore_time = 0
                 save_input()
-                if remove_and_process_covered_targets():
-                    print("[Save input] Find new covered targets during concolic iteration.")
-                    save_input()
+                remove_and_process_covered_targets()
                 global_variable.clear_target()
                 temp_time = time.time() - start_time
-                print(f"[INFO] The time of the target is {temp_time:.2f} seconds")
                 break
 
     print_cover_clock()
 
-def get_input_vector_file():
-    filename = llm_input_file
-    sig_name_and_width = [item[0] for item in InputVector.InputVector['sig_name_and_width']]
-    clock_values = extract_line_values(filename,sig_name_and_width)
-    for clock,line in enumerate(clock_values):
-        InputVector.generate_oneclk_inputvector()
-        for item in sig_name_and_width:
-            if item != '__obs':
-                InputVector.repalce_llm_input_vector(item, clock+1, line[item])
-    InputVector.dump_llm_input_vector()
-    
-def extract_line_values(filename, sig_name_and_width):
-    line_values = []
-
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-        for line in lines:
-            parts = line.strip().split(', ')
-            values = {}
-            for part in parts:
-                sig_name, value = part.split('=')
-                values[sig_name.strip()] = value.strip()
-        
-            line_dict = {}
-            for sig_name in sig_name_and_width:
-                if sig_name in values:
-                    line_dict[sig_name] = values[sig_name]
-                else:
-                    line_dict[sig_name] = None
-            
-            line_values.append(line_dict)
-    
-    return line_values
-
-def print_branches(sorted_branches):
-    f = open(folder_pth + 'branches.txt', 'w')
-    f.write("[BRANCHES] Sorted Branches:\n")
-    for idx, item in enumerate(sorted_branches):
-        f.write(f"[{idx}]:Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock}\n")
-    f.close()
-
-
-
 def concolic_iteration(path):
     init_clock = len(path['input_vector'])
+    if global_variable.first_explore_label:
+        global_variable.begin_clock = 0
+    else:
+        global_variable.begin_clock =  init_clock 
     explore_one_step()
     current_clock = len(path['input_vector'])
-    
-    if(find_next_cfg(init_clock, current_clock)):
+
+    if(find_next_cfg(init_clock, current_clock,path)):
         s.reset()
-        # check_branch_coverage()
         path = InputVector.InputVector
-    
     return path
 
 def explore_one_step():
     InputVector.randomize_input_vector_temp()
     InputVector.concat_input_vector()
     simulate_build_stack()
-    remove_and_process_covered_targets()
+    if remove_and_process_covered_targets():
+        # print("[Save input] Find new covered targets during explore one step.")
+        save_input()
 
 
-def find_next_cfg( init_clock, current_clock):
+
+def find_next_cfg( init_clock, current_clock,path):
+    input_vector = path['input_vector']
     begin_clock = init_clock + 1
-    end_clock = current_clock
+    end_clock = current_clock 
+    find_flag = False
 
     branches = []
+    uncover_branches = []
+    temp_branches = []
+
+    explored_branches = []
     global dqn_init
     global dqn_agent
-    global path_num
+   
     size = len(Constraint._constraint_stack)
 
+    parent_id = []
+    for item in global_variable.target.assign_list[0].parent_node.branch_list:
+        parent_id.append(item.block.id)
     
-    transition_dict = {'states': [],'actions': [],'next_states': [],'rewards': []}
 
     idx = 0
     while(Constraint._constraint_stack[idx].clock == 0):
@@ -283,63 +220,37 @@ def find_next_cfg( init_clock, current_clock):
                 alt_br = Branch_Constraint()
                 alt_br.br = item
                 alt_br.constraint = cnst
-                branches.append(alt_br)
+                if item.block.id not in BeamInput.BeamInput['target_input_vectors']:
+                    uncover_branches.append(alt_br)
+                else:
+                    temp_branches.append(alt_br)
 
 
     if global_variable.first_explore_label:
-        branch_dict = get_available_branches(branches, 2, end_clock)
+        uncover_dict = get_available_branches(uncover_branches, 2, end_clock)
         global_variable.first_explore_label = False
     else:
-        branch_dict = get_available_branches(branches, begin_clock, end_clock)
-    
+        uncover_dict = get_available_branches(uncover_branches,begin_clock +1 , end_clock)
 
-    state = StateVariable.get_values_at_clock(begin_clock-1)
-    state_name = StateVariable.get_names()
+    branches = sort_and_filter_branches(uncover_dict)
+    branches.reverse()
 
-    previous_state = {}
-    for name, value in zip(state_name, state):
-        previous_state[name] = value
-    if global_variable.target.dqn_init == False: 
-        dqn_agent = DQN(state.size, global_variable.branch_dim, learning_rate, gamma, epsilon, target_update, device)
-        global_variable.target.dqn_init = True
-    sorted_branches = dqn_agent.take_action(state, branch_dict)
+    check_num = 0
 
 
-    for item in sorted_branches:
-        # print_sorted_branches(sorted_branches, state, state_name)
-        # mannual select which branch to take    
-        if debug:
-            user_input = input("Enter the index to select an item (or press Enter to continue with this item): ").strip()
-            if user_input:
-                selected_index = int(user_input)
-                if selected_index >= 0 and selected_index < len(sorted_branches):
-                    item = sorted_branches[selected_index]
-                else:
-                    print("Invalid index. Please try again.")
-                    continue
-            
-
+    for item in branches:
+        unsat_flag = False
+        check_num += 1
         clock = item.constraint.clock
         s.reset()
         idx = 0    
-        print(f"Choosing Branch id is {item.br.id},at clock {clock},constraint is {item.constraint.constraint}")
 
         # add constraints before the clock
-        while(Constraint._constraint_stack[idx].clock < clock):
-            if Constraint._constraint_stack[idx].type != CNST_TYPE.CNST_CLK and Constraint._constraint_stack[idx].clock > 1:
-                s.add(Constraint._constraint_stack[idx].constraint)   
-                # if s.check() == z3.unsat:
-                #     print("The constraints are unsatisfiable before the clock of the branch.")
-                #     print_constraints(s)
-                #     quit()
-            idx += 1
-    
-        # Debug: Check the cnst is SAT before add the mutate branch
-        if s.check() == z3.unsat:
-            print("Unsat before mutate")
-        #     return False
-        # print_constraints(s)
 
+        while(Constraint._constraint_stack[idx].clock < clock ):
+            if Constraint._constraint_stack[idx].type != CNST_TYPE.CNST_CLK and Constraint._constraint_stack[idx].clock > begin_clock:
+                s.add(simplify(Constraint._constraint_stack[idx].constraint))
+            idx += 1
 
         assert Constraint._constraint_stack[idx].clock == clock, "The clock is not equal to the clock of the branch constraint."
         assert Constraint._constraint_stack[idx].type == CNST_TYPE.CNST_CLK, "The type is not equal to the clock of the branch constraint."        
@@ -348,69 +259,52 @@ def find_next_cfg( init_clock, current_clock):
         # restore the version of the signals
         SMTSigCore.restore_version(clock)
 
-        # add constraints at the same clock
+        if s.check() == z3.unsat:
+            print(f"[UNSAT] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock} The constraints before clock are unsat.")
+            s.reset()
+
+        # add constraints at the same clock 添加同周期但非mutate目标的cnst
         target_process = item.constraint.obj.process
-        while(Constraint._constraint_stack[idx] != item.constraint):
+        while(Constraint._constraint_stack[idx]._constraint_index != item.constraint._constraint_index):
             process = Constraint._constraint_stack[idx].obj.process
             if(not process.is_edge_triggered or process == target_process):
-                s.add(Constraint._constraint_stack[idx].constraint)  
+                s.add(simplify(Constraint._constraint_stack[idx].constraint))
+
             idx += 1
-
-
-        s.add(item.br._update_term(SMTCLKType.SMT_CLK_CURR))
+        
+        # add the mutated branch constraint
+        s.add(simplify(item.br._update_term(SMTCLKType.SMT_CLK_CURR)))
 
         SMTSigCore.data_synchronization(clock)
-        # print_constraints(s)
+
+        
         # solve the constraints
         if s.check() == z3.sat:
+            explored_branches.append(item.br.id)
+            global_variable.explore_time +=1
+            find_flag = True
             assign = SMTAssign.get_assign(item.br.id)
-            assign._set_covered(clock)
-
+            InputVector.InputVector['input_vector'] = input_vector
             global_variable.branch = item
             model = s.model()
             print_results(model)
             get_the_next_path(clock)
-            InputVector.input_vector_temp_clear()
-            if item.br.id == global_variable.target.assign_list[0].id:
-                global_variable.target.assign_list[0].covered_in_sim = True
             
+            InputVector.input_vector_temp_clear()
+            InputVector.generate_unroll_temp()
+            InputVector.concat_input_vector()
+            InputVector.dump_input_vector()
             sim_not_cnst()
-            remove_and_process_covered_targets()
+            if remove_and_process_covered_targets():
+                save_input()
 
-            # DQN UPDATE
-            path_num += 1
-            action = item.br.id
-            state = StateVariable.get_values_at_clock(clock)
-            state_name = StateVariable.get_names()
-            current_state = {}
-            for name, value in zip(state_name, state):
-                current_state[name] = value
-            if hasattr(global_variable.get_target(), 'cnst_state'): 
-                target_state = global_variable.get_target().cnst_state
-            else:
-                target_state = {}
-            state_distance = calculate_distance(target_state, current_state)
-            block_distance = item.br.block.distance
             item.br.block.distance += 1
-            reward = calculate_reward(state_distance,block_distance)
-            print(f"[Enter] Block ID {item.br.block.id} assign ID {item.br.id} at clock {item.constraint.clock} reward = {reward}")
-            # print(f"\nTaget:{global_variable.target.id}, Choosing assign: {item.br.id}, Choosing Clock:{clock},Block distance:{block_distance},State distance: {state_distance}, Reward: {reward}")
-            next_state = StateVariable.get_values_at_clock(clock)
-            transition_dict['states'].append(state)
-            transition_dict['actions'].append(action)
-            transition_dict['next_states'].append(next_state)
-            transition_dict['rewards'].append(reward)
-            dqn_agent.update(transition_dict)
-
-            if path_num == 3 :
-                dqn_agent.update(transition_dict)
-                transition_dict = {'states': [],'actions': [],'next_states': [],'rewards': []}
-                path_num = 0 
+            if global_variable.target.assign_list[0].covered_in_sim:
                 return True
-     
-          
+            if random.randint(0,1) == 0:
+                return True
         global_variable.branch = None
-    return False
+    return find_flag
        
 def get_the_next_path(clock):
 
@@ -420,6 +314,7 @@ def get_the_next_path(clock):
         line = line.strip()
         name_clock, value = line.split(" = ")
         name, clock = name_clock.rsplit("_", 1)
+        # int(clock) - number: number is the clock of reset number
         if int(clock) <=2:
             InputVector.repalce_input_vector(name, int(clock)-1, value)
         else:
@@ -462,6 +357,7 @@ def simulate_build_stack():
     build_stack()
 
 
+
 def sim():
     if simulator == 'iverilog':
         cmd = f"vvp {folder_pth}conc_run.vvp > {folder_pth}sim.log"
@@ -470,30 +366,98 @@ def sim():
     os.system(cmd)
 
 
-def get_line_num(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            line_num = sum(1 for _ in file)
-        return line_num
-    except FileNotFoundError:
-        print(f"[ERROR] File not found: {file_path}")
-        return 0
+def save_input():
+    """
+    在inputs_history下创建input_x子文件夹，并在其中保存data.mem文件
+    """
+    input_file = os.path.join(folder_pth, "data.mem")
+    inputs_dir = os.path.join(folder_pth, "inputs_history")
+    os.makedirs(inputs_dir, exist_ok=True)
     
+    existing = [d for d in os.listdir(inputs_dir) if os.path.isdir(os.path.join(inputs_dir, d)) 
+               and d.startswith("input")]
+    next_id = len(existing) + 1
+    
+    new_dir = os.path.join(inputs_dir, f"input{next_id}")
+    os.makedirs(new_dir, exist_ok=True)
+    
+    backup_file = os.path.join(new_dir, "data.mem")
+    shutil.copy(input_file, backup_file)
+    return backup_file
+
+
 def build_stack():
+    start_time = time.time()
     f_test = open(folder_pth + 'sim.log', 'r')
-
+    read_time = time.time() - start_time
     assert f_test, "The simulation log file is not found."
-
     clock = 0
-    
-    stop_clock = get_line_num(folder_pth + 'data.mem')
+    stop_clock = 0
     latest_val = None
     latest_block = []
+    reg_block = []
+    begin_clock = global_variable.begin_clock
+    started = False
     Constraint._constraint_stack.append(Constraint.create_clock(clock))
     SMTSigCore._set_wire_version(clock) 
     SMTSigCore._set_variable_version(clock)
-  
+    clock_count = 0
 
+    while True:
+        stripped_line = f_test.readline().strip()
+        val = stripped_line.split()
+        if val != []:
+            if val[0] == ';_C':
+                clock = int(val[1])
+                if clock >= begin_clock:
+                    if not started:
+                        started = True
+                    if clock == stop_clock:
+                        break
+                    Constraint._constraint_stack.append(Constraint.create_clock(clock))
+                    SMTSigCore._set_wire_version(clock) 
+                    SMTSigCore._set_variable_version(clock)
+                    clock_count += 1
+                    for _, assign in SMTAssign._assign_list.items():
+                        if assign.assign_type == SMTAssignType.SMT_ASSIGN:
+                            Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
+                            # print(f"Assign ID {assign.id},block ID {assign.block.id},constraint {Constraint.create_constraint(assign, clock).constraint}")
+                
+            elif not started:
+                continue          
+               
+            elif val[0] == ';A':
+                assign_id = int(val[1])
+                assign = SMTAssign.get_assign(assign_id)
+                Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
+                if assign.block.id not in latest_block:
+                    latest_block.append(assign.block.id)
+
+            elif val[0] == ';_Input':
+                input = val[1]
+                if input.startswith('x'):
+                    stop_clock = clock + 1
+
+            elif val[0] == ';R':
+                if assign.block.id not in reg_block:
+                    reg_block.append(assign.block.id)
+                state_name = val[1]
+                state_val = val[3]
+                StateVariable.add_state(state_name, state_val, clock)
+
+            latest_val = val
+    end_time = time.time()  
+    elapsed_time = end_time - start_time 
+    print(f"建立约束耗时 {elapsed_time:.2f}")
+    print(f"begin clock is {begin_clock}, end clock is {stop_clock}, clock count is {clock_count}")
+
+def sim_not_cnst():
+    sim()
+    f_test = open(folder_pth + 'sim.log', 'r')
+    assert f_test, "The simulation log file is not found."
+    clock = 0
+    stop_clock = 0
+    
     while True:
         stripped_line = f_test.readline().strip()
         val = stripped_line.split()
@@ -503,45 +467,16 @@ def build_stack():
                 if clock == stop_clock:
                     break
                 
-                Constraint._constraint_stack.append(Constraint.create_clock(clock))
-                SMTSigCore._set_wire_version(clock) 
-                SMTSigCore._set_variable_version(clock)
-                for _, assign in SMTAssign._assign_list.items():
-                    if assign.assign_type == SMTAssignType.SMT_ASSIGN:
-                        Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
-                        # print(f"Assign ID {assign.id},block ID {assign.block.id},constraint {Constraint.create_constraint(assign, clock).constraint}")
-                          
-               
             elif val[0] == ';A':
                 assign_id = int(val[1])
                 assign = SMTAssign.get_assign(assign_id)
-                Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
-                # check the block 
-                if assign.block.id not in latest_block:
-                    latest_block.append(assign.block.id)
-
-
-
+                if assign.assign_type == SMTAssignType.SMT_ASSIGN_BRANCH:
+                    assign._set_covered(clock) #仿真到了算覆盖到
+        
             elif val[0] == ';_Input':
                 input = val[1]
                 if input.startswith('x'):
                     stop_clock = clock + 1
-
-            elif val[0] == ';R':
-                state_name = val[1]
-                state_val = val[2]
-                if state_name == 'register':
-                    # print(f"Block {latest_block}")
-                    for _, assign in SMTAssign._assign_list.items():
-                        if assign.assign_type == SMTAssignType.SMT_ASSIGN :
-                            # print(f"Assign ID {assign.id}")
-                            Constraint._constraint_stack.append(Constraint.create_constraint(assign, clock))
-                if state_name != 'register':
-                    StateVariable.add_state(state_name, state_val, clock)
-
-            latest_val = val
-            
-
 
 
 def print_constraints(solver):
@@ -561,82 +496,25 @@ def print_sorted_branches(sorted_branches, state, state_name):
         f.write(f"{name}: {value}\n")
     f.close()
 
+
 def print_cover_clock():
     sorted_targets = sorted(SMTBasicBlock._covered_target_list, key=lambda target: target.assign_list[0].covered_at_clock)
     for target in sorted_targets:
         print(f"Target {target.id} is covered in clock {target.assign_list[0].covered_at_clock}")
 
 def remove_and_process_covered_targets():
-    """
-    移除已覆盖的目标，并将相关信息添加到 BeamSearch 中。
-    """
+    find_new_covered = False
     for i in range(len(SMTBasicBlock._target_list) - 1, -1, -1):
         target = SMTBasicBlock._target_list[i]
         for assign in target.assign_list:
             if assign.covered_in_sim:
+                find_new_covered = True
                 print(f"[COVERED] Removing target {target.id}, the assign is {target.assign_list[0].id}, at clock {assign.covered_at_clock}")
                 if target not in SMTBasicBlock._covered_target_list:
                     SMTBasicBlock._covered_target_list.append(target)
                 SMTBasicBlock._target_list.pop(i)
-
-                input_vector = InputVector.InputVector['input_vector'][:assign.covered_at_clock]
-                if target.id not in BeamInput.BeamInput['target_input_vectors']:
-                    BeamInput.add_input_vector(target,input_vector,target.id,999)
-                break  
-
-def sim_not_cnst():
-    sim()
-    f_test = open(folder_pth + 'sim.log', 'r')
-
-    assert f_test, "The simulation log file is not found."
-
-    clock = 0
-    
-    stop_clock = get_line_num(folder_pth + 'data.mem')
-    latest_val = None
-    latest_block = []
-    Constraint._constraint_stack.append(Constraint.create_clock(clock))
-    SMTSigCore._set_wire_version(clock) 
-    SMTSigCore._set_variable_version(clock)
-    
-    if global_variable.branch is None:
-        pass
-    else: 
-        br = global_variable.branch.br
-        clk = global_variable.branch.constraint.clock
-        if br.block.assign_list:
-            branch_id = br.block.assign_list[0].id
-        while True:
-            stripped_line = f_test.readline().strip()
-            val = stripped_line.split()
-            if val != []:
-                if val[0] == ';_C':
-                    clock = int(val[1])
-                    if clock == stop_clock:
-                        # print("[INFO] Not cover the branch selected.")
-                        break
-                    
-                elif val[0] == ';A':
-                    assign_id = int(val[1])
-                    assign = SMTAssign.get_assign(assign_id)
-                    if assign.assign_type == SMTAssignType.SMT_ASSIGN_BRANCH:
-                        assign._set_covered(clock) #仿真到了就算覆盖到
-            
-                elif val[0] == ';_Input':
-                    input = val[1]
-                    if input.startswith('x'):
-                        stop_clock = clock + 1
-
-def save_input():
-    """
-    备份当前 folder_pth 下的 data.mem 文件到 inputs_history 文件夹，文件名用自增编号防止重复。
-    """
-    input_file = os.path.join(folder_pth, "data.mem")
-    inputs_dir = os.path.join(folder_pth, "inputs_history")
-    os.makedirs(inputs_dir, exist_ok=True)
-    existing = [f for f in os.listdir(inputs_dir) if f.startswith("data_") and f.endswith(".mem")]
-    next_id = len(existing) + 1
-    backup_file = os.path.join(inputs_dir, f"data_{next_id}.mem")
-    shutil.copy(input_file, backup_file)
-    print(f"Saved input: {backup_file}")
-    return backup_file
+                if assign.covered_at_clock == 0:
+                    input_vector = InputVector.InputVector['input_vector'][:]
+                else:
+                    input_vector = InputVector.InputVector['input_vector'][:assign.covered_at_clock]
+    return find_new_covered

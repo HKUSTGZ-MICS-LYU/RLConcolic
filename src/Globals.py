@@ -267,7 +267,7 @@ steps = 5
 
 assert steps<=unroll, "steps should be less than unroll"
 limit_iter = 3
-random_sim = 5
+random_sim = 3
 simulator = 'iverilog'
 
 testbench = 'b06'  # Change this to the desired testbench name

@@ -95,8 +95,9 @@ class Concolic:
         # Step 5: Merge all testbenches and run simulation
         self.merge_testbench()
 
-        # Step 6: Generate multi-input testbench with simulation log
+        # Step 6: Generate multi-input testbench and doublecheck coverage with simulation log
         self.multi_testbench()
+        self.doublecheck_branch_coverage()
 
 
     def generate_testbench(self, folder_pth):
@@ -220,6 +221,41 @@ class Concolic:
         sim_cmd = f"vvp {self.folder_pth}conc_run.vvp > {self.folder_pth}multisim.log"
         print(f"[INFO] Running command: {sim_cmd}")
         os.system(sim_cmd)
+
+    def doublecheck_branch_coverage(self):
+        print("Double checking branch coverage from simulation log...")
+        branch_id_file = os.path.join(self.folder_pth, 'branch_id.txt')
+        log_file = os.path.join(self.folder_pth, 'mergesim.log')
+
+        with open(branch_id_file, 'r') as f:
+                all_branches = [int(line.strip()) for line in f if line.strip() != '']
+                all_branches = set(all_branches)
+
+        covered = set()
+        if 0 in all_branches:
+            covered.add(0)
+        if 1 in all_branches:
+            covered.add(1)
+
+
+        # add covered branches from log
+        with open(log_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith(';A '):
+                    try:
+                        bid = int(line.split()[1])
+                        covered.add(bid)
+                    except:
+                        print(f"[ERROR] 解析行失败: {line}, 错误: {str(e)}")
+                        pass
+
+        not_covered = sorted(all_branches - covered)
+        covered_sorted = sorted(all_branches & covered)
+        coverage_rate = len(covered_sorted) / len(all_branches) if all_branches else 0
+        print("需要覆盖分支数:", len(all_branches))
+        print("已覆盖分支数:", len(covered_sorted))
+        print("覆盖率: {:.2%}".format(coverage_rate))
 
 if __name__ == '__main__':
 
