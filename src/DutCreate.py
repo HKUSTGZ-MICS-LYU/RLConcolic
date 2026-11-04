@@ -545,15 +545,14 @@ class CreateDut:
         f.write(f"{space}  // Display the variables\n")
         # f.write(f"{space}  always @(posedge {clk_name})\n")
         f.write(f"{space}  begin\n")
-        f.write(f"{space}  $display(\";R state = 1\",);\n")
-        # for var_name, details in SMTSigCore._sigcore_list.items():
-        #     if details.type == DATA_TYPE.REG:
-        #         if details.is_array:
-        #             for i in range(details.depth_count):
-        #                 var_name = f"{details.name}[{i}]"
-        #                 f.write(f"{space}  $display(\";R {var_name} = %d\", {var_name});\n")
-        #         else:
-        #             f.write(f"{space}  $display(\";R {details.name} = %d\", {details.name});\n")
+        for details in SMTSigCore._sigcore_list.values():
+            if details.type == DATA_TYPE.REG:
+                if details.is_array:
+                    for i in range(details.depth_count):
+                        var_name = f"{details.name}[{i}]"
+                        f.write(f"{space}  $display(\";R {var_name} = %d\", {var_name});\n")
+                else:
+                    f.write(f"{space}  $display(\";R {details.name} = %d\", {details.name});\n")
 
 
         f.write(f"{space}  end\n")

@@ -13,7 +13,7 @@ RLConcolic is a research repository that combines Reinforcement Learning (RL) wi
 - **Pyverilog**: Verilog parsing and analysis framework
 - **Z3 SMT Solver**: Constraint solving and satisfiability checking
 - **Icarus Verilog (iverilog)**: Verilog simulation backend
-- **PyTorch**: For DQN-based reinforcement learning
+- **PyTorch**: For the reinforcement learning agent
 - **Additional Python packages**: Listed in `requirements.txt`
 
 ## Installation
@@ -69,7 +69,7 @@ RLConcolic/
 │   ├── main.py            # Main entry point
 │   ├── GlobalVar.py       # Global variable configurations
 │   ├── Globals.py         # Global configurations
-│   ├── DQN.py             # Deep Q-Network implementation
+│   ├── DQN.py             # Actor-critic agent (legacy filename)
 │   ├── Simulate.py        # Simulation engine
 │   ├── SMTlib.py          # SMT solver interface
 │   ├── TbCreate.py        # Testbench creation utilities
@@ -102,9 +102,33 @@ TOP_MODULE = "your_top_module"
 
 ### 3. Run the Tool
 ```bash
-cd src
-python main.py
+# Run from the repository root (paths in Globals.py are relative to it).
+python src/main.py
 ```
+
+### 4. Verify the RL integration
+
+The default simulation driver initializes the agent, ranks candidate branches
+with its policy, and updates it using the reward and newly simulated register
+state. Logs include `[RL] Initialized agent`, `[RL] Ranked`, and `[RL] Update`.
+If random simulation already covers every target, no RL step is needed.
+
+The existing agent in `src/DQN.py` is a one-step actor-critic with 128-unit hidden
+layers. This integration does not implement the multi-step DQN described in the
+paper; use that distinction when reporting baseline results.
+
+With the dependencies above installed, run:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The tests include full Icarus Verilog runs of `b06` and `b11` with seed 42,
+`unroll=20`, `steps=5`, and one initial random simulation. They check that RL
+updates actually change both networks, state transitions use new simulation
+data, weights remain finite, and saved inputs reproduce the reported coverage.
+Each RTL run uses a fresh temporary directory; its logs and generated test
+inputs are retained at the path printed by the test.
 
 ## Citation
 

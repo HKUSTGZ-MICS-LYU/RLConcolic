@@ -155,6 +155,7 @@ class DQN:
             self.gamma = gamma  
             self.device = device
             self.action_dim = action_dim
+            self.update_count = 0
             self.epsilon = epsilon  
             self.target_update = target_update  
             self.action_dim = action_dim
@@ -162,7 +163,8 @@ class DQN:
     
 
     def take_action(self, state, branch_dict):
-        state_tensor = torch.tensor([state], dtype=torch.float).to(self.device)
+        state_tensor = torch.as_tensor(np.asarray(state), dtype=torch.float,
+                                       device=self.device).unsqueeze(0)
         with torch.no_grad():  
             action_probs = self.actor(state_tensor)
             # action_probs = action_probs.squeeze() #policy_net输出的是一个batch的数据，所以要squeeze
@@ -179,7 +181,6 @@ class DQN:
         
 
         # print("DQN Sorted Branches:", list({item.br.block.assign_list[0].id for item in sorted_branches})) 
-        sorted_branches.sort(key=lambda item: item.constraint.clock)
         return sorted_branches
     
     # def take_action(self, state, branch_dict):
@@ -227,15 +228,17 @@ class DQN:
 
 
     def update(self, transition_dict):
-        states = torch.tensor(transition_dict['states'],dtype=torch.float).to(self.device)
-        actions = torch.tensor(transition_dict['actions']).view(-1, 1).to(self.device)
+        states = torch.as_tensor(np.asarray(transition_dict['states']), dtype=torch.float, device=self.device)
+        actions = torch.tensor(transition_dict['actions'], dtype=torch.long, device=self.device).view(-1, 1)
         rewards = torch.tensor(transition_dict['rewards'],dtype=torch.float).view(-1, 1).to(self.device)
-        next_states = torch.tensor(transition_dict['next_states'],dtype=torch.float).to(self.device)
+        next_states = torch.as_tensor(np.asarray(transition_dict['next_states']), dtype=torch.float, device=self.device)
+        dones = torch.tensor(transition_dict.get('dones', [False] * len(actions)),
+                             dtype=torch.float, device=self.device).view(-1, 1)
 
         # 时序差分目标
-        td_target = rewards + self.gamma * self.critic(next_states) 
+        td_target = rewards + self.gamma * self.critic(next_states) * (1 - dones)
         td_delta = td_target - self.critic(states)  # 时序差分误差
-        log_probs = torch.log(self.actor(states).gather(1, actions))
+        log_probs = torch.log(self.actor(states).gather(1, actions).clamp_min(1e-8))
         actor_loss = torch.mean(-log_probs * td_delta.detach())
         # 均方误差损失函数
         critic_loss = torch.mean(
@@ -246,3 +249,4 @@ class DQN:
         critic_loss.backward()  # 计算价值网络的梯度
         self.actor_optimizer.step()  # 更新策略网络的参数
         self.critic_optimizer.step()  # 更新价值网络的参数
+        self.update_count += 1

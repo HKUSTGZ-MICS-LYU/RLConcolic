@@ -231,11 +231,10 @@ class Concolic:
                 all_branches = [int(line.strip()) for line in f if line.strip() != '']
                 all_branches = set(all_branches)
 
-        covered = set()
-        if 0 in all_branches:
-            covered.add(0)
-        if 1 in all_branches:
-            covered.add(1)
+        # Reset branches are omitted by the instrumenter and marked at clock 0.
+        # Their IDs depend on the design; they are not always 0 and 1.
+        covered = {branch.id for branch in SMTBranch._all_branches_list
+                   if branch.covered_at_clock == 0}
 
 
         # add covered branches from log
@@ -325,5 +324,3 @@ if __name__ == '__main__':
                         random_sim=args.random_sim
                         )
     concolic.main()
-    
-    

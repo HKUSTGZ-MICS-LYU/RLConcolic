@@ -6,7 +6,7 @@ from Globals import *
 import z3
 from z3 import *
 from DQN import *
-from LLM import *
+from copy import deepcopy
 import itertools
 from GlobalVar import global_variable
 from Globals import *
@@ -28,16 +28,16 @@ import shutil
 
 
 def init():
+    global dqn_agent
+    dqn_agent = None
     # Compile the necessary components
     compile()
     
     # Update global variable for branch dimensions
-    branch_dim = 0
-    for _, assign in SMTAssign._assign_list.items():
-        if assign.assign_type != SMTAssignType.SMT_ASSIGN:
-            branch_dim += 1        
-
-    global_variable.branch_dim = branch_dim
+    # Actions use assignment IDs, which are not contiguous branch indices.
+    global_variable.branch_dim = max(
+        (branch.id for branch in SMTBranch._all_branches_list), default=-1
+    ) + 1
     
     # Calculate state dimensions based on the type of signals
     reg_count = count_registers()
@@ -49,6 +49,13 @@ def count_registers():
         if sigcore.type == DATA_TYPE.REG:
             cnt += sigcore.depth_count
     return cnt
+
+
+def calculate_reward(state_distance, block_distance):
+    """Use the reward weights and thresholds from the existing RL driver."""
+    block_reward = 5 - block_distance if block_distance <= 10 else -1
+    state_reward = 5 - state_distance if state_distance <= 3 else -1
+    return 0.5 * block_reward + 0.5 * state_reward
 
 
 
@@ -100,8 +107,6 @@ def single_target_coverage():
 
     for iteration in range(random_sim):
         print(f"[RANDOM] Randomize input vector for initial simulation, iteration {iteration+1}")
-        seed = int(time.time() * 1000) % (2**32)
-        random.seed(seed)
         InputVector.randomize_fuzzing()
         simulate_build_stack()
         remove_and_process_covered_targets()
@@ -117,8 +122,6 @@ def single_target_coverage():
             target = SMTBasicBlock._target_list[0]
 
         for iteration in range(1):
-            seed = int(time.time() * 1000) % (2**32)
-            random.seed(seed)
             InputVector.randomize_input_vector_fuzzing()
             sim_not_cnst()
             if remove_and_process_covered_targets():
@@ -134,9 +137,10 @@ def single_target_coverage():
         
         target.update_distance_from_adjacency_list()
         print(f"[TARGET] Trying to cover target {target.id}, the assign is {target.assign_list[0].id}")
-        if target.closest_path is None and target.closest_path != path:
-            path = target.closest_path
-            path.dump_input_vector()
+        if target.closest_path is not None and target.closest_path != path:
+            InputVector.InputVector = deepcopy(target.closest_path)
+            path = InputVector.InputVector
+            InputVector.dump_input_vector()
 
         global_variable.add_target(target)
         global_variable.first_explore_label = True
@@ -187,7 +191,7 @@ def explore_one_step():
 
 
 def find_next_cfg( init_clock, current_clock,path):
-    input_vector = path['input_vector']
+    input_vector = list(path['input_vector'])
     begin_clock = init_clock + 1
     end_clock = current_clock 
     find_flag = False
@@ -197,7 +201,6 @@ def find_next_cfg( init_clock, current_clock,path):
     temp_branches = []
 
     explored_branches = []
-    global dqn_init
     global dqn_agent
    
     size = len(Constraint._constraint_stack)
@@ -208,7 +211,7 @@ def find_next_cfg( init_clock, current_clock,path):
     
 
     idx = 0
-    while(Constraint._constraint_stack[idx].clock == 0):
+    while idx < size and Constraint._constraint_stack[idx].clock == 0:
         idx += 1
     for i in range(idx, size):
         cnst = Constraint._constraint_stack[i]
@@ -232,8 +235,18 @@ def find_next_cfg( init_clock, current_clock,path):
     else:
         uncover_dict = get_available_branches(uncover_branches,begin_clock +1 , end_clock)
 
-    branches = sort_and_filter_branches(uncover_dict)
-    branches.reverse()
+    if not uncover_dict:
+        return False
+
+    state = StateVariable.get_values_at_clock(init_clock)
+    if not state.size:
+        raise RuntimeError("No register state was recorded for the RL agent")
+    if dqn_agent is None:
+        dqn_agent = DQN(state.size, global_variable.branch_dim,
+                        learning_rate, gamma, epsilon, target_update, device)
+        print(f"[RL] Initialized agent: states={state.size}, actions={global_variable.branch_dim}")
+    branches = dqn_agent.take_action(state, uncover_dict)
+    print(f"[RL] Ranked {len(branches)} branch candidates")
 
     check_num = 0
 
@@ -284,7 +297,7 @@ def find_next_cfg( init_clock, current_clock,path):
             global_variable.explore_time +=1
             find_flag = True
             assign = SMTAssign.get_assign(item.br.id)
-            InputVector.InputVector['input_vector'] = input_vector
+            InputVector.InputVector['input_vector'] = list(input_vector)
             global_variable.branch = item
             model = s.model()
             print_results(model)
@@ -297,6 +310,22 @@ def find_next_cfg( init_clock, current_clock,path):
             sim_not_cnst()
             if remove_and_process_covered_targets():
                 save_input()
+
+            next_state = StateVariable.get_values_at_clock(clock)
+            current_state = dict(zip(StateVariable.get_names(), next_state))
+            target_state = getattr(global_variable.target, 'cnst_state', {})
+            state_distance = sum(abs(target_state[name] - value)
+                                 for name, value in current_state.items()
+                                 if name in target_state and value is not None)
+            if 'gamma' in target_state and 'gamma' in current_state:
+                state_distance = abs(target_state['gamma'] - current_state['gamma'])
+            reward = calculate_reward(state_distance, item.br.block.distance)
+            dqn_agent.update({
+                'states': [state], 'actions': [item.br.id],
+                'next_states': [next_state], 'rewards': [reward],
+                'dones': [global_variable.target.assign_list[0].covered_in_sim],
+            })
+            print(f"[RL] Update {dqn_agent.update_count}: branch={item.br.id}, reward={reward:.3f}")
 
             item.br.block.distance += 1
             if global_variable.target.assign_list[0].covered_in_sim:
@@ -352,6 +381,7 @@ def sort_branches_by_distance(branches):
 
 def simulate_build_stack():
     sim()
+    StateVariable._all_states.clear()
     SMTSigCore.clear_all_versions()
     Constraint.clear_all_constraints()
     build_stack()
@@ -403,8 +433,8 @@ def build_stack():
     SMTSigCore._set_variable_version(clock)
     clock_count = 0
 
-    while True:
-        stripped_line = f_test.readline().strip()
+    for line in f_test:
+        stripped_line = line.strip()
         val = stripped_line.split()
         if val != []:
             if val[0] == ';_C':
@@ -439,13 +469,12 @@ def build_stack():
                     stop_clock = clock + 1
 
             elif val[0] == ';R':
-                if assign.block.id not in reg_block:
-                    reg_block.append(assign.block.id)
                 state_name = val[1]
                 state_val = val[3]
                 StateVariable.add_state(state_name, state_val, clock)
 
             latest_val = val
+    f_test.close()
     end_time = time.time()  
     elapsed_time = end_time - start_time 
     print(f"建立约束耗时 {elapsed_time:.2f}")
@@ -453,13 +482,14 @@ def build_stack():
 
 def sim_not_cnst():
     sim()
+    StateVariable._all_states.clear()
     f_test = open(folder_pth + 'sim.log', 'r')
     assert f_test, "The simulation log file is not found."
     clock = 0
     stop_clock = 0
     
-    while True:
-        stripped_line = f_test.readline().strip()
+    for line in f_test:
+        stripped_line = line.strip()
         val = stripped_line.split()
         if val != []:
             if val[0] == ';_C':
@@ -478,6 +508,9 @@ def sim_not_cnst():
                 if input.startswith('x'):
                     stop_clock = clock + 1
 
+            elif val[0] == ';R':
+                StateVariable.add_state(val[1], val[3], clock)
+    f_test.close()
 
 def print_constraints(solver):
     f = open(folder_pth + 'debug.txt', 'w')
